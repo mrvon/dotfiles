@@ -1,0 +1,595 @@
+"-------------------------------Operating System-------------------------------
+let g:is_windows                                            =0
+let g:is_mac                                                =0
+let g:is_linux                                              =0
+let g:is_gui                                                =0
+if(has("win32") || has("win64"))
+    let g:is_windows                                        =1
+elseif has('mac')
+    let g:is_mac                                            =1
+else
+    let g:is_linux                                          =1
+endif
+if(has("gui"))
+    let g:is_gui                                            =1
+endif
+"-------------------------------Path-------------------------------------------
+if g:is_windows
+elseif g:is_mac
+    let $MYPATH                                             ='~/'
+    let $MYINIT                                             =$MYPATH.'.config/nvim/init.vim'
+    let $MYGINIT                                            =$MYPATH.'.config/nvim/ginit.vim'
+    let $MYFILE                                             =$MYPATH.'.vim'
+elseif g:is_linux
+    let $MYPATH                                             ='~/'
+    let $MYINIT                                             =$MYPATH.'.config/nvim/init.vim'
+    let $MYGINIT                                            =$MYPATH.'.config/nvim/ginit.vim'
+    let $MYFILE                                             =$MYPATH.'.vim'
+endif
+
+"-------------------------------Leader Key-------------------------------------
+let mapleader                                               =" "
+let maplocalleader                                          =","
+
+"-------------------------------Plugin Package Manager-------------------------
+if &compatible
+    set nocompatible
+endif
+set runtimepath+=$MYFILE/repos/github.com/Shougo/dein.vim/
+
+if dein#load_state($MYFILE)
+    call dein#begin($MYFILE)
+
+    call dein#add($MYFILE.'/repos/github.com/Shougo/dein.vim/')
+    call dein#add('Shougo/deoplete.nvim')
+    call dein#add('vim-airline/vim-airline')
+    call dein#add('vim-airline/vim-airline-themes')
+    call dein#add('scrooloose/nerdtree')
+    call dein#add('scrooloose/nerdcommenter')
+    call dein#add('scrooloose/syntastic')
+    call dein#add('Raimondi/delimitMate')
+    call dein#add('tpope/vim-unimpaired')
+    call dein#add('mileszs/ack.vim')
+    call dein#add('nathanaelkane/vim-indent-guides')
+    call dein#add('altercation/vim-colors-solarized')
+    call dein#add('mrvon/vim-tomorrow-theme')
+    call dein#add('morhetz/gruvbox')
+    call dein#add('kien/ctrlp.vim')
+    call dein#add('majutsushi/tagbar')
+    call dein#add('vim-scripts/matchit.zip')
+    call dein#add('godlygeek/tabular')
+    call dein#add('tpope/vim-surround')
+    call dein#add('mrvon/vim-go')
+    call dein#add('ap/vim-css-color')
+    call dein#add('tpope/vim-repeat')
+    call dein#add('mhinz/vim-signify')
+    call dein#add('reedes/vim-pencil')
+    call dein#add('reedes/vim-wordy')
+    call dein#add('pangloss/vim-javascript')
+    call dein#add('elixir-lang/vim-elixir')
+    call dein#add('ntpeters/vim-better-whitespace')
+    call dein#add('mattn/emmet-vim')
+    call dein#add('mhinz/vim-startify')
+    " call dein#add('airblade/vim-gitgutter')
+
+    call dein#end()
+    call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
+
+"-------------------------------My Color My Taste------------------------------
+if g:is_windows
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
+    let $MYITALIC                                           =1
+elseif g:is_mac
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
+    let $MYITALIC                                           =1
+elseif g:is_linux
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
+    let $MYITALIC                                           =1
+endif
+colorscheme $MYCOLOR
+
+"-------------------------------Encoding---------------------------------------
+" Always use utf-8
+set encoding                                                =utf-8
+set termencoding                                            =utf-8
+set fileencoding                                            =utf-8
+set fileencodings                                           =ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1
+set langmenu                                                =en_US.utf-8
+set fileformats                                             =unix,dos,mac
+language messages                                           en_US.utf-8
+
+" Vim in tmux, clearing uses the current background color
+set t_ut=
+
+"-------------------------------Set Column-------------------------------------
+set columns                                                 =100
+"-------------------------------Set Row----------------------------------------
+set lines                                                   =30
+
+"-------------------------------Tab Key----------------------------------------
+set shiftwidth                                              =4
+set tabstop                                                 =4
+set softtabstop                                             =0
+set shiftround
+set expandtab
+set backspace                                               =indent,eol,start
+set autoindent
+set smartindent
+set printoptions                                            =paper:a4
+
+"-------------------------------Max History Item-------------------------------
+set history                                                 =10000
+
+"-------------------------------Ruler And Statusline---------------------------
+set noruler
+set laststatus                                              =2
+set scrolloff                                               =5
+
+"-------------------------------Magic------------------------------------------
+set magic
+
+"-------------------------------Memory Limit Problem---------------------------
+set maxmem                                                  =100
+set maxmempattern                                           =100
+set maxmemtot                                               =100
+
+"-------------------------------Share Clipboard With Windows-------------------
+if g:is_mac || g:is_windows
+    set clipboard                                           +=unnamed
+elseif g:is_linux
+endif
+set clipboard+=unnamedplus
+
+"-------------------------------Line Space-------------------------------------
+set linespace                                               =0
+
+"-------------------------------Highlight Line Under The Cursor----------------
+set cursorline
+set guicursor                                               =n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
+
+"-------------------------------Lazy Redraw------------------------------------
+set nolazyredraw
+
+"-------------------------------Display Line Number----------------------------
+set number
+
+"-------------------------------Show Matching Bracets--------------------------
+set showmatch
+
+"-------------------------------Highlight Search-------------------------------
+" hightlights search results
+set hlsearch
+" shows search matches as you type
+set incsearch
+
+"-------------------------------Wrap Long Line---------------------------------
+set nowrap
+"set linebreak
+
+"-------------------------------Wrap Scan--------------------------------------
+set wrapscan
+
+"-------------------------------Ignore Case And Smart Case---------------------
+" if all lowercase, ignore case
+set ignorecase
+" if caps, watch case
+set smartcase
+
+"-------------------------------Long line--------------------------------------
+" Always notice you do not write a long line
+" Auto break a line
+set textwidth                                               =80
+" Show the long line range
+set colorcolumn                                             =+1
+
+"-------------------------------Command Wild Menu------------------------------
+" You can use Ctrl-d to show wild list
+set wildmenu
+
+"-------------------------------gf Search Path---------------------------------
+" Search path for gf command
+set path                                                    =.,..,,
+
+"-------------------------------Do Not Use Undofile----------------------------
+set noundofile
+
+"-------------------------------Allow To bg Unsaved Buffer---------------------
+" I prefer use Ctrl-p Ctrl-f to list all buffer
+set hidden
+
+"-------------------------------Auto Read -------------------------------------
+" Auto read when other program have modified the same file
+set autoread
+autocmd FocusGained *                                       :checktime
+
+"-------------------------------Number Format----------------------------------
+set nrformats                                               =hex
+
+"-------------------------------Disable Fold-----------------------------------
+" I don't like vim style fold
+set nofoldenable
+
+"-------------------------------Diff Mode--------------------------------------
+set diffopt                                                 =filler,vertical
+
+"-------------------------------Disable Swap file------------------------------
+set noswapfile
+
+"-------------------------------Disable preview window-------------------------
+set completeopt                                             -=preview
+
+"-------------------------------My favorite plugin-----------------------------
+"-------------------------------Deoplete---------------------------------------
+call dein#add('Shougo/deoplete.nvim')
+call deoplete#enable()
+"-------------------------------Airline----------------------------------------
+let g:airline_theme                                         =$MYAIR
+let g:airline_detect_modified                               =1
+let g:airline_detect_paste                                  =1
+let g:airline_detect_crypt                                  =1
+let g:airline_detect_spell                                  =1
+let g:airline_powerline_fonts                               =1
+let g:airline#extensions#tabline#enabled                    =1
+let g:airline#extensions#tabline#show_buffers               =1
+let g:airline#extensions#tabline#tab_nr_type                =1
+let g:airline#extensions#tabline#show_tab_nr                =1
+let g:airline#extensions#tabline#formatter                  ='default'
+let g:airline#extensions#tabline#buffer_nr_show             =1
+let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
+let g:airline#extensions#whitespace#checks                  =[]
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+"-------------------------------NERDTree---------------------------------------
+nnoremap <leader>n                                          :NERDTreeToggle<cr>
+let NERDTreeAutoCenter                                      =1
+let NERDChristmasTree                                       =1
+let NERDTreeWinSize                                         =25
+"-------------------------------NERDCommenter----------------------------------
+let NERDCreateDefaultMappings                               =0
+let NERDSpaceDelims                                         =1
+let g:NERDAltDelims_asm                                     =1
+map <leader>cc                                              <plug>NERDCommenterAlignLeft
+map <leader>cs                                              <plug>NERDCommenterSexy
+map <leader>cu                                              <plug>NERDCommenterUncomment
+"-------------------------------YCM--------------------------------------------
+" call dein#add('Valloric/YouCompleteMe')
+" let g:ycm_confirm_extra_conf                                =0
+" let g:ycm_key_detailed_diagnostics                          ='<leader>d'
+" let g:ycm_filetype_blacklist                                ={}
+" let g:ycm_complete_in_comments                              =1
+" let g:ycm_complete_in_strings                               =1
+" let g:ycm_collect_identifiers_from_comments_and_strings     =1
+" nnoremap <leader>gd                                         :YcmComplete GoTo<cr>
+"-------------------------------ColorCode--------------------------------------
+hi link Member                                              Identifier
+hi link Variable                                            Identifier
+hi link Namespace                                           Operator
+hi link EnumConstant                                        Constant
+hi link StructDecl                                          Structure
+hi link UnionDecl                                           Structure
+hi link ClassDecl                                           Structure
+hi link EnumDecl                                            Structure
+"-----------------------------------------Solarized----------------------------
+let g:solarized_termcolors                                  =256
+let g:solarized_termtrans                                   =0
+let g:solarized_degrade                                     =0
+let g:solarized_bold                                        =1
+let g:solarized_underline                                   =1
+let g:solarized_italic                                      =$MYITALIC
+let g:solarized_contrast                                    ="normal"
+let g:solarized_visibility                                  ="normal"
+let g:solarized_hitrail                                     =0
+let g:solarized_menu                                        =1
+"-----------------------------------------Indent guides------------------------
+let g:indent_guides_enable_on_vim_startup                   =1
+let g:indent_guides_default_mapping                         =0
+"-----------------------------------------CtrlP--------------------------------
+"Ctrl-P             Search file in project
+"Ctrl-P Ctrl-F      View all buffer
+let g:ctrlp_working_path_mode                               =0
+let g:ctrlp_by_filename                                     =1
+let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:15'
+let g:ctrlp_clear_cache_on_exit                             =1
+let g:ctrlp_extensions                                      =[]
+" Excluding version control directories
+if g:is_windows
+    set wildignore                                          +=*\\.git\\*,*\\.hg\\*,*\\.svn\\*  " Windows ('noshellslash')
+
+    let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ }
+
+elseif g:is_mac
+    set wildignore                                          +=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
+
+    let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ }
+endif
+
+"-----------------------------------------TagBar-------------------------------
+nnoremap <leader>t                                          :TagbarToggle<cr>
+"-----------------------------------------Vim-Markdown-------------------------
+let g:vim_markdown_folding_disabled                         =1
+"-----------------------------------------Git----------------------------------
+let g:gitgutter_map_keys                                    =0
+" nmap [c                                                   <Plug>GitGutterPrevHunk
+" nmap ]c                                                   <Plug>GitGutterNextHunk
+" nmap <Leader>hs                                           <Plug>GitGutterStageHunk
+" nmap <Leader>hr                                           <Plug>GitGutterRevertHunk
+" nmap <Leader>hp                                           <Plug>GitGutterPreviewHunk
+"-----------------------------------------VimGo--------------------------------
+let g:go_bin_path                                           =$GOPATH . "/bin/"
+let g:go_fmt_command                                        ="gofmt"
+augroup go_shortcut
+    autocmd!
+    autocmd FileType go nmap <leader>r  <Plug>(go-run)
+    autocmd FileType go nmap <leader>b  <Plug>(go-build)
+    autocmd FileType go nmap <leader>c  <Plug>(go-coverage)
+    autocmd FileType go nmap <leader>ds <Plug>(go-def-split)
+    autocmd FileType go nmap <leader>dv <Plug>(go-def-vertical)
+    autocmd FileType go nmap <leader>dt <Plug>(go-def-tab)
+    autocmd FileType go nmap <leader>gd <Plug>(go-doc)
+    autocmd FileType go nmap <leader>gv <Plug>(go-doc-vertical)
+    autocmd FileType go nmap <leader>s  <Plug>(go-implements)
+    autocmd FileType go nmap <leader>i  <Plug>(go-imports)
+    autocmd FileType go nmap <leader>f  <Plug>(go-info)
+    autocmd FileType go nmap <leader>e  <Plug>(go-rename)
+augroup END
+let g:go_highlight_functions                                =1
+let g:go_highlight_methods                                  =1
+let g:go_highlight_fields                                   =1
+let g:go_highlight_types                                    =1
+let g:go_highlight_operators                                =1
+let g:go_highlight_build_constraints                        =1
+let g:go_template_autocreate                                =0
+"-----------------------------------------Pencil-------------------------------
+nnoremap <silent> Q                                         gqip
+xnoremap <silent> Q                                         gq
+nnoremap <silent> <leader>Q                                 vapJgwip
+let g:pencil#autoformat                                     =0      " 0=disable, 1=enable (def)
+augroup pencil
+    autocmd!
+    autocmd FileType markdown call pencil#init()
+augroup END
+"-----------------------------------------Startify-----------------------------
+let g:startify_change_to_dir                                =0
+"-----------------------------------------ACK----------------------------------
+nnoremap <leader>vv                                         :Ack<cr>
+if executable('ag')
+  let g:ackprg = 'ag'
+endif
+let g:ackhighlight                                          =1
+" solved mix relative and absolute path results problem
+autocmd BufAdd * exe "cd" fnameescape(getcwd())
+"-----------------------------------------Mrvon Special Key--------------------
+" Thanks to http://learnvimscriptthehardway.stevelosh.com/
+" Use jk instead of esc, This excellent idea come from steve
+inoremap jk                                                 <esc>
+inoremap <esc>                                              <nop>
+"-----------------------------------------Resize windows-----------------------
+nnoremap <Up>                                               <c-w>3+
+nnoremap <Down>                                             <c-w>3-
+nnoremap <Left>                                             <c-w>3<
+nnoremap <Right>                                            <c-w>3>
+"-----------------------------------------Moving between windows---------------
+" origin switch window key-mappings is too hard for me
+nnoremap <c-k>                                              <c-w>k
+nnoremap <c-j>                                              <c-w>j
+nnoremap <c-h>                                              <c-w>h
+nnoremap <c-l>                                              <c-w>l
+
+" Does not indent when I input "else" in some filetype. That's a problem in Vim.
+" Quickly Auto Indent When leave insert mode
+function! QuicklyAutoIndent()
+    let l:cursor_position = getpos(".")
+    normal! ==
+    call setpos(".", l:cursor_position)
+endfunction
+augroup quickly_indent
+    autocmd!
+    autocmd InsertLeave *.py,*.lua                          :call QuicklyAutoIndent()
+augroup END
+
+" edit the alternate file.
+" mostly the alternate file is the previously edited file.
+nnoremap <leader><leader>                                   <c-^>
+
+" edit my vimrc
+nnoremap <leader>ev                                         :vsplit $MYINIT<cr>
+nnoremap <leader>eg                                         :vsplit $MYGINIT<cr>
+
+" replace all tab with space
+nnoremap <localleader>rt                                    :%ret! 4<cr>
+
+" reload my vimrc
+if g:is_windows && g:is_gui
+    nnoremap <leader>sv                                     :source $MYINIT<cr>:call libcallnr("vimtweak.dll", "EnableMaximize", 1)<cr>
+else
+    nnoremap <leader>sv                                     :source $MYINIT<cr>
+endif
+
+" easy way to type my email and copyright information
+iabbrev  @@                                                 mrvon@qq.com
+
+" some abbrev
+cabbrev  W                                                  w
+cabbrev  Q                                                  q
+cabbrev  WQ                                                 wq
+cabbrev  Wq                                                 wq
+
+" use a \" or \' to surround this word
+" nnoremap <leader>"                                          viw<esc>a"<esc>hbi"<esc>lel
+" nnoremap <leader>'                                          viw<esc>a'<esc>hbi'<esc>lel
+
+" use a \" or \' to surround text which we selected visually
+" vnoremap <leader>"                                          <esc>`<i"<esc>`>a"<esc>
+" vnoremap <leader>'                                          <esc>`<i'<esc>`>a'<esc>
+
+" use a pair of "{}" to surround this line
+" nnoremap <leader>{                                          O{<esc>jo}<esc>
+
+
+" Y is a strong y, D is a strong d in Vim default setting
+" as you can see, a stronger h and a stronger l
+nnoremap H                                                  0
+vnoremap H                                                  0
+nnoremap L                                                  $
+vnoremap L                                                  $
+" nnoremap J                                                <nop>
+" vnoremap J                                                <nop>
+" this map seem do not work
+" nnoremap K                                                <nop>
+
+" comment a line
+"augroup  comment_group
+"    autocmd!
+"    autocmd                                                 FileType cpp nnoremap <buffer> <localleader>c I//<esc>
+"    autocmd                                                 FileType lua nnoremap <buffer> <localleader>c I--<esc>
+"    autocmd                                                 FileType vim nnoremap <buffer> <localleader>c I"<esc>
+"augroup  END
+
+" movement mappings
+" find In       Next        ( or [
+" find In       Last        ( or [
+" find Around   Next        ( or [
+" find Around   Last        ( or [
+" onoremap i(                                                :<c-u>normal! f(vi(<cr>
+" onoremap a(                                                :<c-u>normal! f(va(<cr>
+" onoremap i[                                                :<c-u>normal! f[vi[<cr>
+" onoremap a[                                                :<c-u>normal! f[va[<cr>
+" onoremap il(                                               :<c-u>normal! F(vi(<cr>
+" onoremap al(                                               :<c-u>normal! F(va(<cr>
+" onoremap il[                                               :<c-u>normal! F[vi[<cr>
+" onoremap al[                                               :<c-u>normal! F[va[<cr>
+
+
+" Vimscript file settings
+augroup filetype_vim
+    autocmd!
+    autocmd                                                 FileType vim setlocal foldmethod=marker
+augroup END
+
+" Match
+" nnoremap <leader>w                                          :match Error /\v +$/<cr>
+" nnoremap <leader>W                                          :match none<cr>
+
+" Always use Very Magic search
+nnoremap /                                                  /\v
+
+" Closing last search highlight
+nnoremap <leader>h                                          :nohlsearch<cr>
+
+" Using exists syntax file
+" augroup align_filetype_group
+"     autocmd!
+"     autocmd                                                 BufRead,BufNewFile *.txt setlocal filetype=lua
+" augroup END
+
+" edit binary using xxd-format!
+augroup binary_edit_group
+    autocmd!
+    autocmd                                                 BufReadPre      *.bin let   &bin=1
+    autocmd                                                 BufReadPost     *.bin if    &bin    | %!xxd
+    autocmd                                                 BufReadPost     *.bin set   ft=xxd  | endif
+    autocmd                                                 BufWritePre     *.bin if    &bin    | %!xxd -r
+    autocmd                                                 BufWritePre     *.bin endif
+    autocmd                                                 BufWritePost    *.bin if    &bin    | %!xxd
+    autocmd                                                 BufWritePost    *.bin set   nomod   | endif
+augroup END
+
+" save file with nobomb
+augroup save_with_nobomb
+    autocmd!
+    autocmd                                                 BufWritePre *.lua setlocal nobomb
+augroup END
+
+augroup on_enter_vim
+    autocmd!
+    " autocmd VimEnter * NERDTree
+    " autocmd VimEnter * nested :TagbarOpen
+augroup END
+
+augroup on_enter_buffer
+    autocmd!
+    autocmd BufEnter * EnableStripWhitespaceOnSave
+    autocmd BufEnter * DisableWhitespace
+augroup END
+
+" augroup save_retab
+"     autocmd!
+"     autocmd                                                 BufWritePre * :retab
+" augroup END
+
+" Quickly Traverse Tab (I prefer buffer to tab)
+"noremap <silent> <F7>                                       :tabp<cr>
+"noremap <silent> <F8>                                       :tabn<cr>
+
+" Quickly Traverse Buffer (tpope/vim-unimpaired already implement it)
+"noremap <silent> [b                                         :bprevious<cr>
+"noremap <silent> ]b                                         :bnext<cr>
+"noremap <silent> [B                                         :bfirst<cr>
+"noremap <silent> ]B                                         :blast<cr>
+" Previous matched line
+"noremap <silent> [q                                         :cprevious<cr>
+" Next matched line
+"noremap <silent> ]q                                         :cnext<cr>
+
+" Insert current file name
+inoremap <localleader>fn                                    <C-R>=expand("%:t")<cr>
+cnoremap <localleader>fn                                    <C-R>=expand("%:t")<cr>
+
+
+"------------------------------------------------------------------------------
+function! __ExecuteCommand(str)
+    exe "menu __magic_menu.__sub_magic_menu :" . a:str
+    emenu __magic_menu.__sub_magic_menu
+    unmenu __magic_menu
+endfunction
+
+function!                                                   __VisualSelection(direction) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]#')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'backward'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'forward'
+        execute "normal /" . l:pattern . "^M"
+    elseif a:direction == 'ack_smartcase'
+        execute __ExecuteCommand("Ack --smart-case " . "\"" . l:pattern . "\"" . "<cr>")
+    elseif a:direction == 'ack_wholeword'
+        execute __ExecuteCommand("Ack --smart-case -w " . "\"" . l:pattern . "\"" . "<cr>")
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
+
+" search in visual mode
+vnoremap <silent> *                                         :call __VisualSelection('forward')<cr>:set hlsearch<cr>
+vnoremap <silent> #                                         :call __VisualSelection('backward')<cr>:set hlsearch<cr>
+vnoremap <leader>vv                                         :call __VisualSelection('ack_smartcase')<cr>
+vnoremap <leader>vw                                         :call __VisualSelection('ack_wholeword')<cr>
+
+" easy copy to system-clipboard
+"vnoremap <leader>sy                                        "+y
+"nnoremap <leader>sy                                        "+y
+" easy paste from system-clipboard
+"vnoremap <leader>sp                                        "+p
+"nnoremap <leader>sp                                        "+p
