@@ -1,0 +1,17 @@
+[user]
+    name = dennis
+    email = mrvon@qq.com
+[core]
+    editor = nvim -f
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[difftool "vimdiff"]
+    cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+[merge]
+    tool = vimdiff
+[mergetool]
+    prompt = false
+[mergetool "vimdiff"]
+    cmd = nvim -d \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c '$wincmd w' -c 'wincmd J'
