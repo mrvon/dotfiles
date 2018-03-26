@@ -42,6 +42,8 @@ if dein#load_state($MYFILE)
 
     call dein#add($MYFILE.'/repos/github.com/Shougo/dein.vim/')
     call dein#add('Shougo/deoplete.nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
     call dein#add('vim-airline/vim-airline')
     call dein#add('vim-airline/vim-airline-themes')
     call dein#add('scrooloose/nerdtree')
