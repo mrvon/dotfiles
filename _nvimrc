@@ -1,31 +1,7 @@
-"-------------------------------Operating System-------------------------------
-let g:is_windows                                            =0
-let g:is_mac                                                =0
-let g:is_linux                                              =0
-let g:is_gui                                                =0
-if(has("win32") || has("win64"))
-    let g:is_windows                                        =1
-elseif has('mac')
-    let g:is_mac                                            =1
-else
-    let g:is_linux                                          =1
-endif
-if(has("gui"))
-    let g:is_gui                                            =1
-endif
 "-------------------------------Path-------------------------------------------
-if g:is_windows
-elseif g:is_mac
-    let $MYPATH                                             ='~/'
-    let $MYINIT                                             =$MYPATH.'.config/nvim/init.vim'
-    let $MYGINIT                                            =$MYPATH.'.config/nvim/ginit.vim'
-    let $MYFILE                                             =$MYPATH.'.vim'
-elseif g:is_linux
-    let $MYPATH                                             ='~/'
-    let $MYINIT                                             =$MYPATH.'.config/nvim/init.vim'
-    let $MYGINIT                                            =$MYPATH.'.config/nvim/ginit.vim'
-    let $MYFILE                                             =$MYPATH.'.vim'
-endif
+let $MYPATH                                                 ='~/'
+let $MYINIT                                                 =$MYPATH.'.config/nvim/init.vim'
+let $MYFILE                                                 =$MYPATH.'.vim'
 
 "-------------------------------Leader Key-------------------------------------
 let mapleader                                               =" "
@@ -41,7 +17,6 @@ if dein#load_state($MYFILE)
     call dein#begin($MYFILE)
 
     call dein#add($MYFILE.'/repos/github.com/Shougo/dein.vim/')
-    call dein#add('Shougo/deoplete.nvim')
     call dein#add('vim-airline/vim-airline')
     call dein#add('vim-airline/vim-airline-themes')
     call dein#add('scrooloose/nerdtree')
@@ -59,7 +34,6 @@ if dein#load_state($MYFILE)
     call dein#add('vim-scripts/matchit.zip')
     call dein#add('godlygeek/tabular')
     call dein#add('tpope/vim-surround')
-    call dein#add('zchee/deoplete-go', {'build': 'make'})
     call dein#add('fatih/vim-go')
     call dein#add('ap/vim-css-color')
     call dein#add('tpope/vim-repeat')
@@ -71,6 +45,9 @@ if dein#load_state($MYFILE)
     call dein#add('ntpeters/vim-better-whitespace')
     call dein#add('mattn/emmet-vim')
     call dein#add('mhinz/vim-startify')
+    call dein#add('Valloric/YouCompleteMe')
+    " call dein#add('Shougo/deoplete.nvim')
+    " call dein#add('zchee/deoplete-go', {'build': 'make'})
     " call dein#add('airblade/vim-gitgutter')
 
     call dein#end()
@@ -81,22 +58,10 @@ filetype plugin indent on
 syntax enable
 
 "-------------------------------My Color My Taste------------------------------
-if g:is_windows
-    set background                                          =dark
-    let $MYCOLOR                                            ='gruvbox'
-    let $MYAIR                                              ='gruvbox'
-    let $MYITALIC                                           =1
-elseif g:is_mac
-    set background                                          =dark
-    let $MYCOLOR                                            ='gruvbox'
-    let $MYAIR                                              ='gruvbox'
-    let $MYITALIC                                           =1
-elseif g:is_linux
-    set background                                          =dark
-    let $MYCOLOR                                            ='gruvbox'
-    let $MYAIR                                              ='gruvbox'
-    let $MYITALIC                                           =1
-endif
+set background                                              =dark
+let $MYCOLOR                                                ='gruvbox'
+let $MYAIR                                                  ='gruvbox'
+let $MYITALIC                                               =1
 colorscheme $MYCOLOR
 
 "-------------------------------Encoding---------------------------------------
@@ -144,12 +109,9 @@ set maxmem                                                  =100
 set maxmempattern                                           =100
 set maxmemtot                                               =100
 
-"-------------------------------Share Clipboard With Windows-------------------
-if g:is_mac || g:is_windows
-    set clipboard                                           +=unnamed
-elseif g:is_linux
-endif
-set clipboard+=unnamedplus
+"-------------------------------Share Clipboard -------------------------------
+set clipboard                                               +=unnamed
+set clipboard                                               +=unnamedplus
 
 "-------------------------------Line Space-------------------------------------
 set linespace                                               =0
@@ -231,8 +193,7 @@ set completeopt                                             -=preview
 
 "-------------------------------My favorite plugin-----------------------------
 "-------------------------------Deoplete---------------------------------------
-call dein#add('Shougo/deoplete.nvim')
-call deoplete#enable()
+" call deoplete#enable()
 "-------------------------------Airline----------------------------------------
 let g:airline_theme                                         =$MYAIR
 let g:airline_detect_modified                               =1
@@ -264,14 +225,13 @@ map <leader>cc                                              <plug>NERDCommenterA
 map <leader>cs                                              <plug>NERDCommenterSexy
 map <leader>cu                                              <plug>NERDCommenterUncomment
 "-------------------------------YCM--------------------------------------------
-" call dein#add('Valloric/YouCompleteMe')
-" let g:ycm_confirm_extra_conf                                =0
-" let g:ycm_key_detailed_diagnostics                          ='<leader>d'
-" let g:ycm_filetype_blacklist                                ={}
-" let g:ycm_complete_in_comments                              =1
-" let g:ycm_complete_in_strings                               =1
-" let g:ycm_collect_identifiers_from_comments_and_strings     =1
-" nnoremap <leader>gd                                         :YcmComplete GoTo<cr>
+let g:ycm_confirm_extra_conf                                =0
+let g:ycm_key_detailed_diagnostics                          ='<leader>d'
+let g:ycm_filetype_blacklist                                ={}
+let g:ycm_complete_in_comments                              =1
+let g:ycm_complete_in_strings                               =1
+let g:ycm_collect_identifiers_from_comments_and_strings     =1
+nnoremap <leader>gd                                         :YcmComplete GoTo<cr>
 "-------------------------------ColorCode--------------------------------------
 hi link Member                                              Identifier
 hi link Variable                                            Identifier
@@ -305,23 +265,11 @@ let g:ctrlp_clear_cache_on_exit                             =1
 let g:ctrlp_use_caching                                     =0
 let g:ctrlp_extensions                                      =[]
 " Excluding version control directories
-if g:is_windows
-    set wildignore                                          +=*\\.git\\*,*\\.hg\\*,*\\.svn\\*  " Windows ('noshellslash')
-
-    let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ }
-
-elseif g:is_mac || g:is_linux
-    set wildignore                                          +=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
-
-    let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ }
-endif
-
+set wildignore                                              +=*/.git/*,*/.hg/*,*/.svn/*
+let g:ctrlp_custom_ignore = {
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+            \ 'file': '\v\.(exe|so|dll)$',
+            \ }
 "-----------------------------------------TagBar-------------------------------
 nnoremap <leader>t                                          :TagbarToggle<cr>
 "-----------------------------------------Vim-Markdown-------------------------
@@ -418,11 +366,7 @@ nnoremap <leader>eg                                         :vsplit $MYGINIT<cr>
 nnoremap <localleader>rt                                    :%ret! 4<cr>
 
 " reload my vimrc
-if g:is_windows && g:is_gui
-    nnoremap <leader>sv                                     :source $MYINIT<cr>:call libcallnr("vimtweak.dll", "EnableMaximize", 1)<cr>
-else
-    nnoremap <leader>sv                                     :source $MYINIT<cr>
-endif
+nnoremap <leader>sv                                         :source $MYINIT<cr>
 
 " easy way to type my email and copyright information
 iabbrev  @@                                                 mrvon@qq.com
