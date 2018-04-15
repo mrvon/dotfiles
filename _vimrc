@@ -83,7 +83,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 " My color
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim'
-Plugin 'mrvon/vim-tomorrow-theme'
+Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'morhetz/gruvbox'
 
 " Ctrlp
