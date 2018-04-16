@@ -58,7 +58,7 @@ plugins=(git go autojump docker)
 
 export GOROOT_BOOTSTRAP=/usr/lib/go-1.6
 export GOROOT=$HOME/go_build
-export GOPATH=~/scratch/go
+export GOPATH=~/go
 
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH=$GOROOT/bin:$PATH
