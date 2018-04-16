@@ -60,7 +60,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 export GOROOT_BOOTSTRAP=/usr/local/go
 export GOROOT=$HOME/go_build
-export GOPATH=~/scratch/go
+export GOPATH=~/go
 
 export PATH=$GOROOT/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
