@@ -21,7 +21,7 @@ if dein#load_state($MYFILE)
     call dein#add('vim-airline/vim-airline-themes')
     call dein#add('scrooloose/nerdtree')
     call dein#add('scrooloose/nerdcommenter')
-    call dein#add('scrooloose/syntastic')
+    call dein#add('w0rp/ale')
     call dein#add('Raimondi/delimitMate')
     call dein#add('tpope/vim-unimpaired')
     call dein#add('mileszs/ack.vim')
@@ -209,6 +209,7 @@ let g:airline#extensions#tabline#formatter                  ='default'
 let g:airline#extensions#tabline#buffer_nr_show             =1
 let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 let g:airline#extensions#whitespace#checks                  =[]
+let g:airline#extensions#ale#enabled                        =1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
