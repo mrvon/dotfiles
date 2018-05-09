@@ -225,6 +225,8 @@ let g:NERDAltDelims_asm                                     =1
 map <leader>cc                                              <plug>NERDCommenterAlignLeft
 map <leader>cs                                              <plug>NERDCommenterSexy
 map <leader>cu                                              <plug>NERDCommenterUncomment
+"-------------------------------ALE--------------------------------------------
+let g:ale_lint_on_text_changed                              ='never'
 "-------------------------------YCM--------------------------------------------
 let g:ycm_confirm_extra_conf                                =0
 let g:ycm_key_detailed_diagnostics                          ='<leader>d'
