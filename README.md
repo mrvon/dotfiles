@@ -27,15 +27,18 @@ $ fc-cache -vf
 + https://github.com/ggreer/the_silver_searcher
 + https://github.com/robbyrussell/oh-my-zsh
 + https://github.com/bhilburn/powerlevel9k
++ https://github.com/zsh-users/zsh-autosuggestions
 + https://github.com/tmux/tmux
 + https://github.com/git/git
 
 ### ubuntu ###
 
 ```sh
-$ apt-get install xsel
-$ pip3 install --upgrade pip
-$ pip3 install neovim
+$ sudo apt install xclip
+$ sudo -H pip2 install --upgrade pip
+$ sudo -H pip2 install neovim
+$ sudo -H pip3 install --upgrade pip
+$ sudo -H pip3 install neovim
 ```
 
 ### excellent tutorial ###
