@@ -49,14 +49,16 @@ $ sudo -H pip3 install neovim
 ### tips ###
 
 ```sh
-%s//gc               # search the pattern before you replace it.
-%s///gn              # can calculate how many matching in this file
-%s/\r//g             # delete all ^M
-z<CR>                # scroll
-set ff=unix          # change line break to unix style
-e ++enc=cp936        # open file with specific encoding (for instance, cp936)
+%s//gc                    # search the pattern before you replace it.
+%s///gn                   # can calculate how many matching in this file
+%s/\r//g                  # delete all ^M
+z<CR>                     # scroll
+set ff=unix               # change line break to unix style
+e ++enc=cp936             # open file with specific encoding (for instance, cp936)
+set expandtab | %retab!   # replace tab with space (expand tab)
+set noexpandtab | %retab! # replace space with tab (no expand tab)
 
-history | vim -      # read from stdin
+history | vim -           # read from stdin
 
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/

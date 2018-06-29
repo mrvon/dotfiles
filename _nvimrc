@@ -189,6 +189,9 @@ set noswapfile
 "-------------------------------Disable preview window-------------------------
 set completeopt                                             -=preview
 
+"-------------------------------Shows The Effects Of A Command-----------------
+set inccommand                                              =nosplit
+
 "-------------------------------My favorite plugin-----------------------------
 "-------------------------------Deoplete---------------------------------------
 " call deoplete#enable()
