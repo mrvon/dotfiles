@@ -29,7 +29,6 @@ if dein#load_state($MYFILE)
     call dein#add('altercation/vim-colors-solarized')
     call dein#add('chriskempson/vim-tomorrow-theme')
     call dein#add('morhetz/gruvbox')
-    call dein#add('kien/ctrlp.vim')
     call dein#add('majutsushi/tagbar')
     call dein#add('vim-scripts/matchit.zip')
     call dein#add('godlygeek/tabular')
@@ -46,6 +45,7 @@ if dein#load_state($MYFILE)
     call dein#add('mattn/emmet-vim')
     call dein#add('mhinz/vim-startify')
     call dein#add('Valloric/YouCompleteMe')
+    call dein#add('junegunn/fzf', { 'build': './install', 'merged': 0 })
     " call dein#add('Shougo/deoplete.nvim')
     " call dein#add('zchee/deoplete-go', {'build': 'make'})
     " call dein#add('airblade/vim-gitgutter')
@@ -259,21 +259,6 @@ let g:solarized_menu                                        =1
 "-----------------------------------------Indent guides------------------------
 let g:indent_guides_enable_on_vim_startup                   =1
 let g:indent_guides_default_mapping                         =0
-"-----------------------------------------CtrlP--------------------------------
-"Ctrl-P             Search file in project
-"Ctrl-P Ctrl-F      View all buffer
-let g:ctrlp_working_path_mode                               =0
-let g:ctrlp_by_filename                                     =1
-let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:15'
-let g:ctrlp_clear_cache_on_exit                             =1
-let g:ctrlp_use_caching                                     =0
-let g:ctrlp_extensions                                      =[]
-" Excluding version control directories
-set wildignore                                              +=*/.git/*,*/.hg/*,*/.svn/*
-let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-            \ 'file': '\v\.(exe|so|dll)$',
-            \ }
 "-----------------------------------------TagBar-------------------------------
 nnoremap <leader>t                                          :TagbarToggle<cr>
 "-----------------------------------------Vim-Markdown-------------------------
