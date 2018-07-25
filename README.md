@@ -3,9 +3,7 @@
 ### link to ###
 
 ```sh
-$ ln -s ~/dotfiles/_vimrc ~/.vimrc
 $ ln -s ~/dotfiles/_nvimrc ~/.config/nvim/init.vim
-$ ln -s ~/dotfiles/_tmux ~/.tmux.conf
 $ ln -s ~/dotfiles/_gitconfig ~/.gitconfig
 # Linux
 $ ln -s ~/dotfiles/_zshrc_linux ~/.zshrc
@@ -16,7 +14,6 @@ $ ln -s ~/dotfiles/_zshrc_mac ~/.zshrc
 ### install fonts ###
 
 ```sh
-$ cp ~/dotfiles/font/Monaco.ttf ~/.local/share/fonts
 $ cp ~/dotfiles/font/MonacoForPowerline.ttf ~/.local/share/fonts
 $ fc-cache -vf
 ```
@@ -28,8 +25,9 @@ $ fc-cache -vf
 + https://github.com/robbyrussell/oh-my-zsh
 + https://github.com/bhilburn/powerlevel9k
 + https://github.com/zsh-users/zsh-autosuggestions
-+ https://github.com/tmux/tmux
 + https://github.com/git/git
++ https://github.com/luarocks/luarocks
++ https://github.com/mpeterv/luacheck
 
 ### ubuntu ###
 

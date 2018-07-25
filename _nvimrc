@@ -229,6 +229,8 @@ map <leader>cs                                              <plug>NERDCommenterS
 map <leader>cu                                              <plug>NERDCommenterUncomment
 "-------------------------------ALE--------------------------------------------
 let g:ale_lint_on_text_changed                              ='never'
+nmap <silent> [s                                            <plug>(ale_previous_wrap)
+nmap <silent> ]s                                            <plug>(ale_next_wrap)
 "-------------------------------YCM--------------------------------------------
 let g:ycm_confirm_extra_conf                                =0
 let g:ycm_key_detailed_diagnostics                          ='<leader>d'
@@ -491,7 +493,8 @@ augroup END
 " Insert current file name
 inoremap <localleader>fn                                    <C-R>=expand("%:t")<cr>
 cnoremap <localleader>fn                                    <C-R>=expand("%:t")<cr>
-
+inoremap <localleader>fm                                    <C-R>=expand("%:p")<cr>
+cnoremap <localleader>fm                                    <C-R>=expand("%:p")<cr>
 
 "------------------------------------------------------------------------------
 function! __ExecuteCommand(str)
