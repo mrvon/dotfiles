@@ -50,13 +50,15 @@ $ sudo -H pip3 install neovim
 %s//gc                    # search the pattern before you replace it.
 %s///gn                   # can calculate how many matching in this file
 %s/\r//g                  # delete all ^M
-z<CR>                     # scroll
 set ff=unix               # change line break to unix style
 e ++enc=cp936             # open file with specific encoding (for instance, cp936)
 set expandtab | %retab!   # replace tab with space (expand tab)
 set noexpandtab | %retab! # replace space with tab (no expand tab)
+z<CR>                     # scroll
+zR                        # Open all folding
 
 history | vim -           # read from stdin
+vim --startuptime profile # profile startup time
 
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/

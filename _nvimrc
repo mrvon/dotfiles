@@ -38,7 +38,6 @@ if dein#load_state($MYFILE)
     call dein#add('tpope/vim-repeat')
     call dein#add('mhinz/vim-signify')
     call dein#add('reedes/vim-pencil')
-    call dein#add('reedes/vim-wordy')
     call dein#add('pangloss/vim-javascript')
     call dein#add('elixir-lang/vim-elixir')
     call dein#add('ntpeters/vim-better-whitespace')
@@ -77,11 +76,6 @@ language messages                                           en_US.utf-8
 
 " Vim in tmux, clearing uses the current background color
 set t_ut=
-
-"-------------------------------Set Column-------------------------------------
-set columns                                                 =100
-"-------------------------------Set Row----------------------------------------
-set lines                                                   =30
 
 "-------------------------------Tab Key----------------------------------------
 set shiftwidth                                              =4
