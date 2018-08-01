@@ -315,6 +315,7 @@ autocmd BufAdd * exe "cd" fnameescape(getcwd())
 "-----------------------------------------FZF----------------------------------
 nnoremap <leader>f                                          :Files<cr>
 nnoremap <leader>b                                          :Buffer<cr>
+nnoremap <leader>r                                          :History<cr>
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, This excellent idea come from steve
@@ -350,18 +351,11 @@ nnoremap <leader><leader>                                   <c-^>
 
 " edit my vimrc
 nnoremap <leader>ev                                         :vsplit $MYINIT<cr>
-nnoremap <leader>eg                                         :vsplit $MYGINIT<cr>
-
-" replace all tab with space
-nnoremap <localleader>rt                                    :%ret! 4<cr>
 
 " reload my vimrc
 nnoremap <leader>sv                                         :source $MYINIT<cr>
 
-" easy way to type my email and copyright information
-iabbrev  @@                                                 mrvon@qq.com
-
-" some abbrev
+" abbrev
 cabbrev  W                                                  w
 cabbrev  Q                                                  q
 cabbrev  WQ                                                 wq
@@ -378,7 +372,6 @@ cabbrev  Wq                                                 wq
 " use a pair of "{}" to surround this line
 " nnoremap <leader>{                                          O{<esc>jo}<esc>
 
-
 " Y is a strong y, D is a strong d in Vim default setting
 " as you can see, a stronger h and a stronger l
 nnoremap H                                                  0
@@ -387,7 +380,6 @@ nnoremap L                                                  $
 vnoremap L                                                  $
 " nnoremap J                                                <nop>
 " vnoremap J                                                <nop>
-" this map seem do not work
 " nnoremap K                                                <nop>
 
 " comment a line
@@ -453,11 +445,11 @@ augroup save_with_nobomb
     autocmd                                                 BufWritePre *.lua setlocal nobomb
 augroup END
 
-augroup on_enter_vim
-    autocmd!
+" augroup on_enter_vim
+    " autocmd!
     " autocmd VimEnter * NERDTree
     " autocmd VimEnter * nested :TagbarOpen
-augroup END
+" augroup END
 
 augroup on_enter_buffer
     autocmd!
@@ -469,10 +461,6 @@ augroup END
 "     autocmd!
 "     autocmd                                                 BufWritePre * :retab
 " augroup END
-
-" Quickly Traverse Tab (I prefer buffer to tab)
-"noremap <silent> <F7>                                       :tabp<cr>
-"noremap <silent> <F8>                                       :tabn<cr>
 
 " Quickly Traverse Buffer (tpope/vim-unimpaired already implement it)
 "noremap <silent> [b                                         :bprevious<cr>
