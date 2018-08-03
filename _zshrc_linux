@@ -1,4 +1,6 @@
 # Path to your oh-my-zsh installation.
+export TERM="xterm-256color"
+export EDITOR='nvim'
 export ZSH=/home/dennis/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -75,8 +77,6 @@ export PATH=~/racket/racket/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-export TERM="xterm-256color"
-export EDITOR='nvim'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
