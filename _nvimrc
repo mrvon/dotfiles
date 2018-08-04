@@ -23,29 +23,29 @@ if dein#load_state($MYFILE)
     call dein#add('scrooloose/nerdcommenter')
     call dein#add('w0rp/ale')
     call dein#add('Raimondi/delimitMate')
-    call dein#add('tpope/vim-unimpaired')
     call dein#add('mileszs/ack.vim')
     call dein#add('nathanaelkane/vim-indent-guides')
-    call dein#add('altercation/vim-colors-solarized')
-    call dein#add('chriskempson/vim-tomorrow-theme')
     call dein#add('morhetz/gruvbox')
     call dein#add('majutsushi/tagbar')
     call dein#add('vim-scripts/matchit.zip')
     call dein#add('godlygeek/tabular')
     call dein#add('tpope/vim-surround')
-    call dein#add('mrvon/vim-go')
-    call dein#add('ap/vim-css-color')
     call dein#add('tpope/vim-repeat')
+    call dein#add('tpope/vim-unimpaired')
+    call dein#add('tpope/vim-fugitive')
+    call dein#add('mrvon/vim-go')
     call dein#add('mhinz/vim-signify')
-    call dein#add('reedes/vim-pencil')
-    call dein#add('pangloss/vim-javascript')
-    call dein#add('elixir-lang/vim-elixir')
     call dein#add('ntpeters/vim-better-whitespace')
-    call dein#add('mattn/emmet-vim')
     call dein#add('mhinz/vim-startify')
     call dein#add('Valloric/YouCompleteMe')
     call dein#add('junegunn/fzf', { 'build': './install', 'merged': 0 })
     call dein#add('junegunn/fzf.vim', { 'depends': 'junegunn/fzf' })
+    call dein#add('ap/vim-css-color')
+    " call dein#add('mattn/emmet-vim')
+    " call dein#add('altercation/vim-colors-solarized')
+    " call dein#add('chriskempson/vim-tomorrow-theme')
+    " call dein#add('pangloss/vim-javascript')
+    " call dein#add('elixir-lang/vim-elixir')
     " call dein#add('Shougo/deoplete.nvim')
     " call dein#add('zchee/deoplete-go', {'build': 'make'})
     " call dein#add('airblade/vim-gitgutter')
@@ -232,6 +232,7 @@ let g:ycm_filetype_blacklist                                ={}
 let g:ycm_complete_in_comments                              =1
 let g:ycm_complete_in_strings                               =1
 let g:ycm_collect_identifiers_from_comments_and_strings     =1
+let g:ycm_python_binary_path                                ='python'
 nnoremap <leader>gd                                         :YcmComplete GoTo<cr>
 "-------------------------------ColorCode--------------------------------------
 hi link Member                                              Identifier
@@ -293,15 +294,6 @@ let g:go_highlight_types                                    =1
 let g:go_highlight_operators                                =1
 let g:go_highlight_build_constraints                        =1
 let g:go_template_autocreate                                =0
-"-----------------------------------------Pencil-------------------------------
-nnoremap <silent> Q                                         gqip
-xnoremap <silent> Q                                         gq
-nnoremap <silent> <leader>Q                                 vapJgwip
-let g:pencil#autoformat                                     =0      " 0=disable, 1=enable (def)
-augroup pencil
-    autocmd!
-    autocmd FileType markdown call pencil#init()
-augroup END
 "-----------------------------------------Startify-----------------------------
 let g:startify_change_to_dir                                =0
 "-----------------------------------------ACK----------------------------------
