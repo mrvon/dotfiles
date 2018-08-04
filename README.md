@@ -5,6 +5,7 @@
 ```sh
 $ ln -s ~/dotfiles/_nvimrc ~/.config/nvim/init.vim
 $ ln -s ~/dotfiles/_gitconfig ~/.gitconfig
+$ ln -s ~/dotfiles/_tmux.conf ~/.tmux.conf
 # Linux
 $ ln -s ~/dotfiles/_zshrc_linux ~/.zshrc
 # Mac
@@ -18,16 +19,28 @@ $ cp ~/dotfiles/font/MonacoForPowerline.ttf ~/.local/share/fonts
 $ fc-cache -vf
 ```
 
-### dependencies ###
-
-+ https://github.com/neovim/neovim
+### tools ###
 + https://github.com/ggreer/the_silver_searcher
-+ https://github.com/robbyrussell/oh-my-zsh
-+ https://github.com/bhilburn/powerlevel9k
-+ https://github.com/zsh-users/zsh-autosuggestions
 + https://github.com/git/git
 + https://github.com/luarocks/luarocks
 + https://github.com/mpeterv/luacheck
+
+### shell ###
++ https://github.com/robbyrussell/oh-my-zsh
++ https://github.com/bhilburn/powerlevel9k
++ https://github.com/zsh-users/zsh-autosuggestions
+
+### neovim ###
++ https://github.com/neovim/neovim
+
+### tmux ###
++ https://github.com/tmux/tmux
++ https://github.com/tmux-plugins/tpm
++ https://github.com/jimeh/tmux-themepack
++ https://github.com/tmuxinator/tmuxinator
+
+### gnome terminal colorscheme ###
++ https://github.com/Mayccoll/Gogh
 
 ### ubuntu ###
 
