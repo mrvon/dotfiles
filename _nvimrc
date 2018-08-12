@@ -352,6 +352,8 @@ cabbrev  W                                                  w
 cabbrev  Q                                                  q
 cabbrev  WQ                                                 wq
 cabbrev  Wq                                                 wq
+cabbrev  QA                                                 qa
+cabbrev  Qa                                                 qa
 
 " use a \" or \' to surround this word
 " nnoremap <leader>"                                          viw<esc>a"<esc>hbi"<esc>lel
