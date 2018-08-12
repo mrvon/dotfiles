@@ -8,10 +8,10 @@
 [difftool]
     prompt = false
 [difftool "vimdiff"]
-    cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+    cmd = nvim -d "$LOCAL" "$REMOTE"
 [merge]
     tool = vimdiff
 [mergetool]
     prompt = false
 [mergetool "vimdiff"]
-    cmd = nvim -d \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c '$wincmd w' -c 'wincmd J'
+    cmd = nvim -d "$LOCAL" "$MERGED" "$REMOTE" -c '2wincmd w'
