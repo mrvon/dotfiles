@@ -314,11 +314,13 @@ nnoremap <leader>r                                          :History<cr>
 " Use jk instead of esc, This excellent idea come from steve
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
+tnoremap jk                                                 <c-\><c-n>
+tnoremap <expr> <c-r>                                       '<c-\><c-n>"'.nr2char(getchar()).''
 "-----------------------------------------Resize windows-----------------------
-nnoremap <Up>                                               <c-w>3+
-nnoremap <Down>                                             <c-w>3-
-nnoremap <Left>                                             <c-w>3<
-nnoremap <Right>                                            <c-w>3>
+nnoremap <up>                                               <c-w>3+
+nnoremap <down>                                             <c-w>3-
+nnoremap <left>                                             <c-w>3<
+nnoremap <right>                                            <c-w>3>
 "-----------------------------------------Moving between windows---------------
 " origin switch window key-mappings is too hard for me
 nnoremap <c-k>                                              <c-w>k
