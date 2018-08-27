@@ -186,7 +186,7 @@ set noswapfile
 set completeopt                                             -=preview
 
 "-------------------------------Shows The Effects Of A Command-----------------
-set inccommand                                              =nosplit
+" set inccommand                                            =nosplit
 
 "-------------------------------My favorite plugin-----------------------------
 "-------------------------------Deoplete---------------------------------------
