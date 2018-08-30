@@ -373,17 +373,6 @@ cabbrev  Wq                                                 wq
 cabbrev  QA                                                 qa
 cabbrev  Qa                                                 qa
 
-" use a \" or \' to surround this word
-" nnoremap <leader>"                                          viw<esc>a"<esc>hbi"<esc>lel
-" nnoremap <leader>'                                          viw<esc>a'<esc>hbi'<esc>lel
-
-" use a \" or \' to surround text which we selected visually
-" vnoremap <leader>"                                          <esc>`<i"<esc>`>a"<esc>
-" vnoremap <leader>'                                          <esc>`<i'<esc>`>a'<esc>
-
-" use a pair of "{}" to surround this line
-" nnoremap <leader>{                                          O{<esc>jo}<esc>
-
 " Y is a strong y, D is a strong d in Vim default setting
 " as you can see, a stronger h and a stronger l
 nnoremap H                                                  0
@@ -393,29 +382,6 @@ vnoremap L                                                  $
 " nnoremap J                                                <nop>
 " vnoremap J                                                <nop>
 " nnoremap K                                                <nop>
-
-" comment a line
-"augroup  comment_group
-"    autocmd!
-"    autocmd                                                 FileType cpp nnoremap <buffer> <localleader>c I//<esc>
-"    autocmd                                                 FileType lua nnoremap <buffer> <localleader>c I--<esc>
-"    autocmd                                                 FileType vim nnoremap <buffer> <localleader>c I"<esc>
-"augroup  END
-
-" movement mappings
-" find In       Next        ( or [
-" find In       Last        ( or [
-" find Around   Next        ( or [
-" find Around   Last        ( or [
-" onoremap i(                                                :<c-u>normal! f(vi(<cr>
-" onoremap a(                                                :<c-u>normal! f(va(<cr>
-" onoremap i[                                                :<c-u>normal! f[vi[<cr>
-" onoremap a[                                                :<c-u>normal! f[va[<cr>
-" onoremap il(                                               :<c-u>normal! F(vi(<cr>
-" onoremap al(                                               :<c-u>normal! F(va(<cr>
-" onoremap il[                                               :<c-u>normal! F[vi[<cr>
-" onoremap al[                                               :<c-u>normal! F[va[<cr>
-
 
 " Vimscript file settings
 augroup filetype_vim
@@ -433,7 +399,7 @@ nnoremap /                                                  /\v
 " Closing last search highlight
 nnoremap <leader>h                                          :nohlsearch<cr>
 
-" Using exists syntax file
+" Filetype alias
 " augroup align_filetype_group
 "     autocmd!
 "     autocmd                                                 BufRead,BufNewFile *.txt setlocal filetype=lua
@@ -474,16 +440,6 @@ augroup END
 "     autocmd                                                 BufWritePre * :retab
 " augroup END
 
-" Quickly Traverse Buffer (tpope/vim-unimpaired already implement it)
-"noremap <silent> [b                                         :bprevious<cr>
-"noremap <silent> ]b                                         :bnext<cr>
-"noremap <silent> [B                                         :bfirst<cr>
-"noremap <silent> ]B                                         :blast<cr>
-" Previous matched line
-"noremap <silent> [q                                         :cprevious<cr>
-" Next matched line
-"noremap <silent> ]q                                         :cnext<cr>
-
 " Insert current file name
 inoremap <localleader>fn                                    <C-R>=expand("%:t")<cr>
 cnoremap <localleader>fn                                    <C-R>=expand("%:t")<cr>
@@ -523,10 +479,3 @@ vnoremap <silent> *                                         :call __VisualSelect
 vnoremap <silent> #                                         :call __VisualSelection('backward')<cr>:set hlsearch<cr>
 vnoremap <leader>vv                                         :call __VisualSelection('ack_smartcase')<cr>
 vnoremap <leader>vw                                         :call __VisualSelection('ack_wholeword')<cr>
-
-" easy copy to system-clipboard
-"vnoremap <leader>sy                                        "+y
-"nnoremap <leader>sy                                        "+y
-" easy paste from system-clipboard
-"vnoremap <leader>sp                                        "+p
-"nnoremap <leader>sp                                        "+p
