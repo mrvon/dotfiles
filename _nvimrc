@@ -26,6 +26,7 @@ if dein#load_state($MYFILE)
     call dein#add('mileszs/ack.vim')
     call dein#add('nathanaelkane/vim-indent-guides')
     call dein#add('morhetz/gruvbox')
+    call dein#add('chriskempson/vim-tomorrow-theme')
     call dein#add('majutsushi/tagbar')
     call dein#add('vim-scripts/matchit.zip')
     call dein#add('godlygeek/tabular')
@@ -43,7 +44,6 @@ if dein#load_state($MYFILE)
     call dein#add('Vimjas/vim-python-pep8-indent', {'on_ft': 'python'})
     call dein#add('mattn/emmet-vim', {'on_ft': 'html'})
     " call dein#add('altercation/vim-colors-solarized')
-    " call dein#add('chriskempson/vim-tomorrow-theme')
     " call dein#add('pangloss/vim-javascript')
     " call dein#add('elixir-lang/vim-elixir')
     " call dein#add('Shougo/deoplete.nvim')
@@ -59,9 +59,9 @@ filetype plugin indent on
 syntax enable
 
 "-------------------------------My Color My Taste------------------------------
-set background                                              =dark
-let $MYCOLOR                                                ='gruvbox'
-let $MYAIR                                                  ='gruvbox'
+set background                                              =light
+let $MYCOLOR                                                ='Tomorrow'
+let $MYAIR                                                  ='tomorrow'
 let $MYITALIC                                               =1
 colorscheme $MYCOLOR
 
@@ -202,7 +202,7 @@ let g:airline#extensions#tabline#enabled                    =1
 let g:airline#extensions#tabline#show_buffers               =1
 let g:airline#extensions#tabline#tab_nr_type                =1
 let g:airline#extensions#tabline#show_tab_nr                =1
-let g:airline#extensions#tabline#formatter                  ='default'
+let g:airline#extensions#tabline#formatter                  ='unique_tail'
 let g:airline#extensions#tabline#buffer_nr_show             =1
 let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 let g:airline#extensions#whitespace#checks                  =[]
