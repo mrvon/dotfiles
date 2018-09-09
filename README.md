@@ -21,6 +21,7 @@ $ fc-cache -vf
 
 ### tools ###
 + https://github.com/ggreer/the_silver_searcher
++ https://github.com/BurntSushi/ripgrep
 + https://github.com/git/git
 + https://github.com/luarocks/luarocks
 + https://github.com/mpeterv/luacheck
