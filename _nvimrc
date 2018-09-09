@@ -34,7 +34,6 @@ if dein#load_state($MYFILE)
     call dein#add('tpope/vim-repeat')
     call dein#add('tpope/vim-unimpaired')
     call dein#add('tpope/vim-fugitive')
-    call dein#add('mrvon/vim-go')
     call dein#add('mhinz/vim-signify')
     call dein#add('ntpeters/vim-better-whitespace')
     call dein#add('mhinz/vim-startify')
@@ -43,6 +42,8 @@ if dein#load_state($MYFILE)
     call dein#add('junegunn/fzf.vim', {'depends': 'junegunn/fzf'})
     call dein#add('Vimjas/vim-python-pep8-indent', {'on_ft': 'python'})
     call dein#add('mattn/emmet-vim', {'on_ft': 'html'})
+    call dein#add('mrvon/vim-go', {'on_ft': 'go'})
+    call dein#add('vim-erlang/vim-erlang-omnicomplete', {'on_ft': 'erlang'})
     " call dein#add('edkolev/tmuxline.vim')
     " call dein#add('altercation/vim-colors-solarized')
     " call dein#add('pangloss/vim-javascript')
@@ -318,8 +319,10 @@ let g:go_template_autocreate                                =0
 let g:startify_change_to_dir                                =0
 "-----------------------------------------ACK----------------------------------
 nnoremap <leader>vv                                         :Ack<cr>
-if executable('ag')
-  let g:ackprg = 'ag'
+if executable('rg')
+    let g:ackprg = 'rg --vimgrep'
+elseif executable('ag')
+    let g:ackprg = 'ag --vimgrep'
 endif
 let g:ackhighlight                                          =1
 " solved mix relative and absolute path results problem

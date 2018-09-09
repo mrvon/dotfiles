@@ -72,6 +72,7 @@ export GOPATH=~/go
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH=$GOROOT/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
+export PATH=~/kerl/21.0/bin:$PATH
 export PATH=~/elixir/bin:$PATH
 export PATH=~/racket/racket/bin:$PATH
 
