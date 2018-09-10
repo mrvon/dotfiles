@@ -69,7 +69,8 @@ e ++enc=cp936             # open file with specific encoding (for instance, cp93
 set expandtab | %retab!   # replace tab with space (expand tab)
 set noexpandtab | %retab! # replace space with tab (no expand tab)
 z<CR>                     # scroll
-zR                        # Open all folding
+zR                        # open all folding
+%bw                       # wipe out all buffer
 
 history | vim -           # read from stdin
 vim --startuptime profile # profile startup time
