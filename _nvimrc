@@ -242,16 +242,16 @@ let g:ycm_collect_identifiers_from_comments_and_strings     =1
 " Use ALE instead of it
 let g:ycm_show_diagnostics_ui                               =0
 let g:ycm_semantic_triggers                                 ={
-    \   'c' : ['->', '.'],
-    \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s', 're!\[.*\]\s'],
-    \   'ocaml' : ['.', '#'],
-    \   'cpp,cuda,objcpp' : ['->', '.', '::'],
-    \   'perl' : ['->'],
-    \   'php' : ['->', '::'],
-    \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-    \   'ruby' : ['.', '::'],
-    \   'lua' : ['.', ':'],
-    \   'erlang' : [':'],
+    \ 'c' : ['->', '.'],
+    \ 'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s', 're!\[.*\]\s'],
+    \ 'ocaml' : ['.', '#'],
+    \ 'cpp,cuda,objcpp' : ['->', '.', '::'],
+    \ 'perl' : ['->'],
+    \ 'php' : ['->', '::'],
+    \ 'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+    \ 'ruby' : ['.', '::'],
+    \ 'lua' : ['.', ':'],
+    \ 'erlang' : [':'],
     \ }
 " let g:ycm_python_binary_path                              ='python'
 nnoremap <leader>gd                                         :YcmComplete GoTo<cr>
@@ -322,6 +322,21 @@ autocmd BufAdd * exe "cd" fnameescape(getcwd())
 nnoremap <leader>f                                          :Files<cr>
 nnoremap <leader>b                                          :Buffer<cr>
 nnoremap <leader>r                                          :History<cr>
+let g:fzf_colors                                            ={
+    \ 'fg':      ['fg', 'Normal'],
+    \ 'bg':      ['bg', 'Normal'],
+    \ 'hl':      ['fg', 'Comment'],
+    \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+    \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+    \ 'hl+':     ['fg', 'Statement'],
+    \ 'info':    ['fg', 'PreProc'],
+    \ 'border':  ['fg', 'Ignore'],
+    \ 'prompt':  ['fg', 'Conditional'],
+    \ 'pointer': ['fg', 'Exception'],
+    \ 'marker':  ['fg', 'Keyword'],
+    \ 'spinner': ['fg', 'Label'],
+    \ 'header':  ['fg', 'Comment']
+    \ }
 "-----------------------------------------EMMET--------------------------------
 let g:user_emmet_leader_key                                 =','
 "-----------------------------------------Mrvon Special Key--------------------
