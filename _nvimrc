@@ -255,15 +255,6 @@ let g:ycm_semantic_triggers                                 ={
     \ }
 " let g:ycm_python_binary_path                              ='python'
 nnoremap <leader>gd                                         :YcmComplete GoTo<cr>
-"-------------------------------ColorCode--------------------------------------
-hi link Member                                              Identifier
-hi link Variable                                            Identifier
-hi link Namespace                                           Operator
-hi link EnumConstant                                        Constant
-hi link StructDecl                                          Structure
-hi link UnionDecl                                           Structure
-hi link ClassDecl                                           Structure
-hi link EnumDecl                                            Structure
 "-----------------------------------------Solarized----------------------------
 let g:solarized_termcolors                                  =256
 let g:solarized_termtrans                                   =0
