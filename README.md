@@ -6,10 +6,7 @@
 $ ln -s ~/dotfiles/_nvimrc ~/.config/nvim/init.vim
 $ ln -s ~/dotfiles/_gitconfig ~/.gitconfig
 $ ln -s ~/dotfiles/_tmux.conf ~/.tmux.conf
-# Linux
-$ ln -s ~/dotfiles/_zshrc_linux ~/.zshrc
-# Mac
-$ ln -s ~/dotfiles/_zshrc_mac ~/.zshrc
+$ ln -s ~/dotfiles/_zshrc ~/.zshrc
 ```
 
 ### install fonts ###
