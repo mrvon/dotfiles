@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"
 export EDITOR='nvim'
-export ZSH=/home/dennis/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
