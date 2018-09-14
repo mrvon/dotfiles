@@ -341,7 +341,7 @@ let g:fzf_colors                                            ={
 let g:user_emmet_leader_key                                 =','
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
-" Use jk instead of esc, This excellent idea come from steve
+" Use jk instead of esc, this excellent idea came from steve.
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
 tnoremap jk                                                 <c-\><c-n>
