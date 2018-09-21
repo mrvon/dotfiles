@@ -253,7 +253,8 @@ let g:ycm_semantic_triggers                                 ={
     \ 'lua' : ['.', ':'],
     \ 'erlang' : [':'],
     \ }
-" let g:ycm_python_binary_path                              ='python'
+let g:ycm_python_binary_path                                ='python3'
+let g:ycm_server_python_interpreter                         ='python3'
 nnoremap <leader>gd                                         :YcmComplete GoTo<cr>
 "-----------------------------------------Solarized----------------------------
 let g:solarized_termcolors                                  =256
