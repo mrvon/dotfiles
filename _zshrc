@@ -93,5 +93,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias vim="nvim"
 
+# remove warning: "context mismatch in svga_sampler_view_destroy"
+export SVGA_VGPU10=0
+
 # export HTTP_PROXY="192.168.9.160:1080"
 # export HTTPS_PROXY="192.168.9.160:1080"
