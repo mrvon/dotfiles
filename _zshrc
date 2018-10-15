@@ -65,17 +65,6 @@ plugins=(git go autojump docker zsh-autosuggestions)
 
 # User configuration
 
-export GOROOT_BOOTSTRAP=/usr/lib/go-1.6
-export GOROOT=$HOME/go_build
-export GOPATH=~/go
-
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-export PATH=$GOROOT/bin:$PATH
-export PATH=$GOPATH/bin:$PATH
-export PATH=~/kerl/21.0/bin:$PATH
-export PATH=~/elixir/bin:$PATH
-export PATH=~/racket/racket/bin:$PATH
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
