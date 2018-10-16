@@ -326,9 +326,10 @@ you should place your code here."
   (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
   ;; version control
   (setq-default vc-follow-symlinks nil)
-  ;; lua layer
-  (setq lua-indent-level 4)
-  )
+  ;; lua layer configurations
+  (setq-default lua-indent-level 4
+                lua-documentation-url "http://www.lua.org/manual/5.3/manual.html")
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
