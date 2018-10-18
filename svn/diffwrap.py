@@ -6,7 +6,7 @@ import os
 DIFF = "/usr/local/bin/nvim"
 
 # Subversion provides the paths we need as the last two parameters.
-LEFT  = sys.argv[-2]
+LEFT = sys.argv[-2]
 RIGHT = sys.argv[-1]
 
 # Call the diff command (change the following line to make sense for

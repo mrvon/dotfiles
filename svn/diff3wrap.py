@@ -6,7 +6,7 @@ import os
 DIFF3 = "/usr/local/bin/nvim"
 
 # Subversion provides the paths we need as the last three parameters.
-MINE  = sys.argv[-3]
+MINE = sys.argv[-3]
 OLDER = sys.argv[-2]
 YOURS = sys.argv[-1]
 
