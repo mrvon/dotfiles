@@ -24,7 +24,6 @@ if dein#load_state($MYFILE)
     call dein#add('w0rp/ale')
     call dein#add('Raimondi/delimitMate')
     call dein#add('mileszs/ack.vim')
-    call dein#add('nathanaelkane/vim-indent-guides')
     call dein#add('morhetz/gruvbox')
     call dein#add('mrvon/vim-tomorrow-theme')
     call dein#add('majutsushi/tagbar')
@@ -45,6 +44,7 @@ if dein#load_state($MYFILE)
     call dein#add('mattn/emmet-vim', {'on_ft': 'html'})
     call dein#add('mrvon/vim-go', {'on_ft': 'go'})
     call dein#add('mrvon/vim-erlang-omnicomplete', {'on_ft': 'erlang'})
+    " call dein#add('nathanaelkane/vim-indent-guides')
     " call dein#add('edkolev/tmuxline.vim')
     " call dein#add('altercation/vim-colors-solarized')
     " call dein#add('pangloss/vim-javascript')
@@ -299,11 +299,11 @@ augroup go_shortcut
     autocmd FileType go nmap <localleader>s  <Plug>(go-implements)
     autocmd FileType go nmap <localleader>e  <Plug>(go-rename)
 augroup END
+let g:go_highlight_extra_types                              =1
 let g:go_highlight_functions                                =1
 let g:go_highlight_function_calls                           =1
-let g:go_highlight_methods                                  =1
-let g:go_highlight_fields                                   =1
 let g:go_highlight_types                                    =1
+let g:go_highlight_fields                                   =1
 let g:go_highlight_operators                                =1
 let g:go_highlight_build_constraints                        =1
 let g:go_template_autocreate                                =0
@@ -495,3 +495,11 @@ vnoremap <silent> *                                         :call __VisualSelect
 vnoremap <silent> #                                         :call __VisualSelection('backward')<cr>:set hlsearch<cr>
 vnoremap <leader>vv                                         :call __VisualSelection('ack_smartcase')<cr>
 vnoremap <leader>vw                                         :call __VisualSelection('ack_wholeword')<cr>
+
+" get highlight group of cursor word
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
