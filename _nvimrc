@@ -191,7 +191,6 @@ set completeopt                                             -=preview
 "-------------------------------Shows The Effects Of A Command-----------------
 " set inccommand                                            =nosplit
 
-"-------------------------------My favorite plugin-----------------------------
 "-------------------------------Deoplete---------------------------------------
 " call deoplete#enable()
 "-------------------------------Airline----------------------------------------
@@ -405,10 +404,6 @@ augroup filetype_vim
     autocmd                                                 FileType vim setlocal foldmethod=marker
 augroup END
 
-" Match
-" nnoremap <leader>w                                          :match Error /\v +$/<cr>
-" nnoremap <leader>W                                          :match none<cr>
-
 " Always use Very Magic search
 nnoremap /                                                  /\v
 
@@ -418,7 +413,7 @@ nnoremap <leader>h                                          :nohlsearch<cr>
 " Filetype alias
 " augroup align_filetype_group
 "     autocmd!
-"     autocmd                                                 BufRead,BufNewFile *.txt setlocal filetype=lua
+"     autocmd                                               BufRead,BufNewFile *.txt setlocal filetype=lua
 " augroup END
 
 " edit binary using xxd-format!
@@ -457,10 +452,10 @@ augroup END
 " augroup END
 
 " Insert current file name
-" inoremap <localleader>fn                                  <C-R>=expand("%:t")<cr>
-" cnoremap <localleader>fn                                  <C-R>=expand("%:t")<cr>
-" inoremap <localleader>fm                                  <C-R>=expand("%:p")<cr>
-" cnoremap <localleader>fm                                  <C-R>=expand("%:p")<cr>
+inoremap <localleader>fn                                    <C-R>=expand("%:t")<cr>
+cnoremap <localleader>fn                                    <C-R>=expand("%:t")<cr>
+inoremap <localleader>fm                                    <C-R>=expand("%:p")<cr>
+cnoremap <localleader>fm                                    <C-R>=expand("%:p")<cr>
 
 "------------------------------------------------------------------------------
 function! __ExecuteCommand(str)
