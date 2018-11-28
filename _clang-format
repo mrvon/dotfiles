@@ -16,3 +16,5 @@ AllowShortLoopsOnASingleLine: false
 BinPackParameters: false
 BreakBeforeBinaryOperators: true
 ContinuationIndentWidth: 4
+AlwaysBreakAfterReturnType: AllDefinitions
+ReflowComments: false
