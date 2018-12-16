@@ -233,6 +233,7 @@ nmap <silent> [s                                            <plug>(ale_previous_
 nmap <silent> ]s                                            <plug>(ale_next_wrap)
 let g:ale_linters                                           ={'asm': []}
 let g:ale_fixers                                            ={'python': ['yapf']}
+let g:ale_set_highlights                                    =1
 "-------------------------------YCM--------------------------------------------
 let g:ycm_confirm_extra_conf                                =0
 let g:ycm_key_detailed_diagnostics                          ='<leader>d'
