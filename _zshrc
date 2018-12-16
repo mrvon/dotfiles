@@ -67,6 +67,9 @@ plugins=(git go autojump docker zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
+# Plugins configuration
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=green'
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -86,7 +89,7 @@ alias vim="nvim"
 export SVGA_VGPU10=0
 
 # emacs GUI version use chinese pinyin input method
-LC_CTYPE=zh_CN.UTF-8
+# LC_CTYPE=zh_CN.UTF-8
 
 # export HTTP_PROXY="192.168.9.160:1080"
 # export HTTPS_PROXY="192.168.9.160:1080"
