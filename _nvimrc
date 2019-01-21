@@ -287,7 +287,6 @@ let g:gitgutter_map_keys                                    =0
 let g:go_bin_path                                           =$GOPATH . "/bin/"
 let g:go_fmt_command                                        ="gofmt"
 let g:go_def_mode                                           ="godef"
-let g:go_def_mapping_enabled                                =0
 augroup go_shortcut
     autocmd!
     autocmd FileType go nmap <localleader>b  <Plug>(go-build)
