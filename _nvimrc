@@ -62,9 +62,15 @@ filetype plugin indent on
 syntax enable
 
 "-------------------------------My Color My Taste------------------------------
-set background                                              =light
-let $MYCOLOR                                                ='Tomorrow'
-let $MYAIR                                                  ='tomorrow'
+if $TERMINAL_COLOR == "dark"
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
+else
+    set background                                          =light
+    let $MYCOLOR                                            ='Tomorrow'
+    let $MYAIR                                              ='tomorrow'
+endif
 let $MYITALIC                                               =1
 colorscheme $MYCOLOR
 
