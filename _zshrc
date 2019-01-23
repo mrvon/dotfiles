@@ -2,6 +2,7 @@
 export TERM="xterm-256color"
 export EDITOR='nvim'
 export ZSH=~/.oh-my-zsh
+export TERMINAL_COLOR='light' #dark
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
