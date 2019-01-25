@@ -414,9 +414,6 @@ augroup filetype_vim
     autocmd                                                 FileType vim setlocal foldmethod=marker
 augroup END
 
-" Always use Very Magic search
-nnoremap /                                                  /\v
-
 " Closing last search highlight
 nnoremap <leader>h                                          :nohlsearch<cr>
 
