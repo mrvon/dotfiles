@@ -316,6 +316,8 @@ let g:go_highlight_fields                                   =1
 let g:go_highlight_operators                                =1
 let g:go_highlight_build_constraints                        =1
 let g:go_template_autocreate                                =0
+"-----------------------------------------Whitespace---------------------------
+let g:strip_whitespace_confirm                              =0
 "-----------------------------------------Startify-----------------------------
 let g:startify_change_to_dir                                =0
 "-----------------------------------------ACK----------------------------------
