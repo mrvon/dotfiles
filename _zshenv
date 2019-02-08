@@ -17,3 +17,6 @@ export GOPATH=~/go
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH=$GOROOT/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
+# python virtualenv
+export WORKON_HOME=~/virtualenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
