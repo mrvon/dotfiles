@@ -11,14 +11,10 @@ export TERMINAL_COLOR='light' #(light, dark)
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_COLOR_SCHEME=$TERMINAL_COLOR
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-# POWERLEVEL9K_USER_DEFAULT_FOREGROUND='black'
-# POWERLEVEL9K_USER_DEFAULT_BACKGROUND='white'
-# POWERLEVEL9K_USER_SUDO_FOREGROUND='black'
-# POWERLEVEL9K_USER_SUDO_BACKGROUND='white'
-# POWERLEVEL9K_USER_ROOT_FOREGROUND='black'
-# POWERLEVEL9K_USER_ROOT_BACKGROUND='white'
+POWERLEVEL9K_VIRTUALENV_FOREGROUND='blue'
+POWERLEVEL9K_VIRTUALENV_BACKGROUND='yellow'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -62,7 +58,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git go autojump docker zsh-autosuggestions)
+plugins=(git go autojump docker zsh-autosuggestions virtualenvwrapper)
 
 # User configuration
 
