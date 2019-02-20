@@ -3,7 +3,7 @@ import sys
 import os
 
 # Configure your favorite three-way diff program here.
-DIFF3 = "/usr/local/bin/nvim"
+DIFF3 = "nvim"
 
 # Subversion provides the paths we need as the last three parameters.
 MINE = sys.argv[-3]
