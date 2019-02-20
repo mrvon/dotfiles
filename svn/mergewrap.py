@@ -3,7 +3,7 @@ import sys
 import os
 
 # Configure your favorite merge program here.
-MERGE = "/usr/local/bin/nvim"
+MERGE = "nvim"
 
 # Get the paths provided by Subversion.
 BASE = sys.argv[1]

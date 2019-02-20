@@ -3,7 +3,7 @@ import sys
 import os
 
 # Configure your favorite diff program here.
-DIFF = "/usr/local/bin/nvim"
+DIFF = "nvim"
 
 # Subversion provides the paths we need as the last two parameters.
 LEFT = sys.argv[-2]
