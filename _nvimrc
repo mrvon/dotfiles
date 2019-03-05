@@ -354,8 +354,8 @@ let g:user_emmet_leader_key                                 =','
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, this excellent idea came from steve.
+" inoremap <esc>                                            <nop>
 inoremap jk                                                 <esc>
-inoremap <esc>                                              <nop>
 tnoremap jk                                                 <c-\><c-n>
 tnoremap <expr> <c-r>                                       '<c-\><c-n>"'.nr2char(getchar()).''
 "-----------------------------------------Resize windows-----------------------
