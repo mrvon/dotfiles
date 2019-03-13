@@ -17,3 +17,4 @@ export GOPATH=~/go
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH=$GOROOT/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
+export GO111MODULE=on
