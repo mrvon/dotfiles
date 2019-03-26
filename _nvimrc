@@ -39,6 +39,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
 Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'mrvon/vim-go', {'do': ':GoInstallBinaries', 'for': 'go'}
+Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 " Plug 'mrvon/vim-erlang-omnicomplete', {'for': 'erlang'}
 " Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'edkolev/tmuxline.vim'
