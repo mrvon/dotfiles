@@ -1,2 +1,3 @@
 bind diff D !git difftool %(commit)~1 %(commit) %(file)
 bind log D !git difftool %(commit)~1 %(commit) %(file)
+set tab-size = 4
