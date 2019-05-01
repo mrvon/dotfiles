@@ -85,3 +85,5 @@ export SVGA_VGPU10=0
 
 # emacs GUI version use chinese pinyin input method
 # LC_CTYPE=zh_CN.UTF-8
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
