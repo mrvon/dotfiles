@@ -58,9 +58,11 @@ $ sudo -H pip3 install neovim
 ### tips ###
 
 ```sh
-%s//gc                    # search the pattern before you replace it.
+%s//gc                    # replace the pattern which you had just searched
 %s///gn                   # can calculate how many matching in this file
 %s/\r//g                  # delete all ^M
+g/^--/d                   # delete all line start from --
+g//d                      # delete all line which you had just searched
 set ff=unix               # change line break to unix style
 e ++enc=cp936             # open file with specific encoding (for instance, cp936)
 set expandtab | %retab!   # replace tab with space (expand tab)
