@@ -398,6 +398,8 @@ nnoremap H                                                  0
 vnoremap H                                                  0
 nnoremap L                                                  $
 vnoremap L                                                  $
+" no Ex mode
+nnoremap Q                                                  <nop>
 " nnoremap J                                                <nop>
 " vnoremap J                                                <nop>
 " nnoremap K                                                <nop>
