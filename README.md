@@ -1,6 +1,6 @@
 # Happy Hacking #
 
-### install links ###
+### install ###
 
 ```sh
 $ ./install.sh
@@ -36,16 +36,6 @@ $ fc-cache -vf
 
 ### gnome terminal colorscheme ###
 + https://github.com/Mayccoll/Gogh
-
-### ubuntu ###
-
-```sh
-$ sudo apt install xclip
-$ sudo -H pip2 install --upgrade pip
-$ sudo -H pip2 install neovim
-$ sudo -H pip3 install --upgrade pip
-$ sudo -H pip3 install neovim
-```
 
 ### excellent tutorial ###
 
