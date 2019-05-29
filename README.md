@@ -1,12 +1,9 @@
 # Happy Hacking #
 
-### link to ###
+### install links ###
 
 ```sh
-$ ln -s ~/dotfiles/_nvimrc ~/.config/nvim/init.vim
-$ ln -s ~/dotfiles/_gitconfig ~/.gitconfig
-$ ln -s ~/dotfiles/_tmux.conf ~/.tmux.conf
-$ ln -s ~/dotfiles/_zshrc ~/.zshrc
+$ ./install.sh
 ```
 
 ### install fonts ###
