@@ -1,6 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys
-import os
+import subprocess
 
 # Configure your favorite diff program here.
 DIFF = "nvim"
@@ -12,7 +12,7 @@ RIGHT = sys.argv[-1]
 # Call the diff command (change the following line to make sense for
 # your diff program).
 cmd = [DIFF, "-d", LEFT, RIGHT]
-os.execv(cmd[0], cmd)
+subprocess.run(cmd)
 
 # Return an errorcode of 0 if no differences were detected, 1 if some were.
 # Any other errorcode will be treated as fatal.

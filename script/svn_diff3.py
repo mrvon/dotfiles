@@ -1,6 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys
-import os
+import subprocess
 
 # Configure your favorite three-way diff program here.
 DIFF3 = "nvim"
@@ -13,7 +13,7 @@ YOURS = sys.argv[-1]
 # Call the three-way diff command (change the following line to make
 # sense for your three-way diff program).
 cmd = [DIFF3, "-d", OLDER, MINE, YOURS]
-os.execv(cmd[0], cmd)
+subprocess.run(cmd)
 
 # After performing the merge, this script needs to print the contents
 # of the merged file to stdout.  Do that in whatever way you see fit.
