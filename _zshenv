@@ -12,6 +12,9 @@ case `uname` in
     ;;
 esac
 
+DOTFILES_SCRIPT=~/dotfiles/script
+export PATH=$DOTFILES_SCRIPT:$PATH
+
 export GOROOT=$HOME/go_build
 export GOPATH=~/go
 export PATH=$GOROOT/bin:$PATH

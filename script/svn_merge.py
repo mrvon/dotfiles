@@ -1,6 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys
-import os
+import subprocess
 
 # Configure your favorite merge program here.
 MERGE = "nvim"
@@ -18,7 +18,7 @@ cmd = [
     MERGE, "-d", BASE, MINE, THEIRS, MERGED, "-c", "$wincmd w", "-c",
     "wincmd J"
 ]
-os.execv(cmd[0], cmd)
+subprocess.run(cmd)
 
 # Return an errorcode of 0 if the conflict was resolved; 1 otherwise.
 # Any other errorcode will be treated as fatal.
