@@ -53,7 +53,7 @@ editor-cmd = nvim
 ###   This will override the compile-time default, which is to use
 ###   Subversion's internal diff implementation.
 # diff-cmd = diff_program (diff, gdiff, etc.)
-diff-cmd = /home/dennis/.subversion/diffwrap.py
+diff-cmd = ~/.subversion/diffwrap.py
 ### Diff-extensions are arguments passed to an external diff
 ### program or to Subversion's internal diff implementation.
 ### Set diff-extensions to override the default arguments ('-u').
@@ -62,7 +62,7 @@ diff-cmd = /home/dennis/.subversion/diffwrap.py
 ###   This will override the compile-time default, which is to use
 ###   Subversion's internal diff3 implementation.
 # diff3-cmd = diff3_program (diff3, gdiff3, etc.)
-diff3-cmd = /home/dennis/.subversion/diff3wrap.py
+diff3-cmd = ~/.subversion/diff3wrap.py
 ### Set diff3-has-program-arg to 'yes' if your 'diff3' program
 ###   accepts the '--diff-program' option.
 # diff3-has-program-arg = [yes | no]
@@ -70,7 +70,7 @@ diff3-cmd = /home/dennis/.subversion/diff3wrap.py
 ### merging tool of choice. Subversion will pass 5 arguments to
 ### the specified command: base theirs mine merged wcfile
 # merge-tool-cmd = merge_command
-merge-tool-cmd = /home/dennis/.subversion/mergewrap.py
+merge-tool-cmd = ~/.subversion/mergewrap.py
 
 ### Section for configuring tunnel agents.
 [tunnels]
