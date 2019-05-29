@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# link
 ln -f -s ~/dotfiles/_zshenv ~/.zshenv
 ln -f -s ~/dotfiles/_zshrc ~/.zshrc
 ln -f -s ~/dotfiles/_nvimrc ~/.config/nvim/init.vim
@@ -12,3 +13,12 @@ ln -f -s ~/dotfiles/_mongorc.js ~/.mongorc.js
 ln -f -s ~/dotfiles/_tigrc ~/.tigrc
 mkdir -p ~/.subversion
 ln -f -s ~/dotfiles/_svn_config ~/.subversion/config
+
+# dependecy
+# sudo apt install -y xclip
+# sudo apt install -y silversearcher-ag
+# sudo -H pip2 install --upgrade pip
+# sudo -H pip2 install --upgrade pynvim
+# sudo -H pip3 install --upgrade pip
+# sudo -H pip3 install --upgrade pynvim
+# sudo -H pip3 install --upgrade yapf
