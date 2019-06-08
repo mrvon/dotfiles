@@ -56,7 +56,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git go autojump zsh-autosuggestions)
+plugins=(autojump zsh-autosuggestions)
 
 # User configuration
 
@@ -82,6 +82,9 @@ alias vim="nvim"
 
 # remove warning: "context mismatch in svga_sampler_view_destroy"
 export SVGA_VGPU10=0
+
+# disable auto cd
+unsetopt AUTO_CD
 
 # emacs GUI version use chinese pinyin input method
 # LC_CTYPE=zh_CN.UTF-8
