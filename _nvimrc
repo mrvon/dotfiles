@@ -12,7 +12,6 @@ if &compatible
 endif
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'junegunn/vim-easy-align'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
@@ -24,7 +23,6 @@ Plug 'mrvon/vim-tomorrow-theme'
 Plug 'morhetz/gruvbox'
 Plug 'majutsushi/tagbar'
 Plug 'andymass/vim-matchup'
-Plug 'godlygeek/tabular'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
@@ -34,6 +32,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'mhinz/vim-startify'
 Plug 'Valloric/YouCompleteMe', {'do': 'python3 ./install.py --clang-complete'}
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
@@ -322,6 +321,9 @@ endif
 let g:ackhighlight                                          =1
 " solved mix relative and absolute path results problem
 autocmd BufAdd * exe "cd" fnameescape(getcwd())
+"-----------------------------------------EASY ALIGN---------------------------
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 "-----------------------------------------FZF----------------------------------
 nnoremap <leader>f                                          :Files<cr>
 nnoremap <leader>b                                          :Buffer<cr>
