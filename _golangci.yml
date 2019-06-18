@@ -1,0 +1,10 @@
+run:
+  # exit code when at least one issue was found, default is 1
+  issues-exit-code: 1
+  # include test files or not, default is true
+  tests: true
+
+linters:
+  # all linter except slow
+  enable-all: true
+  fast: true
