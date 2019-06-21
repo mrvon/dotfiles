@@ -228,9 +228,13 @@ map <leader>cu                                              <plug>NERDCommenterU
 let g:ale_lint_on_text_changed                              ='never'
 nmap <silent> [s                                            <plug>(ale_previous_wrap)
 nmap <silent> ]s                                            <plug>(ale_next_wrap)
-let g:ale_linters                                           ={'asm': []}
+let g:ale_linters                                           ={
+    \ 'asm': [],
+    \ 'go': ['go vet', 'gofmt', 'staticcheck'],
+    \ }
 let g:ale_fixers                                            ={'python': ['yapf']}
 let g:ale_set_highlights                                    =1
+let g:ale_go_staticcheck_lint_package                       =1
 "-------------------------------YCM--------------------------------------------
 let g:ycm_confirm_extra_conf                                =0
 let g:ycm_key_detailed_diagnostics                          ='<leader>d'
