@@ -23,3 +23,4 @@ ln -f -s ~/dotfiles/_svn_config ~/.subversion/config
 # sudo -H pip3 install --upgrade pip
 # sudo -H pip3 install --upgrade pynvim
 # sudo -H pip3 install --upgrade yapf
+# go get -u honnef.co/go/tools/cmd/staticcheck
