@@ -39,13 +39,9 @@ Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
 Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'mrvon/vim-go', {'do': ':GoInstallBinaries', 'for': 'go'}
 Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
-" Plug 'mrvon/vim-erlang-omnicomplete', {'for': 'erlang'}
-" Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'edkolev/tmuxline.vim'
-" Plug 'altercation/vim-colors-solarized'
+" Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'pangloss/vim-javascript'
-" Plug 'elixir-lang/vim-elixir'
-" Plug 'airblade/vim-gitgutter'
 " Plug 'ap/vim-css-color'
 call plug#end()
 
@@ -275,8 +271,8 @@ let g:indent_guides_enable_on_vim_startup                   =1
 let g:indent_guides_default_mapping                         =0
 "-----------------------------------------TagBar-------------------------------
 nnoremap <leader>t                                          :TagbarToggle<cr>
-"-----------------------------------------Vim-Markdown-------------------------
-let g:vim_markdown_folding_disabled                         =1
+"-----------------------------------------Matchup------------------------------
+let g:matchup_matchparen_status_offscreen                   =0
 "-----------------------------------------Git----------------------------------
 let g:gitgutter_map_keys                                    =0
 " nmap [c                                                   <Plug>GitGutterPrevHunk
