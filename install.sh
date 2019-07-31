@@ -12,6 +12,7 @@ ln -f -s ~/dotfiles/_flake8 ~/.flake8
 ln -f -s ~/dotfiles/_luacheckrc ~/.luacheckrc
 ln -f -s ~/dotfiles/_mongorc.js ~/.mongorc.js
 ln -f -s ~/dotfiles/_tigrc ~/.tigrc
+ln -f -s ~/dotfiles/_coc-settings.json ~/.config/nvim/coc-settings.json
 mkdir -p ~/.subversion
 ln -f -s ~/dotfiles/_svn_config ~/.subversion/config
 
@@ -25,3 +26,5 @@ ln -f -s ~/dotfiles/_svn_config ~/.subversion/config
 # sudo -H pip3 install --upgrade yapf
 # sudo -H pip3 install --upgrade flake8
 # go get -u honnef.co/go/tools/cmd/staticcheck
+# sudo luarocks install luacheck
+# sudo luarocks install --server=http://luarocks.org/dev lua-lsp

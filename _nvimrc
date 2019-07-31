@@ -37,7 +37,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 Plug 'Raimondi/delimitMate'
-Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
 " Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'edkolev/tmuxline.vim'
 " Plug 'ap/vim-css-color'
@@ -182,6 +181,10 @@ set completeopt                                             -=preview
 "-------------------------------Shows The Effects Of A Command-----------------
 " set inccommand                                            =nosplit
 
+"-------------------------------NO BACKUP--------------------------------------
+set nobackup
+set nowritebackup
+
 "-------------------------------Deoplete---------------------------------------
 " call deoplete#enable()
 "-------------------------------Airline----------------------------------------
@@ -274,6 +277,11 @@ let g:go_highlight_fields                                   =1
 let g:go_highlight_operators                                =1
 let g:go_highlight_build_constraints                        =1
 let g:go_template_autocreate                                =0
+"-----------------------------------------COC----------------------------------
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 "-----------------------------------------Whitespace---------------------------
 let g:strip_whitespace_confirm                              =0
 "-----------------------------------------Startify-----------------------------
