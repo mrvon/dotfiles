@@ -12,36 +12,34 @@ if &compatible
 endif
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'w0rp/ale'
-Plug 'Raimondi/delimitMate'
-Plug 'mileszs/ack.vim'
-Plug 'mrvon/vim-tomorrow-theme'
-Plug 'morhetz/gruvbox'
-Plug 'majutsushi/tagbar'
 Plug 'andymass/vim-matchup'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'mhinz/vim-startify'
-Plug 'Valloric/YouCompleteMe', {'do': 'python3 ./install.py --clang-complete'}
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
-Plug 'mattn/emmet-vim', {'for': 'html'}
-Plug 'mrvon/vim-go', {'do': ':GoInstallBinaries', 'for': 'go'}
+Plug 'junegunn/vim-easy-align'
 Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
-" Plug 'edkolev/tmuxline.vim'
+Plug 'majutsushi/tagbar'
+Plug 'mattn/emmet-vim', {'for': 'html'}
+Plug 'mhinz/vim-signify'
+Plug 'mhinz/vim-startify'
+Plug 'mileszs/ack.vim'
+Plug 'morhetz/gruvbox'
+Plug 'mrvon/vim-go', {'do': ':GoInstallBinaries', 'for': 'go'}
+Plug 'mrvon/vim-tomorrow-theme'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
+Plug 'Raimondi/delimitMate'
+Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
 " Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'pangloss/vim-javascript'
+" Plug 'edkolev/tmuxline.vim'
 " Plug 'ap/vim-css-color'
 call plug#end()
 
@@ -231,30 +229,6 @@ let g:ale_linters                                           ={
 let g:ale_fixers                                            ={'python': ['yapf']}
 let g:ale_set_highlights                                    =1
 let g:ale_go_staticcheck_lint_package                       =1
-"-------------------------------YCM--------------------------------------------
-let g:ycm_confirm_extra_conf                                =0
-let g:ycm_key_detailed_diagnostics                          ='<leader>d'
-let g:ycm_filetype_blacklist                                ={}
-let g:ycm_complete_in_comments                              =1
-let g:ycm_complete_in_strings                               =1
-let g:ycm_collect_identifiers_from_comments_and_strings     =1
-" Use ALE instead of it
-let g:ycm_show_diagnostics_ui                               =0
-let g:ycm_semantic_triggers                                 ={
-    \ 'c' : ['->', '.'],
-    \ 'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s', 're!\[.*\]\s'],
-    \ 'ocaml' : ['.', '#'],
-    \ 'cpp,cuda,objcpp' : ['->', '.', '::'],
-    \ 'perl' : ['->'],
-    \ 'php' : ['->', '::'],
-    \ 'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-    \ 'ruby' : ['.', '::'],
-    \ 'lua' : ['.', ':'],
-    \ 'erlang' : [':'],
-    \ }
-let g:ycm_python_binary_path                                ='python3'
-let g:ycm_server_python_interpreter                         ='python3'
-nnoremap <leader>gd                                         :YcmComplete GoTo<cr>
 "-----------------------------------------Solarized----------------------------
 let g:solarized_termcolors                                  =256
 let g:solarized_termtrans                                   =0
@@ -273,13 +247,6 @@ let g:indent_guides_default_mapping                         =0
 nnoremap <leader>t                                          :TagbarToggle<cr>
 "-----------------------------------------Matchup------------------------------
 let g:matchup_matchparen_status_offscreen                   =0
-"-----------------------------------------Git----------------------------------
-let g:gitgutter_map_keys                                    =0
-" nmap [c                                                   <Plug>GitGutterPrevHunk
-" nmap ]c                                                   <Plug>GitGutterNextHunk
-" nmap <Leader>hs                                           <Plug>GitGutterStageHunk
-" nmap <Leader>hr                                           <Plug>GitGutterRevertHunk
-" nmap <Leader>hp                                           <Plug>GitGutterPreviewHunk
 "-----------------------------------------Vim-Go--------------------------------
 let g:go_bin_path                                           =$GOPATH . "/bin/"
 let g:go_fmt_command                                        ="gofmt"
@@ -287,9 +254,9 @@ let g:go_def_mode                                           ="godef"
 augroup go_shortcut
     autocmd!
     autocmd FileType go nmap <localleader>b  <Plug>(go-build)
-    autocmd FileType go nmap <localleader>co  <Plug>(go-coverage)
-    autocmd FileType go nmap <localleader>cr  <Plug>(go-callers)
-    autocmd FileType go nmap <localleader>ce  <Plug>(go-callees)
+    autocmd FileType go nmap <localleader>co <Plug>(go-coverage)
+    autocmd FileType go nmap <localleader>cr <Plug>(go-callers)
+    autocmd FileType go nmap <localleader>ce <Plug>(go-callees)
     autocmd FileType go nmap <localleader>ds <Plug>(go-def-split)
     autocmd FileType go nmap <localleader>dv <Plug>(go-def-vertical)
     autocmd FileType go nmap <localleader>dt <Plug>(go-def-tab)
