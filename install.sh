@@ -28,3 +28,8 @@ ln -f -s ~/dotfiles/_svn_config ~/.subversion/config
 # go get -u honnef.co/go/tools/cmd/staticcheck
 # sudo luarocks install luacheck
 # sudo luarocks install --server=http://luarocks.org/dev lua-lsp
+# go get -u github.com/sourcegraph/go-langserver
+
+# PlugUpgrade
+# PlugUpdate
+# CocInstall coc-python
