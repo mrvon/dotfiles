@@ -3,6 +3,15 @@
         "lua": {
             "command": "lua-lsp",
             "filetypes": ["lua"]
+        },
+        "golang": {
+            "command": "go-langserver",
+            "filetypes": ["go"],
+            "initializationOptions": {
+                "gocodeCompletionEnabled": true,
+                "diagnosticsEnabled": true,
+                "lintTool": "golint"
+            }
         }
     },
     "diagnostic.enableSign": false
