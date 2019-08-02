@@ -14,5 +14,8 @@
             }
         }
     },
-    "diagnostic.enableSign": false
+    "diagnostic.enableSign": false,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
 }
