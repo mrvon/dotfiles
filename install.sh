@@ -15,6 +15,7 @@ ln -f -s ~/dotfiles/_tigrc ~/.tigrc
 ln -f -s ~/dotfiles/_coc-settings.json ~/.config/nvim/coc-settings.json
 mkdir -p ~/.subversion
 ln -f -s ~/dotfiles/_svn_config ~/.subversion/config
+ln -f -s ~/dotfiles/_proxy_config ~/.proxy_config
 
 # dependecy
 # sudo apt install -y xclip
