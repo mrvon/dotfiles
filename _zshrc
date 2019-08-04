@@ -106,3 +106,4 @@ unsetopt AUTO_CD
 # LC_CTYPE=zh_CN.UTF-8
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.proxy_config ] && source ~/.proxy_config
