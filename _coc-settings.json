@@ -5,18 +5,14 @@
             "filetypes": ["lua"]
         },
         "golang": {
-            "command": "go-langserver",
-            "filetypes": ["go"],
-            "initializationOptions": {
-                "gocodeCompletionEnabled": true,
-                "diagnosticsEnabled": true,
-                "lintTool": "golint"
-            }
+            "command": "gopls",
+            "rootPatterns": ["go.mod"],
+            "filetypes": ["go"]
         }
     },
     "diagnostic.enableSign": false,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
-	"coc.preferences.diagnostic.displayByAle": true
+    "coc.preferences.diagnostic.displayByAle": true
 }
