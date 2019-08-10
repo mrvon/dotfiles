@@ -27,9 +27,9 @@ ln -f -s ~/dotfiles/_proxy_config ~/.proxy_config
 # sudo -H pip3 install --upgrade yapf
 # sudo -H pip3 install --upgrade flake8
 # go get -u honnef.co/go/tools/cmd/staticcheck
-# sudo luarocks install luacheck
-# sudo luarocks install --server=http://luarocks.org/dev lua-lsp
-# go get -u github.com/sourcegraph/go-langserver
+# sudo -H luarocks install luacheck
+# sudo -H luarocks install --server=http://luarocks.org/dev lua-lsp
+# go get golang.org/x/tools/gopls@latest
 
 # PlugUpgrade
 # PlugUpdate
