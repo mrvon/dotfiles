@@ -94,7 +94,7 @@ set scrolloff                                               =5
 set magic
 
 "-------------------------------Memory Limit Problem---------------------------
-set maxmempattern                                           =100
+set maxmempattern                                           =1000
 
 "-------------------------------Share Clipboard -------------------------------
 set clipboard                                               +=unnamed
