@@ -33,7 +33,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'Raimondi/delimitMate'
 " Plug 'christoomey/vim-tmux-navigator'
 " Plug 'mattn/emmet-vim', {'for': 'html'}
