@@ -230,8 +230,12 @@ let g:ale_linters                                           ={
     \ 'go': ['go vet', 'gofmt', 'staticcheck'],
     \ }
 let g:ale_fixers                                            ={'python': ['yapf']}
-let g:ale_set_highlights                                    =1
 let g:ale_go_staticcheck_lint_package                       =1
+if $TERMINAL_COLOR == "dark"
+    let g:ale_set_highlights                                =0
+else
+    let g:ale_set_highlights                                =1
+endif
 "-----------------------------------------Solarized----------------------------
 let g:solarized_termcolors                                  =256
 let g:solarized_termtrans                                   =0
