@@ -203,7 +203,6 @@ let g:airline#extensions#tabline#buffer_nr_show             =1
 let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 let g:airline#extensions#whitespace#checks                  =[]
 let g:airline#extensions#ale#enabled                        =1
-let g:airline#extensions#tagbar#enabled                     =0
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -222,6 +221,7 @@ map <leader>cc                                              <plug>NERDCommenterA
 map <leader>cs                                              <plug>NERDCommenterSexy
 map <leader>cu                                              <plug>NERDCommenterUncomment
 "-------------------------------ALE--------------------------------------------
+let g:ale_completion_enabled                                =0
 let g:ale_lint_on_text_changed                              ='never'
 nmap <silent> [s                                            <plug>(ale_previous_wrap)
 nmap <silent> ]s                                            <plug>(ale_next_wrap)
