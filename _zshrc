@@ -70,10 +70,6 @@ export UPDATE_ZSH_DAYS=13
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="mm/dd/yyyy"
 
-# Max history size
-HISTSIZE=50000
-SAVEHIST=$HISTSIZE
-
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -110,6 +106,10 @@ export SVGA_VGPU10=0
 
 # disable auto cd
 unsetopt AUTO_CD
+
+# Max history size
+HISTSIZE=50000
+SAVEHIST=$HISTSIZE
 
 # emacs GUI version use chinese pinyin input method
 # LC_CTYPE=zh_CN.UTF-8
