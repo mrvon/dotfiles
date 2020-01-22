@@ -1,0 +1,42 @@
+inoremap jk <esc>
+
+let mapleader		=" "
+
+" Y is a strong y, D is a strong d in Vim default setting
+" as you can see, a stronger h and a stronger l
+nnoremap H 0
+vnoremap H 0
+nnoremap L $
+vnoremap L $
+
+set clipboard=unnamed
+set shiftwidth=4
+set tabstop=4
+set softtabstop=0
+set expandtab
+set backspace=indent,eol,start
+set autoindent
+set magic
+set number
+set hlsearch
+set incsearch
+set nowrap
+set ignorecase
+set smartcase
+set textwidth=80
+
+nnoremap <c-k> <c-w>k
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+nnoremap <leader>ev :e ~/.vimrc<CR>
+nnoremap <leader>ec :so ~/.vimrc<CR>
+
+nnoremap <leader>b :vsc Build.BuildSolution<CR>
+nnoremap <leader>r :vsc Debug.StartWithoutDebugging<CR>
+nnoremap <leader>f :vsc VAssistX.OpenFileInSolutionDialog<CR>
+nnoremap <leader>h :nohlsearch<CR>
+
+map <leader>cc :vsc Edit.CommentSelection<CR>
+map <leader>cu :vsc Edit.UncommentSelection<CR>
