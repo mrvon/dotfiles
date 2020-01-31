@@ -1,6 +1,6 @@
 inoremap jk <esc>
 
-let mapleader		=" "
+let mapleader=" "
 
 " Y is a strong y, D is a strong d in Vim default setting
 " as you can see, a stronger h and a stronger l
@@ -29,6 +29,9 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+nnoremap <c-o> :vsc View.NavigateBackward<CR>
+nnoremap <c-i> :vsc View.NavigateForward<CR>
 
 nnoremap <leader>ev :e ~/.vimrc<CR>
 nnoremap <leader>ec :so ~/.vimrc<CR>
