@@ -185,8 +185,9 @@ set completeopt                                             -=preview
 set nobackup
 set nowritebackup
 
-"-------------------------------Deoplete---------------------------------------
-" call deoplete#enable()
+"-------------------------------Unimpaired-------------------------------------
+nmap <silent> [[                                            [q
+nmap <silent> ]]                                            ]q
 "-------------------------------Airline----------------------------------------
 let g:airline_theme                                         =$MYAIR
 let g:airline_detect_modified                               =1
