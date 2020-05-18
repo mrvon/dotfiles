@@ -13,6 +13,7 @@
     "suggest.noselect": true,
     "suggest.enablePreselect": false,
     "diagnostic.enableSign": false,
+    "diagnostic.messageTarget": "echo",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
