@@ -185,9 +185,6 @@ set completeopt                                             -=preview
 set nobackup
 set nowritebackup
 
-"-------------------------------Unimpaired-------------------------------------
-nmap <silent> [[                                            [q
-nmap <silent> ]]                                            ]q
 "-------------------------------Airline----------------------------------------
 let g:airline_theme                                         =$MYAIR
 let g:airline_detect_modified                               =1
@@ -204,6 +201,7 @@ let g:airline#extensions#tabline#buffer_nr_show             =1
 let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 let g:airline#extensions#whitespace#checks                  =[]
 let g:airline#extensions#ale#enabled                        =1
+let g:airline#extensions#tagbar#enabled                     =0
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -323,6 +321,9 @@ let g:fzf_colors                                            ={
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
     \ 'header':  ['fg', 'Comment']
+    \ }
+let g:fzf_layout                                            ={
+    \ 'window': { 'width': 0.9, 'height': 0.6 }
     \ }
 "-----------------------------------------EMMET--------------------------------
 let g:user_emmet_leader_key                                 =','
