@@ -186,6 +186,10 @@ set completeopt                                             -=preview
 set nobackup
 set nowritebackup
 
+"-------------------------------Visual Paste Without Overwriting Register------
+xnoremap <expr> p 'pgv"'.v:register.'y`>'
+xnoremap <expr> P 'Pgv"'.v:register.'y`>'
+
 "-------------------------------Airline----------------------------------------
 let g:airline_theme                                         =$MYAIR
 let g:airline_detect_modified                               =1
