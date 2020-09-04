@@ -107,8 +107,17 @@ export SVGA_VGPU10=0
 # disable auto cd
 unsetopt AUTO_CD
 
+setopt EXTENDED_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_VERIFY
+
 # Max history size
-HISTSIZE=50000
+HISTSIZE=100000
 SAVEHIST=$HISTSIZE
 
 # emacs GUI version use chinese pinyin input method

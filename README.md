@@ -29,6 +29,16 @@ $ fc-cache -vf
 ### neovim ###
 + https://github.com/neovim/neovim
 
+### lua ###
+
+```sh
+wget https://www.lua.org/ftp/lua-5.3.5.tar.gz
+tar zxvf lua-5.3.5.tar.gz
+cd lua-5.3.5
+make linux
+sudo make linux install
+```
+
 ### tmux ###
 + https://github.com/tmux/tmux
 + https://github.com/tmux-plugins/tpm
