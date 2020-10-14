@@ -81,7 +81,8 @@ plugins=(
     autojump
     zsh-autosuggestions
     zsh-syntax-highlighting
-    kubectl)
+    # kubectl
+)
 
 # User configuration
 
