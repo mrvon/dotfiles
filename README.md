@@ -68,6 +68,7 @@ set noexpandtab | %retab! # replace space with tab (no expand tab)
 z<CR>                     # scroll
 zR                        # open all folding
 %bw                       # wipe out all buffer
+gf, gF                    # go to file under cursor
 
 history | vim -           # read from stdin
 vim --startuptime profile # profile startup time
