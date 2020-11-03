@@ -186,6 +186,11 @@ set completeopt                                             -=preview
 set nobackup
 set nowritebackup
 
+"-------------------------------UPDATE TIME------------------------------------
+" having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime                                              =300
+
 "-------------------------------Visual Paste Without Overwriting Register------
 xnoremap <expr> p 'pgv"'.v:register.'y`>'
 xnoremap <expr> P 'Pgv"'.v:register.'y`>'
@@ -291,6 +296,8 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+" Find symbol of current document.
+nnoremap <silent><nowait> <leader>o                         :<C-u>CocList outline<cr>
 "-----------------------------------------Whitespace---------------------------
 let g:strip_whitespace_confirm                              =0
 "-----------------------------------------Startify-----------------------------
