@@ -22,7 +22,7 @@ $ fc-cache -vf
 
 ### shell ###
 + https://github.com/robbyrussell/oh-my-zsh
-+ https://github.com/bhilburn/powerlevel9k
++ https://github.com/romkatv/powerlevel10k
 + https://github.com/zsh-users/zsh-autosuggestions
 + https://github.com/zsh-users/zsh-syntax-highlighting
 
