@@ -35,6 +35,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
 Plug 'Raimondi/delimitMate'
+Plug 'jsfaint/gen_tags.vim'
 " Plug 'christoomey/vim-tmux-navigator'
 " Plug 'mattn/emmet-vim', {'for': 'html'}
 " Plug 'nathanaelkane/vim-indent-guides'
@@ -216,7 +217,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 "-------------------------------NERDTree---------------------------------------
-nnoremap <leader>n                                          :NERDTreeToggle<cr>
+nnoremap <localleader>n                                     :NERDTreeToggle<cr>
 let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
@@ -260,7 +261,7 @@ let g:solarized_menu                                        =1
 let g:indent_guides_enable_on_vim_startup                   =1
 let g:indent_guides_default_mapping                         =0
 "-----------------------------------------TagBar-------------------------------
-nnoremap <leader>t                                          :TagbarToggle<cr>
+nnoremap <localleader>t                                     :TagbarToggle<cr>
 "-----------------------------------------Matchup------------------------------
 let g:matchup_matchparen_status_offscreen                   =0
 "-----------------------------------------Vim-Go--------------------------------
@@ -296,8 +297,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-" Find symbol of current document.
-nnoremap <silent><nowait> <leader>o                         :<C-u>CocList outline<cr>
 "-----------------------------------------Whitespace---------------------------
 let g:strip_whitespace_confirm                              =0
 "-----------------------------------------Startify-----------------------------
@@ -319,6 +318,8 @@ xmap ga <Plug>(EasyAlign)
 nnoremap <leader>f                                          :Files<cr>
 nnoremap <leader>b                                          :Buffer<cr>
 nnoremap <leader>r                                          :History<cr>
+nnoremap <leader>t                                          :BTags<cr>
+nnoremap <leader>o                                          :Tags<cr>
 let g:fzf_colors                                            ={
     \ 'fg':      ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
@@ -339,6 +340,9 @@ let g:fzf_layout                                            ={
     \ }
 "-----------------------------------------EMMET--------------------------------
 let g:user_emmet_leader_key                                 =','
+"-----------------------------------------GenTags------------------------------
+let g:loaded_gentags#gtags                                  =1
+let g:gen_tags#ctags_opts                                   =['--exclude=.ccls-cache']
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, this excellent idea came from steve.
