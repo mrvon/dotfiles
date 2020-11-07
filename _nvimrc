@@ -342,7 +342,10 @@ let g:fzf_layout                                            ={
 let g:user_emmet_leader_key                                 =','
 "-----------------------------------------GenTags------------------------------
 let g:loaded_gentags#gtags                                  =1
-let g:gen_tags#ctags_opts                                   =['--exclude=.ccls-cache']
+let g:gen_tags#ctags_opts                                   =[
+            \ '--exclude=.ccls-cache',
+            \ '--exclude=build',
+            \ ]
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, this excellent idea came from steve.
