@@ -39,6 +39,15 @@ make linux
 sudo make linux install
 ```
 
+### universal ctags ###
+
+```sh
+git clone https://github.com/universal-ctags/ctags ctags_build
+cd ctags_build && ./autogen.sh && ./configure
+make
+sudo make install
+```
+
 ### tmux ###
 + https://github.com/tmux/tmux
 + https://github.com/tmux-plugins/tpm
