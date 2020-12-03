@@ -81,6 +81,7 @@ gf, gF                    # go to file under cursor
 
 history | vim -           # read from stdin
 vim --startuptime profile # profile startup time
+git remote prune origin   # deletes all stale remote-tracking branches
 
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
