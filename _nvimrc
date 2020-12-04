@@ -140,7 +140,7 @@ set smartcase
 "-------------------------------Long line--------------------------------------
 " Always notice you do not write a long line
 " Auto break a line
-set textwidth                                               =80
+" set textwidth                                             =200
 " Show the long line range
 set colorcolumn                                             =+1
 
