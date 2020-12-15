@@ -241,6 +241,7 @@ let g:ale_linters                                           ={
     \ }
 let g:ale_fixers                                            ={'python': ['yapf']}
 let g:ale_go_staticcheck_lint_package                       =1
+let g:ale_go_govet_options                                  ="-composites=false"
 if $TERMINAL_COLOR == "dark"
     let g:ale_set_highlights                                =0
 else
