@@ -7,7 +7,10 @@
         "golang": {
             "command": "gopls",
             "rootPatterns": ["go.mod"],
-            "filetypes": ["go"]
+            "filetypes": ["go"],
+            "initializationOptions": {
+                "analyses": {"composites": false}
+            }
         },
         "ccls": {
             "command": "ccls",
@@ -27,5 +30,5 @@
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
-    "coc.preferences.diagnostic.displayByAle": true
+    "diagnostic.displayByAle": true
 }
