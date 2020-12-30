@@ -25,12 +25,12 @@ Plug 'mrvon/vim-go', {'do': ':GoInstallBinaries', 'for': 'go'}
 Plug 'mrvon/vim-tomorrow-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
@@ -221,15 +221,6 @@ nnoremap <localleader>n                                     :NERDTreeToggle<cr>
 let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
-"-------------------------------NERDCommenter----------------------------------
-let g:NERDCreateDefaultMappings                             =0
-let g:NERDSpaceDelims                                       =1
-let g:NERDAltDelims_asm                                     =1
-" double space issue workaround
-let g:NERDCustomDelimiters                                  ={'python': {'left': '#'}}
-map <leader>cc                                              <plug>NERDCommenterAlignLeft
-map <leader>cs                                              <plug>NERDCommenterSexy
-map <leader>cu                                              <plug>NERDCommenterUncomment
 "-------------------------------ALE--------------------------------------------
 let g:ale_completion_enabled                                =0
 let g:ale_lint_on_text_changed                              ='never'
