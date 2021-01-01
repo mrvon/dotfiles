@@ -125,8 +125,8 @@ setopt HIST_VERIFY
 HISTSIZE=100000
 SAVEHIST=$HISTSIZE
 
-# emacs GUI version use chinese pinyin input method
-# LC_CTYPE=zh_CN.UTF-8
+# ls colors
+export LS_COLORS="ow=01;36;40"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.proxy_config ] && source ~/.proxy_config
