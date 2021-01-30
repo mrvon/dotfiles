@@ -5,6 +5,7 @@
     editor = nvim -f
 [diff]
     tool = vimdiff
+	submodule = log
 [difftool]
     prompt = false
 [difftool "vimdiff"]
@@ -15,3 +16,5 @@
     prompt = false
 [mergetool "vimdiff"]
     cmd = nvim -d "$LOCAL" "$MERGED" "$REMOTE" -c '2wincmd w'
+[push]
+	recurseSubmodules = check
