@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# cvt 3840 2160 60
+#
+# 3840x2160 59.98 Hz (CVT 8.29M9) hsync: 134.18 kHz; pclk: 712.75 MHz
+# Modeline "3840x2160_60.00"  712.75  3840 4160 4576 5312  2160 2163 2168 2237 -hsync +vsync
+
+# xrandr --query
+
+xrandr --newmode "3840x2160_60.00"  712.75  3840 4160 4576 5312  2160 2163 2168 2237 -hsync +vsync
+xrandr --addmode Virtual1 3840x2160_60.00
