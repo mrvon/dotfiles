@@ -21,7 +21,7 @@ Plug 'mhinz/vim-signify', {'branch': 'master'}
 Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
-Plug 'mrvon/vim-go', {'do': ':GoInstallBinaries'}
+Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plug 'mrvon/vim-tomorrow-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
