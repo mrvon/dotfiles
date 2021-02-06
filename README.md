@@ -29,6 +29,10 @@ $ fc-cache -vf
 ### neovim ###
 + https://github.com/neovim/neovim
 
+:CocInstall coc-tsserver
+:CocInstall coc-python
+:CocInstall coc-json
+
 ### lua ###
 
 ```sh
@@ -37,6 +41,20 @@ tar zxvf lua-5.3.5.tar.gz
 cd lua-5.3.5
 make linux
 sudo make linux install
+```
+
+### npm ###
+
+```sh
+sudo apt install nodejs
+sudo apt install npm
+npm config set registry https://registry.npm.taobao.org
+```
+
+### gem ###
+
+```sh
+sudo apt install ruby-dev
 ```
 
 ### universal ctags ###
