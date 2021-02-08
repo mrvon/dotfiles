@@ -32,6 +32,7 @@ $ fc-cache -vf
 :CocInstall coc-tsserver
 :CocInstall coc-python
 :CocInstall coc-json
+:CocInstall coc-html
 
 ### lua ###
 
