@@ -11,8 +11,13 @@ esac
 DOTFILES_SCRIPT=~/dotfiles/script
 export PATH=$DOTFILES_SCRIPT:$PATH
 
+# Golang
 export GOROOT=$HOME/go_build
 export GOPATH=~/go
 export PATH=$GOROOT/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
 export GO111MODULE=auto
+
+# Yarn
+YARN_PATH=~/.config/yarn/global/node_modules/.bin
+export PATH=$YARN_PATH:$PATH
