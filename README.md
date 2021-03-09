@@ -98,6 +98,7 @@ zR                        # open all folding
 %bw                       # wipe out all buffer
 gf, gF                    # go to file under cursor
 
+vim --clean               # skips initializations from files and environment variables
 history | vim -           # read from stdin
 vim --startuptime profile # profile startup time
 git remote prune origin   # deletes all stale remote-tracking branches
