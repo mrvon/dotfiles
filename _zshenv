@@ -21,3 +21,6 @@ export GO111MODULE=auto
 # Yarn
 YARN_PATH=~/.config/yarn/global/node_modules/.bin
 export PATH=$YARN_PATH:$PATH
+
+# Rust
+export PATH=$HOME/.cargo/bin:$PATH

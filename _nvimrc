@@ -230,7 +230,10 @@ let g:ale_linters                                           ={
     \ 'asm': [],
     \ 'go': ['go vet', 'gofmt', 'staticcheck'],
     \ }
-let g:ale_fixers                                            ={'python': ['yapf']}
+let g:ale_fixers                                            ={
+    \ 'python': ['yapf'],
+    \ 'rust': ['rustfmt'],
+    \ }
 let g:ale_go_staticcheck_lint_package                       =1
 let g:ale_go_govet_options                                  ="-composites=false"
 if $TERMINAL_COLOR == "dark"
