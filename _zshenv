@@ -16,11 +16,11 @@ export GOROOT=$HOME/go_build
 export GOPATH=~/go
 export PATH=$GOROOT/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
-export GO111MODULE=auto
-
-# Yarn
-YARN_PATH=~/.config/yarn/global/node_modules/.bin
-export PATH=$YARN_PATH:$PATH
+export GO111MODULE=on
 
 # Rust
 export PATH=$HOME/.cargo/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

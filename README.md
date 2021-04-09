@@ -47,8 +47,9 @@ sudo make linux install
 ### npm ###
 
 ```sh
-sudo apt install nodejs
-sudo apt install npm
+https://github.com/nvm-sh/nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+nvm install node
 npm config set registry https://registry.npm.taobao.org
 ```
 
