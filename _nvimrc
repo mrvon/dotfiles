@@ -36,8 +36,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
 Plug 'Raimondi/delimitMate'
 Plug 'jsfaint/gen_tags.vim'
+Plug 'mattn/emmet-vim', {'for': 'html'}
 " Plug 'christoomey/vim-tmux-navigator'
-" Plug 'mattn/emmet-vim', {'for': 'html'}
 " Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'edkolev/tmuxline.vim'
 " Plug 'ap/vim-css-color'
@@ -333,8 +333,6 @@ let g:fzf_colors                                            ={
 let g:fzf_layout                                            ={
     \ 'window': { 'width': 0.9, 'height': 0.6 }
     \ }
-"-----------------------------------------EMMET--------------------------------
-let g:user_emmet_leader_key                                 =','
 "-----------------------------------------GenTags------------------------------
 let g:loaded_gentags#gtags                                  =1
 let g:gen_tags#ctags_opts                                   =[
