@@ -36,7 +36,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
 Plug 'Raimondi/delimitMate'
 Plug 'jsfaint/gen_tags.vim'
-Plug 'mattn/emmet-vim', {'for': 'html'}
+Plug 'mattn/emmet-vim', {'for': ['html', 'vue']}
+Plug 'leafOfTree/vim-vue-plugin', {'for': 'vue'}
 " Plug 'christoomey/vim-tmux-navigator'
 " Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'edkolev/tmuxline.vim'
@@ -405,6 +406,7 @@ augroup filetype_vim
     autocmd!
     autocmd                                                 FileType vim setlocal foldmethod=marker
     autocmd                                                 FileType html setlocal tabstop=2 shiftwidth=2
+    autocmd                                                 FileType vue setlocal tabstop=2 shiftwidth=2
     autocmd                                                 FileType javascript setlocal tabstop=2 shiftwidth=2
 augroup END
 
