@@ -103,6 +103,7 @@ vim --clean               # skips initializations from files and environment var
 history | vim -           # read from stdin
 vim --startuptime profile # profile startup time
 git remote prune origin   # deletes all stale remote-tracking branches
+ctrl+a z                  # tmux zoom in / zoom out
 
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
