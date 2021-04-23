@@ -129,6 +129,8 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
+setopt IGNORE_EOF                # Ignore CTRL+D
+
 # ls colors
 export LS_COLORS="ow=01;36;40"
 
