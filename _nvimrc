@@ -338,10 +338,11 @@ let g:fzf_layout                                            ={
     \ }
 "-----------------------------------------GenTags------------------------------
 let g:loaded_gentags#gtags                                  =1
-let g:gen_tags#ctags_opts                                   =[
-            \ '--exclude=.ccls-cache',
-            \ '--exclude=build',
-            \ ]
+" let g:gen_tags#ctags_opts                                   =[
+"             \ '--exclude=.ccls-cache',
+"             \ '--exclude=build',
+"             \ ]
+" $HOME/.config/ctags/my.ctags
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, this excellent idea came from steve.
