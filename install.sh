@@ -3,6 +3,7 @@
 # link
 ln -f -s ~/dotfiles/_zshenv ~/.zshenv
 ln -f -s ~/dotfiles/_zshrc ~/.zshrc
+mkdir -p ~/.config/nvim
 ln -f -s ~/dotfiles/_nvimrc ~/.config/nvim/init.vim
 ln -f -s ~/dotfiles/_tmux.conf ~/.tmux.conf
 ln -f -s ~/dotfiles/_gitconfig ~/.gitconfig
@@ -17,6 +18,8 @@ mkdir -p ~/.subversion
 ln -f -s ~/dotfiles/_svn_config ~/.subversion/config
 ln -f -s ~/dotfiles/_proxy_config ~/.proxy_config
 # ln -f -s ~/dotfiles/_ssh_config ~/.ssh/config
+mkdir -p ~/.config/ctags
+ln -f -s ~/dotfiles/_ctags ~/.config/ctags/my.ctags
 
 # dependecy
 # sudo apt install -y xclip
