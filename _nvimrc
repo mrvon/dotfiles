@@ -338,7 +338,10 @@ let g:fzf_layout                                            ={
     \ }
 "-----------------------------------------GenTags------------------------------
 let g:loaded_gentags#gtags                                  =1
-" let g:gen_tags#ctags_opts                                   =[
+let g:loaded_gentags#ctags                                  =0
+let g:gen_tags#gtags_auto_gen                               =0
+let g:gen_tags#ctags_auto_gen                               =0
+" let g:gen_tags#ctags_opts                                 =[
 "             \ '--exclude=.ccls-cache',
 "             \ '--exclude=build',
 "             \ ]
