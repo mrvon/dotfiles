@@ -318,6 +318,8 @@ nnoremap <leader>b                                          :Buffer<cr>
 nnoremap <leader>r                                          :History<cr>
 nnoremap <leader>t                                          :BTags<cr>
 nnoremap <leader>o                                          :Tags<cr>
+nnoremap <leader>g                                          :Ag<cr>
+" nnoremap <leader>g                                        :Rg<cr>
 let g:fzf_colors                                            ={
     \ 'fg':      ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
