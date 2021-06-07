@@ -214,6 +214,7 @@ let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 let g:airline#extensions#whitespace#checks                  =[]
 let g:airline#extensions#ale#enabled                        =1
 let g:airline#extensions#tagbar#enabled                     =0
+let g:airline#extensions#coc#enabled                        =0
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
