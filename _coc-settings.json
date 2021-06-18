@@ -4,6 +4,14 @@
             "command": "lua-lsp",
             "filetypes": ["lua"]
         },
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod"],
+            "filetypes": ["go"],
+            "initializationOptions": {
+                "analyses": {"composites": false}
+            }
+        },
         "ccls": {
             "command": "ccls",
             "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
