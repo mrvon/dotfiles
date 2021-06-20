@@ -104,6 +104,7 @@ history | vim -           # read from stdin
 vim --startuptime profile # profile startup time
 git remote prune origin   # deletes all stale remote-tracking branches
 ctrl+a z                  # tmux zoom in / zoom out
+stty sane                 # make your tty sane
 
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
