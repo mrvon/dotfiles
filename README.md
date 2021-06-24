@@ -105,6 +105,9 @@ vim --startuptime profile # profile startup time
 git remote prune origin   # deletes all stale remote-tracking branches
 ctrl+a z                  # tmux zoom in / zoom out
 stty sane                 # make your tty sane
+ctrl+x ctrl+e             # edit command line in $EDITOR
+ctrl+k / ctrl+u / ctrl+w  # command line cut
+ctrl+y                    # command line yank
 
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
