@@ -366,7 +366,7 @@ let g:gen_tags#ctags_auto_update                            =0
 "             \ ]
 " $HOME/.config/ctags/my.ctags
 "-----------------------------------------Maximize-----------------------------
-let g:maximizer_default_mapping_key                         ='<leader><leader>'
+nnoremap <silent><leader>z                                  :MaximizerToggle<CR>
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, this excellent idea came from steve.
@@ -400,7 +400,7 @@ augroup END
 
 " edit the alternate file.
 " mostly the alternate file is the previously edited file.
-" nnoremap <leader><leader>                                 <c-^>
+nnoremap <leader><leader>                                   <c-^>
 
 " edit my vimrc
 nnoremap <leader>ev                                         :vsplit $MYINIT<cr>
