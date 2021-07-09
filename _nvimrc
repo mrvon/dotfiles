@@ -115,7 +115,6 @@ set nolazyredraw
 
 "-------------------------------Display Line Number----------------------------
 set number
-set relativenumber
 
 "-------------------------------Show Matching Bracets--------------------------
 set showmatch
