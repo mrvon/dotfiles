@@ -197,6 +197,11 @@ set updatetime                                              =300
 "-------------------------------WIN MIN HEIGHT---------------------------------
 set winminheight                                            =0
 
+"-------------------------------SIGN COLUMN------------------------------------
+if has("nvim-0.5.0")
+    set signcolumn                                          =number
+endif
+
 "-------------------------------Visual Paste Without Overwriting Register------
 xnoremap <expr> p 'pgv"'.v:register.'y`>'
 xnoremap <expr> P 'Pgv"'.v:register.'y`>'
