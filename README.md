@@ -98,6 +98,7 @@ z<CR>                     # scroll
 zR                        # open all folding
 %bw                       # wipe out all buffer
 gf, gF                    # go to file under cursor
+gq                        # format the lines by textwidth
 
 vim --clean               # skips initializations from files and environment variables
 history | vim -           # read from stdin
