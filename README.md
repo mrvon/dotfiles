@@ -94,12 +94,8 @@ set ff=unix               # change line break to unix style
 e ++enc=cp936             # open file with specific encoding (for instance, cp936)
 set expandtab | %retab!   # replace tab with space (expand tab)
 set noexpandtab | %retab! # replace space with tab (no expand tab)
-z<CR>                     # scroll
-zR                        # open all folding
 %bw                       # wipe out all buffer
 gf, gF                    # go to file under cursor
-gq                        # format the lines by textwidth
-
 vim --clean               # skips initializations from files and environment variables
 history | vim -           # read from stdin
 vim --startuptime profile # profile startup time
@@ -111,6 +107,10 @@ ctrl+x ctrl+e             # edit command line in $EDITOR
 ctrl+k / ctrl+u / ctrl+w  # command line cut
 ctrl+y                    # command line yank
 less +F                   # ctrl+c, shift+f, q to quit, use it instead of tail -f
+zR                        # open all folding
+za                        # toggle folding
+zf                        # create folding, zfva{
+gq                        # format the lines by textwidth
 
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
