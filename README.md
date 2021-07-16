@@ -109,7 +109,7 @@ ctrl+y                    # command line yank
 less +F                   # ctrl+c, shift+f, q to quit, use it instead of tail -f
 zR                        # open all folding
 za                        # toggle folding
-zf                        # create folding, zfva{
+zf                        # create folding, zfa{
 gq                        # format the lines by textwidth
 
 # disable keyboard in mac
