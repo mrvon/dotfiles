@@ -20,6 +20,7 @@ ln -f -s ~/dotfiles/_proxy_config ~/.proxy_config
 # ln -f -s ~/dotfiles/_ssh_config ~/.ssh/config
 mkdir -p ~/.config/ctags
 ln -f -s ~/dotfiles/_ctags ~/.config/ctags/my.ctags
+ln -f -s ~/dotfiles/_xprofile ~/.xprofile
 
 # dependecy
 # sudo apt install -y xclip
