@@ -62,7 +62,7 @@ diff-cmd = svn_diff.py
 ###   This will override the compile-time default, which is to use
 ###   Subversion's internal diff3 implementation.
 # diff3-cmd = diff3_program (diff3, gdiff3, etc.)
-diff3-cmd = svn_diff3.py
+# diff3-cmd = svn_diff3.py
 ### Set diff3-has-program-arg to 'yes' if your 'diff3' program
 ###   accepts the '--diff-program' option.
 # diff3-has-program-arg = [yes | no]
