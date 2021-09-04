@@ -379,10 +379,6 @@ inoremap jk                                                 <esc>
 tnoremap jk                                                 <c-\><c-n>
 inoremap JK                                                 <esc>
 tnoremap JK                                                 <c-\><c-n>
-inoremap kj                                                 <esc>
-tnoremap kj                                                 <c-\><c-n>
-inoremap KJ                                                 <esc>
-tnoremap KJ                                                 <c-\><c-n>
 tnoremap <expr> <c-r>                                       '<c-\><c-n>"'.nr2char(getchar()).''
 "-----------------------------------------Resize windows-----------------------
 " nnoremap <up>                                             <c-w>3+
