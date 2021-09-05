@@ -1,4 +1,15 @@
 {
+    "diagnostic.displayByAle": false,
+    "diagnostic.enableSign": false,
+    "diagnostic.messageTarget": "echo",
+    "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly":true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "suggest.enablePreselect": false,
+    "suggest.noselect": true,
+    "vetur.ignoreProjectWarning": true,
     "languageserver": {
         "lua": {
             "command": "lua-lsp",
@@ -22,14 +33,5 @@
                 }
             }
         }
-    },
-    "suggest.noselect": true,
-    "suggest.enablePreselect": false,
-    "diagnostic.enableSign": false,
-    "diagnostic.messageTarget": "echo",
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.enabled": true,
-    "diagnostic.displayByAle": false,
-    "vetur.ignoreProjectWarning": true
+    }
 }
