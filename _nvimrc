@@ -67,7 +67,7 @@ colorscheme $MYCOLOR
 set encoding                                                =utf-8
 set termencoding                                            =utf-8
 set fileencoding                                            =utf-8
-set fileencodings                                           =utf-8
+set fileencodings                                           =ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1
 set langmenu                                                =en_US.utf-8
 set fileformats                                             =unix,dos,mac
 language messages                                           en_US.utf-8
