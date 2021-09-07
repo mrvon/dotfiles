@@ -198,7 +198,7 @@ set updatetime                                              =300
 set winminheight                                            =0
 
 "-------------------------------TIMEOUT LEN------------------------------------
-set timeoutlen                                              =300
+set timeoutlen                                              =500
 
 "-------------------------------SIGN COLUMN------------------------------------
 if has("nvim-0.5.0")
