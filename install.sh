@@ -21,6 +21,8 @@ ln -f -s ~/dotfiles/_proxy_config ~/.proxy_config
 mkdir -p ~/.config/ctags
 ln -f -s ~/dotfiles/_ctags ~/.config/ctags/my.ctags
 ln -f -s ~/dotfiles/_xprofile ~/.xprofile
+ln -f -s ~/dotfiles/_gdbinit ~/.gdbinit
+wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
 
 # dependecy
 # sudo apt install -y xclip
