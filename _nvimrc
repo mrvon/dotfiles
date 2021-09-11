@@ -534,6 +534,8 @@ vnoremap <localleader>v                                     :call __VisualSelect
 " move by line
 nnoremap j                                                  gj
 nnoremap k                                                  gk
+vnoremap j                                                  gj
+vnoremap k                                                  gk
 
 " get highlight group of cursor word
 function! SynStack()
