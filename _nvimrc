@@ -209,6 +209,8 @@ endif
 xnoremap <expr> p 'pgv"'.v:register.'y`>'
 xnoremap <expr> P 'Pgv"'.v:register.'y`>'
 
+"-------------------------------Commentary-------------------------------------
+autocmd FileType asm setlocal commentstring=;\ %s
 "-------------------------------Airline----------------------------------------
 let g:airline_theme                                         =$MYAIR
 let g:airline_detect_modified                               =1
