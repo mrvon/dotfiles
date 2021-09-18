@@ -15,6 +15,6 @@
 [mergetool]
     prompt = false
 [mergetool "vimdiff"]
-    cmd = nvim -d "$BASE" "$LOCAL" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
+    cmd = nvim -d "$LOCAL" "$MERGED" "$REMOTE" -c '2wincmd w'
 [push]
 	recurseSubmodules = check
