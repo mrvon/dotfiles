@@ -398,12 +398,10 @@ nnoremap <c-j>                                              <c-w>j
 nnoremap <c-h>                                              <c-w>h
 nnoremap <c-l>                                              <c-w>l
 
-" Does not indent when I input "else" in some filetype. That's a problem in Vim.
+" Does not indent when I input "else" in some filetype
 " Quickly Auto Indent When leave insert mode
 function! QuicklyAutoIndent()
-    let l:cursor_position = getpos(".")
     normal! ==
-    call setpos(".", l:cursor_position)
 endfunction
 augroup quickly_indent
     autocmd!
