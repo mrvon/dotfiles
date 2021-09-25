@@ -1,3 +1,6 @@
+# disable XON/XOFF, for i-search
+stty -ixon
+
 # Path
 case `uname` in
     Linux)
