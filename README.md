@@ -111,6 +111,8 @@ zR                        # open all folding
 za                        # toggle folding
 zf                        # create folding, zfa{
 gq                        # format the lines by textwidth
+ctrl+r                    # reverse-i-search, ctrl+r to next, ctrl+g to cancel
+ctrl+s                    # i-search, ctrl+s to next, ctrl+g to cancel
 
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
