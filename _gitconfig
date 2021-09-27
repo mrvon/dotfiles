@@ -14,6 +14,7 @@
     tool = vimdiff
 [mergetool]
     prompt = false
+	keepBackup = false
 [mergetool "vimdiff"]
     cmd = nvim -d "$LOCAL" "$MERGED" "$REMOTE" -c '2wincmd w'
 [push]
