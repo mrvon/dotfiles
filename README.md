@@ -107,9 +107,10 @@ ctrl+x ctrl+e             # edit command line in $EDITOR
 ctrl+k / ctrl+u / ctrl+w  # command line cut
 ctrl+y                    # command line yank
 less +F                   # ctrl+c, shift+f, q to quit, use it instead of tail -f
+zf                        # create folding, zfa{
+zf%                       # create folding with %
 zR                        # open all folding
 za                        # toggle folding
-zf                        # create folding, zfa{
 gq                        # format the lines by textwidth
 ctrl+r                    # reverse-i-search, ctrl+r to next, ctrl+g to cancel
 ctrl+s                    # i-search, ctrl+s to next, ctrl+g to cancel
