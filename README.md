@@ -19,6 +19,7 @@ $ fc-cache -vf
 + https://github.com/git/git
 + https://github.com/luarocks/luarocks
 + https://github.com/mpeterv/luacheck
++ https://github.com/sharkdp/fd
 
 ### shell ###
 + https://github.com/robbyrussell/oh-my-zsh
