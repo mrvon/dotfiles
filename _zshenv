@@ -1,5 +1,5 @@
 # disable XON/XOFF, for i-search
-stty -ixon
+[[ $- == *i* ]] && stty -ixon
 
 # Path
 case `uname` in
