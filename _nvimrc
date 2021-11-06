@@ -436,6 +436,7 @@ augroup filetype_vim
     autocmd                                                 FileType html setlocal tabstop=2 shiftwidth=2
     autocmd                                                 FileType vue setlocal tabstop=2 shiftwidth=2
     autocmd                                                 FileType javascript setlocal tabstop=2 shiftwidth=2
+    autocmd                                                 FileType rust let delimitMate_quotes = "\" `"
 augroup END
 
 " Closing last search highlight
