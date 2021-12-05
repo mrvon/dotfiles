@@ -2,6 +2,10 @@
 [[ $- == *i* ]] && stty -ixon
 
 # Path
+DOTFILES_SCRIPT=~/dotfiles/script
+export PATH=$DOTFILES_SCRIPT:$PATH
+
+# Golang
 case `uname` in
     Linux)
         export GOROOT_BOOTSTRAP=/usr/local/go-1.6
@@ -10,11 +14,6 @@ case `uname` in
         export GOROOT_BOOTSTRAP=/usr/local/go
     ;;
 esac
-
-DOTFILES_SCRIPT=~/dotfiles/script
-export PATH=$DOTFILES_SCRIPT:$PATH
-
-# Golang
 export GOROOT=$HOME/go_build
 export GOPATH=~/go
 export PATH=$GOROOT/bin:$PATH
