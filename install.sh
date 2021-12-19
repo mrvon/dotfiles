@@ -23,6 +23,7 @@ ln -f -s ~/dotfiles/_ctags ~/.config/ctags/my.ctags
 ln -f -s ~/dotfiles/_xprofile ~/.xprofile
 ln -f -s ~/dotfiles/_gdbinit ~/.gdbinit
 wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
+ln -f -s ~/dotfiles/_inputrc ~/.inputrc
 
 # dependecy
 # sudo apt install -y xclip
