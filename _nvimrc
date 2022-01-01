@@ -1,7 +1,12 @@
 "-------------------------------Path-------------------------------------------
 let $MYPATH                                                 ='~/'
+if has('win32') || has('win64')
+let $MYINIT                                                 =$MYPATH.'AppData\Local\nvim\init.vim'
+let $MYPLUG                                                 =$MYPATH.'AppData\Local\nvim-data\site\autoload'
+else
 let $MYINIT                                                 =$MYPATH.'.config/nvim/init.vim'
 let $MYPLUG                                                 =$MYPATH.'.local/share/nvim/plugged'
+endif
 
 "-------------------------------Leader Key-------------------------------------
 let mapleader                                               =" "
