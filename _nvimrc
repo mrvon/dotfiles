@@ -53,14 +53,14 @@ filetype plugin indent on
 syntax enable
 
 "-------------------------------My Color My Taste------------------------------
-if $TERMINAL_COLOR == "dark"
-    set background                                          =dark
-    let $MYCOLOR                                            ='gruvbox'
-    let $MYAIR                                              ='gruvbox'
-else
+if $TERMINAL_COLOR == "light"
     set background                                          =light
     let $MYCOLOR                                            ='Tomorrow'
     let $MYAIR                                              ='tomorrow'
+else
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
 endif
 let $MYITALIC                                               =1
 colorscheme $MYCOLOR
@@ -255,10 +255,10 @@ let g:ale_fixers                                            ={
     \ }
 let g:ale_go_staticcheck_lint_package                       =1
 let g:ale_go_govet_options                                  ="-composites=false"
-if $TERMINAL_COLOR == "dark"
-    let g:ale_set_highlights                                =0
-else
+if $TERMINAL_COLOR == "light"
     let g:ale_set_highlights                                =1
+else
+    let g:ale_set_highlights                                =0
 endif
 "-----------------------------------------Solarized----------------------------
 let g:solarized_termcolors                                  =256
