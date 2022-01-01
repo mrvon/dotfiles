@@ -124,3 +124,25 @@ rlwrap -m nc              # enable ctrl-x ctrl-e in rlwrap
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
 sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
 ```
+
+### install for windows ###
+
+Powershell
+```
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+```
+
+Git Bash
+```
+mkdir -p ~/AppData/Local/nvim
+ln -f -s ~/dotfiles/_nvimrc ~/AppData/Local/nvim/init.vim
+ln -f -s ~/dotfiles/_gnvimrc ~/AppData/Local/nvim/ginit.vim
+```
+
+```
+choco install neovim
+choco install ripgrep
+choco install ag
+choco install universal-ctags
+```
