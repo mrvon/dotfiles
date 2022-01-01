@@ -1,6 +1,7 @@
 "-------------------------------Path-------------------------------------------
 let $MYPATH                                                 ='~/'
 let $MYINIT                                                 =$MYPATH.'.config/nvim/init.vim'
+let $MYPLUG                                                 =$MYPATH.'.local/share/nvim/plugged'
 
 "-------------------------------Leader Key-------------------------------------
 let mapleader                                               =" "
@@ -11,7 +12,7 @@ if &compatible
     set nocompatible
 endif
 
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin($MYPLUG)
 Plug 'Raimondi/delimitMate'
 Plug 'andymass/vim-matchup'
 Plug 'christoomey/vim-tmux-navigator'
