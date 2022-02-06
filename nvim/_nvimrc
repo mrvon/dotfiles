@@ -8,10 +8,6 @@ let $MYINIT                                                 =$MYPATH.'.config/nv
 let $MYPLUG                                                 =$MYPATH.'.local/share/nvim/plugged'
 endif
 
-"-------------------------------Leader Key-------------------------------------
-let mapleader                                               =" "
-let maplocalleader                                          =","
-
 "-------------------------------Plugin Package Manager-------------------------
 if &compatible
     set nocompatible
@@ -82,100 +78,6 @@ language messages                                           en_US.utf-8
 
 " Vim in tmux, clearing uses the current background color
 set t_ut=
-
-"-------------------------------Tab Key----------------------------------------
-set shiftwidth                                              =4
-set tabstop                                                 =4
-set softtabstop                                             =0
-set shiftround
-set expandtab
-set backspace                                               =indent,eol,start
-set autoindent
-set smartindent
-set printoptions                                            =paper:a4
-
-"-------------------------------Max History Item-------------------------------
-set history                                                 =10000
-
-"-------------------------------Ruler And Statusline---------------------------
-set noruler
-set laststatus                                              =2
-set scrolloff                                               =5
-
-"-------------------------------Magic------------------------------------------
-set magic
-
-"-------------------------------Memory Limit Problem---------------------------
-" set maxmempattern                                         =1000
-
-"-------------------------------Share Clipboard -------------------------------
-set clipboard                                               +=unnamed
-set clipboard                                               +=unnamedplus
-
-"-------------------------------Line Space-------------------------------------
-set linespace                                               =0
-
-"-------------------------------Highlight Line Under The Cursor----------------
-set cursorline
-set guicursor                                               =n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
-
-"-------------------------------Lazy Redraw------------------------------------
-set nolazyredraw
-
-"-------------------------------Display Line Number----------------------------
-set number
-
-"-------------------------------Show Matching Bracets--------------------------
-set showmatch
-
-"-------------------------------Highlight Search-------------------------------
-" hightlights search results
-set hlsearch
-" shows search matches as you type
-set incsearch
-
-"-------------------------------Wrap Long Line---------------------------------
-set nowrap
-"set linebreak
-
-"-------------------------------Wrap Scan--------------------------------------
-set wrapscan
-
-"-------------------------------Ignore Case And Smart Case---------------------
-" if all lowercase, ignore case
-set ignorecase
-" if caps, watch case
-set smartcase
-
-"-------------------------------Long line--------------------------------------
-" Always notice you do not write a long line
-" Auto break a line
-" set textwidth                                             =200
-" Show the long line range
-set colorcolumn                                             =+1
-
-"-------------------------------Command Wild Menu------------------------------
-" You can use Ctrl-d to show wild list
-set wildmenu
-
-"-------------------------------gf Search Path---------------------------------
-" Search path for gf command
-set path                                                    =.,..,,
-
-"-------------------------------Do Not Use Undofile----------------------------
-set noundofile
-
-"-------------------------------Allow To bg Unsaved Buffer---------------------
-" I prefer use Ctrl-p Ctrl-f to list all buffer
-set hidden
-
-"-------------------------------Auto Read -------------------------------------
-" Auto read when other program have modified the same file
-set autoread
-autocmd FocusGained *                                       :checktime
-
-"-------------------------------Number Format----------------------------------
-set nrformats                                               =hex
 
 "-------------------------------Disable Fold-----------------------------------
 " I don't like vim style fold
