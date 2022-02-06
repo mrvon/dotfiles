@@ -1,12 +1,6 @@
 local map = vim.api.nvim_set_keymap
 local cmd = vim.cmd
 
---[[
--------------------------------Visual Paste Without Overwriting Register------
-xnoremap <expr> p 'pgv"'.v:register.'y`>'
-xnoremap <expr> P 'Pgv"'.v:register.'y`>'
-]]
-
 local noremap = {noremap = true}
 
 -- leader keys
@@ -14,6 +8,10 @@ map("i", "jk", "<esc>", noremap)
 map("t", "jk", "<c-\\><c-n>", noremap)
 map("i", "JK", "<esc>", noremap)
 map("t", "JK", "<c-\\><c-n>", noremap)
+
+-- visual paste without overwritting register
+map("x", "p", [['pgv"'.v:register.'y`>']], {expr = true})
+map("x", "P", [['Pgv"'.v:register.'y`>']], {expr = true})
 
 -- when in terminal mode, escape will leave terminal mode and then it becomes
 -- like any other vim buffer and can be switched or deleted or whatever

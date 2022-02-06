@@ -50,9 +50,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'ap/vim-css-color'
 call plug#end()
 
-filetype plugin indent on
-syntax enable
-
 "-------------------------------My Color My Taste------------------------------
 if $TERMINAL_COLOR == "light"
     set background                                          =light
@@ -65,59 +62,6 @@ else
 endif
 let $MYITALIC                                               =1
 colorscheme $MYCOLOR
-
-"-------------------------------Encoding---------------------------------------
-" Always use utf-8
-set encoding                                                =utf-8
-set termencoding                                            =utf-8
-set fileencoding                                            =utf-8
-set fileencodings                                           =ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1
-set langmenu                                                =en_US.utf-8
-set fileformats                                             =unix,dos,mac
-language messages                                           en_US.utf-8
-
-" Vim in tmux, clearing uses the current background color
-set t_ut=
-
-"-------------------------------Disable Fold-----------------------------------
-" I don't like vim style fold
-set nofoldenable
-
-"-------------------------------Diff Mode--------------------------------------
-set diffopt                                                 =filler,vertical
-
-"-------------------------------Disable Swap file------------------------------
-set noswapfile
-
-"-------------------------------Disable preview window-------------------------
-set completeopt                                             -=preview
-
-"-------------------------------Shows The Effects Of A Command-----------------
-" set inccommand                                            =nosplit
-
-"-------------------------------NO BACKUP--------------------------------------
-set nobackup
-set nowritebackup
-
-"-------------------------------UPDATE TIME------------------------------------
-" having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime                                              =300
-
-"-------------------------------WIN MIN HEIGHT---------------------------------
-set winminheight                                            =0
-
-"-------------------------------TIMEOUT LEN------------------------------------
-set timeoutlen                                              =500
-
-"-------------------------------SIGN COLUMN------------------------------------
-if has("nvim-0.5.0")
-    set signcolumn                                          =number
-endif
-
-"-------------------------------Visual Paste Without Overwriting Register------
-xnoremap <expr> p 'pgv"'.v:register.'y`>'
-xnoremap <expr> P 'Pgv"'.v:register.'y`>'
 
 "-------------------------------Commentary-------------------------------------
 autocmd FileType asm setlocal commentstring=;\ %s

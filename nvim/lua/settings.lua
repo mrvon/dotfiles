@@ -2,12 +2,25 @@ local g = vim.g
 local opt = vim.opt
 local cmd = vim.cmd
 
+-- leader key
 g.mapleader = " "
 g.maplocalleader = ","
 
-opt.mouse = "a"
+-- encoding
+opt.encoding = "utf-8"
+opt.fileencoding = "utf-8"
+opt.fileencodings = "ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1"
+opt.langmenu = "en_US.utf-8"
+opt.fileformats = "unix,dos,mac"
+-- cmd("language messages en_US.utf-8")
 
--- Tab
+-- vim in tmux, clearing uses the current background color
+cmd("set t_ut=")
+
+-- colors
+opt.termguicolors = true
+
+-- tab
 opt.shiftwidth = 4
 opt.tabstop = 4
 opt.softtabstop =0
@@ -53,7 +66,7 @@ opt.wildmenu = true
 -- search path for gf command
 opt.path = ".,..,,"
 
--- no use undofile
+-- disable undo file
 opt.undofile = false
 
 -- allow to bg unsaved buffer
@@ -69,6 +82,56 @@ opt.nrformats = "hex"
 -- I don't like vim style fold
 opt.foldenable = false
 
+-- diff mode
+opt.diffopt = "filler,vertical"
+
+-- disable swap file
+opt.swapfile = false
+
+-- disable preview window
+opt.completeopt:remove("preview")
+
+-- disable backup file
+opt.backup = false
+opt.writebackup = false
+
+-- having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+-- delays and poor user experience.
+opt.updatetime = 300
+
+-- window mininum height
+opt.winminheight = 0
+
+-- timeout len
+opt.timeoutlen = 500
+
+-- sign column
+opt.signcolumn = "number"
+
 opt.clipboard:append("unnamed")
 opt.clipboard:append("unnamedplus")
 
+-- disable builtins plugins
+local disabled_built_ins = {
+    "netrw",
+    "netrwPlugin",
+    "netrwSettings",
+    "netrwFileHandlers",
+    "gzip",
+    "zip",
+    "zipPlugin",
+    "tar",
+    "tarPlugin",
+    "getscript",
+    "getscriptPlugin",
+    "vimball",
+    "vimballPlugin",
+    "2html_plugin",
+    "logipat",
+    "rrhelper",
+    "spellfile_plugin",
+    "matchit"
+}
+for _, plugin in pairs(disabled_built_ins) do
+    g["loaded_" .. plugin] = 1
+end
