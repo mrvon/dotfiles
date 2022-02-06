@@ -28,10 +28,10 @@ map("n", "<c-l>", "<c-w>l", noremap)
 map("n", "<leader><leader>", "<c-^>", noremap)
 
 -- edit vimrc
--- map("n", "<leader>ev", ":vsplit $MYINIT", noremap)
+map("n", "<leader>ev", ":vsplit $MYVIMRC<cr>", noremap)
 
 -- reload vimrc
--- nnoremap <leader>sv                                         :source $MYINIT<cr>
+map("n", "<leader>sv", ":source $MYVIMRC<cr>", noremap)
 
 cmd("cabbrev W w")
 cmd("cabbrev Q q")

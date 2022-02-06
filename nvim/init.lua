@@ -1,5 +1,7 @@
+require "bootstrap"
 require "settings"
 require "keymaps"
-require "plugins.packer"
 require "plugins.airline"
+require "plugins.ale"
 require "plugins.gen_tags"
+require "plugins.packer"
