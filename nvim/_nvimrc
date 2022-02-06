@@ -217,18 +217,6 @@ function! RipgrepFzf(query, fullscreen)
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
-"-----------------------------------------GenTags------------------------------
-let g:loaded_gentags#gtags                                  =1
-let g:loaded_gentags#ctags                                  =0
-let g:gen_tags#gtags_auto_gen                               =0
-let g:gen_tags#ctags_auto_gen                               =0
-let g:gen_tags#gtags_auto_update                            =0
-let g:gen_tags#ctags_auto_update                            =0
-" let g:gen_tags#ctags_opts                                 =[
-"             \ '--exclude=.ccls-cache',
-"             \ '--exclude=build',
-"             \ ]
-" $HOME/.config/ctags/my.ctags
 
 " Vimscript file settings
 augroup filetype_vim

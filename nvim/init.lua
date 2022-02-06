@@ -1,3 +1,5 @@
 require "settings"
 require "keymaps"
 require "plugins.packer"
+require "plugins.airline"
+require "plugins.gen_tags"
