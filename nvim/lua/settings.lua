@@ -13,15 +13,17 @@ opt.fileencoding = "utf-8"
 opt.fileencodings = "ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1"
 opt.langmenu = "en_US.utf-8"
 opt.fileformats = "unix,dos,mac"
+cmd "language messages en_US.utf-8"
 
 -- colors
 cmd "colorscheme gruvbox"
 opt.termguicolors = true
+opt.background = "dark"
 
--- vim in tmux, clearing uses the current background color
+-- when vim in tmux, clearing uses the current background color
 cmd "set t_ut="
 
--- tab
+-- tab/indent
 opt.shiftwidth = 4
 opt.tabstop = 4
 opt.softtabstop =0
@@ -32,33 +34,50 @@ opt.autoindent = true
 opt.smartindent = true
 opt.printoptions = "paper:a4"
 
+-- max history
 opt.history = 10000
 
--- opt.cursorline = true
--- opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
-
+-- ruler and statusline
 opt.ruler = false
 opt.laststatus = 2
 opt.scrolloff = 5
 
+-- enable magic
 opt.magic = true
 
+-- enable share clipboard
+opt.clipboard:append("unnamed")
+opt.clipboard:append("unnamedplus")
+
+-- line space
 opt.linespace = 0
 
+-- highlight line under the cursor
+opt.cursorline = true
+opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+
+-- enable lazyredraw
 opt.lazyredraw = true
 
+-- enable line number
 opt.number = true
+
+-- show matching brackets
 opt.showmatch = true
 
+-- hightlights search results
 opt.hlsearch = true
 opt.incsearch = true
 
+-- wrap long line
 opt.wrap = false
 opt.wrapscan = true
 
+-- case
 opt.ignorecase = true
 opt.smartcase = true
 
+-- color column
 opt.colorcolumn = "+1"
 
 -- you can use ctrl-d to show wild list
@@ -108,9 +127,6 @@ opt.timeoutlen = 500
 
 -- sign column
 opt.signcolumn = "number"
-
-opt.clipboard:append("unnamed")
-opt.clipboard:append("unnamedplus")
 
 -- disable builtins plugins
 local disabled_built_ins = {
