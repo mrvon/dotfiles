@@ -1,3 +1,4 @@
+-- luacheck: ignore 113
 local g = vim.g
 local opt = vim.opt
 local cmd = vim.cmd
@@ -12,13 +13,13 @@ opt.fileencoding = "utf-8"
 opt.fileencodings = "ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1"
 opt.langmenu = "en_US.utf-8"
 opt.fileformats = "unix,dos,mac"
--- cmd("language messages en_US.utf-8")
-
--- vim in tmux, clearing uses the current background color
-cmd("set t_ut=")
 
 -- colors
+cmd "colorscheme gruvbox"
 opt.termguicolors = true
+
+-- vim in tmux, clearing uses the current background color
+cmd "set t_ut="
 
 -- tab
 opt.shiftwidth = 4
@@ -74,7 +75,7 @@ opt.hidden = true
 
 -- auto read when other program have modified the same file
 opt.autoread = true
-cmd("autocmd FocusGained * :checktime")
+cmd "autocmd FocusGained * :checktime"
 
 -- number format
 opt.nrformats = "hex"
