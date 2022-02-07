@@ -3,7 +3,7 @@
 # link
 ln -f -s ~/dotfiles/_zshenv ~/.zshenv
 ln -f -s ~/dotfiles/_zshrc ~/.zshrc
-# mkdir -p ~/.config/nvim
+rm -rf ~/.config/nvim
 ln -f -s ~/dotfiles/nvim ~/.config
 ln -f -s ~/dotfiles/_tmux.conf ~/.tmux.conf
 ln -f -s ~/dotfiles/_gitconfig ~/.gitconfig
@@ -37,7 +37,3 @@ ln -f -s ~/dotfiles/_inputrc ~/.inputrc
 # sudo -H luarocks install luacheck
 # sudo -H luarocks install --server=http://luarocks.org/dev lua-lsp
 # go get golang.org/x/tools/gopls@latest
-
-# PlugUpgrade
-# PlugUpdate
-# CocInstall coc-python

@@ -30,11 +30,6 @@ $ fc-cache -vf
 ### neovim ###
 + https://github.com/neovim/neovim
 
-:CocInstall coc-tsserver
-:CocInstall coc-python
-:CocInstall coc-json
-:CocInstall coc-html
-
 ### lua ###
 
 ```sh
