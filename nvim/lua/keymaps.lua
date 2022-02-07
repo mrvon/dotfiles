@@ -1,3 +1,4 @@
+-- luacheck: ignore 113
 local map = vim.api.nvim_set_keymap
 local cmd = vim.cmd
 

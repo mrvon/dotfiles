@@ -8,11 +8,6 @@ let $MYINIT                                                 =$MYPATH.'.config/nv
 let $MYPLUG                                                 =$MYPATH.'.local/share/nvim/plugged'
 endif
 
-"-------------------------------Plugin Package Manager-------------------------
-if &compatible
-    set nocompatible
-endif
-
 call plug#begin($MYPLUG)
 Plug 'Raimondi/delimitMate'
 Plug 'andymass/vim-matchup'
