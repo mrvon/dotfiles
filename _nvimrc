@@ -1,10 +1,10 @@
 "-------------------------------Path-------------------------------------------
 let $MYPATH                                                 ='~/'
 if has('win32') || has('win64')
-let $MYINIT                                                 =$MYPATH.'AppData\Local\nvim\init.vim'
+let $MYVIMRC                                                =$MYPATH.'AppData\Local\nvim\init.vim'
 let $MYPLUG                                                 =$MYPATH.'AppData\Local\nvim-data\site\autoload'
 else
-let $MYINIT                                                 =$MYPATH.'.config/nvim/init.vim'
+let $MYVIMRC                                                =$MYPATH.'.config/nvim/init.vim'
 let $MYPLUG                                                 =$MYPATH.'.local/share/nvim/plugged'
 endif
 
@@ -38,7 +38,6 @@ Plug 'mrvon/vim-tomorrow-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
-Plug 'szw/vim-maximizer'
 Plug 'tbastos/vim-lua'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -49,8 +48,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'leafOfTree/vim-vue-plugin', {'for': 'vue'}
 " Plug 'christoomey/vim-tmux-navigator'
-" Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'edkolev/tmuxline.vim'
 " Plug 'ap/vim-css-color'
 call plug#end()
 
@@ -69,11 +66,11 @@ else
 endif
 let $MYITALIC                                               =1
 colorscheme $MYCOLOR
+set termguicolors
 
 "-------------------------------Encoding---------------------------------------
 " Always use utf-8
 set encoding                                                =utf-8
-set termencoding                                            =utf-8
 set fileencoding                                            =utf-8
 set fileencodings                                           =ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1
 set langmenu                                                =en_US.utf-8
@@ -105,9 +102,6 @@ set scrolloff                                               =5
 "-------------------------------Magic------------------------------------------
 set magic
 
-"-------------------------------Memory Limit Problem---------------------------
-" set maxmempattern                                         =1000
-
 "-------------------------------Share Clipboard -------------------------------
 set clipboard                                               +=unnamed
 set clipboard                                               +=unnamedplus
@@ -120,7 +114,7 @@ set cursorline
 set guicursor                                               =n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
 
 "-------------------------------Lazy Redraw------------------------------------
-set nolazyredraw
+set lazyredraw
 
 "-------------------------------Display Line Number----------------------------
 set number
@@ -265,20 +259,6 @@ if $TERMINAL_COLOR == "light"
 else
     let g:ale_set_highlights                                =0
 endif
-"-----------------------------------------Solarized----------------------------
-let g:solarized_termcolors                                  =256
-let g:solarized_termtrans                                   =0
-let g:solarized_degrade                                     =0
-let g:solarized_bold                                        =1
-let g:solarized_underline                                   =1
-let g:solarized_italic                                      =$MYITALIC
-let g:solarized_contrast                                    ="normal"
-let g:solarized_visibility                                  ="normal"
-let g:solarized_hitrail                                     =0
-let g:solarized_menu                                        =1
-"-----------------------------------------Indent guides------------------------
-let g:indent_guides_enable_on_vim_startup                   =1
-let g:indent_guides_default_mapping                         =0
 "-----------------------------------------TagBar-------------------------------
 nnoremap <localleader>t                                     :TagbarToggle<cr>
 "-----------------------------------------Matchup------------------------------
@@ -411,10 +391,10 @@ nnoremap <c-l>                                              <c-w>l
 nnoremap <leader><leader>                                   <c-^>
 
 " edit my vimrc
-nnoremap <leader>ev                                         :vsplit $MYINIT<cr>
+nnoremap <leader>ev                                         :vsplit $MYVIMRC<cr>
 
 " reload my vimrc
-nnoremap <leader>sv                                         :source $MYINIT<cr>
+nnoremap <leader>sv                                         :source $MYVIMRC<cr>
 
 " abbrev
 cabbrev  W                                                  w
