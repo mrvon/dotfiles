@@ -1,62 +1,12 @@
-"-------------------------------Path-------------------------------------------
-let $MYPATH                                                 ='~/'
-if has('win32') || has('win64')
-let $MYINIT                                                 =$MYPATH.'AppData\Local\nvim\init.vim'
-let $MYPLUG                                                 =$MYPATH.'AppData\Local\nvim-data\site\autoload'
-else
-let $MYINIT                                                 =$MYPATH.'.config/nvim/init.vim'
-let $MYPLUG                                                 =$MYPATH.'.local/share/nvim/plugged'
-endif
-
 call plug#begin($MYPLUG)
-Plug 'Raimondi/delimitMate'
-Plug 'andymass/vim-matchup'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'dense-analysis/ale'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
-Plug 'jsfaint/gen_tags.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim', {'for': ['html', 'vue']}
-Plug 'mhinz/vim-signify', {'branch': 'master'}
-Plug 'mhinz/vim-startify'
-Plug 'mileszs/ack.vim'
-Plug 'morhetz/gruvbox'
-Plug 'mrvon/vim-tomorrow-theme'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'scrooloose/nerdtree'
-Plug 'szw/vim-maximizer'
-Plug 'tbastos/vim-lua'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" Plug 'leafOfTree/vim-vue-plugin', {'for': 'vue'}
-" Plug 'christoomey/vim-tmux-navigator'
-" Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'edkolev/tmuxline.vim'
-" Plug 'ap/vim-css-color'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'scrooloose/nerdtree'
 call plug#end()
-
-"-------------------------------My Color My Taste------------------------------
-if $TERMINAL_COLOR == "light"
-    set background                                          =light
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
-else
-    set background                                          =dark
-    let $MYCOLOR                                            ='gruvbox'
-    let $MYAIR                                              ='gruvbox'
-endif
-let $MYITALIC                                               =1
-colorscheme $MYCOLOR
 
 "-------------------------------Commentary-------------------------------------
 autocmd FileType asm setlocal commentstring=;\ %s

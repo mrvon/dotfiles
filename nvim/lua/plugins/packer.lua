@@ -4,6 +4,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     -- Packer can manage itself
     use { 'wbthomason/packer.nvim' }
+
     use { 'nvim-telescope/telescope.nvim',
         requires = {
             {'nvim-lua/plenary.nvim'}
@@ -19,7 +20,9 @@ return require('packer').startup(function()
     use { 'jsfaint/gen_tags.vim' }
     use { 'mhinz/vim-signify' }
     use { 'mhinz/vim-startify' }
+    use { 'mileszs/ack.vim' }
     use { 'morhetz/gruvbox' }
+    use { 'ntpeters/vim-better-whitespace' }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use { 'tpope/vim-commentary' }
     use { 'tpope/vim-fugitive' }
@@ -28,4 +31,5 @@ return require('packer').startup(function()
     use { 'tpope/vim-unimpaired' }
     use { 'vim-airline/vim-airline' }
     use { 'vim-airline/vim-airline-themes' }
+    use { 'tbastos/vim-lua' }
 end)
