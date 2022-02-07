@@ -128,6 +128,99 @@ opt.timeoutlen = 500
 -- sign column
 opt.signcolumn = "number"
 
+cmd [[
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+    autocmd FileType html setlocal tabstop=2 shiftwidth=2
+    autocmd FileType vue setlocal tabstop=2 shiftwidth=2
+    autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
+    autocmd FileType rust let delimitMate_quotes = "\" `"
+augroup END
+
+" edit binary using xxd-format!
+augroup binary_edit_group
+    autocmd!
+    autocmd BufReadPre   *.bin let   &bin=1
+    autocmd BufReadPost  *.bin if    &bin    | %!xxd
+    autocmd BufReadPost  *.bin set   ft=xxd  | endif
+    autocmd BufWritePre  *.bin if    &bin    | %!xxd -r
+    autocmd BufWritePre  *.bin endif
+    autocmd BufWritePost *.bin if    &bin    | %!xxd
+    autocmd BufWritePost *.bin set   nomod   | endif
+augroup END
+
+" save file with nobomb
+augroup save_with_nobomb
+    autocmd!
+    autocmd BufWritePre *.lua setlocal nobomb
+augroup END
+
+augroup on_enter_buffer
+    autocmd!
+    autocmd BufEnter * EnableStripWhitespaceOnSave
+    autocmd BufEnter * DisableWhitespace
+augroup END
+
+" filetype alias
+" augroup align_filetype_group
+"     autocmd!
+"     autocmd BufRead,BufNewFile *.txt setlocal filetype=lua
+" augroup END
+
+" augroup on_enter_vim
+    " autocmd!
+    " autocmd VimEnter * NERDTree
+    " autocmd VimEnter * nested :TagbarOpen
+" augroup END
+
+" augroup save_retab
+"     autocmd!
+"     autocmd BufWritePre * :retab
+" augroup END
+
+function! __ExecuteCommand(str)
+    exe "menu __magic_menu.__sub_magic_menu :" . a:str
+    emenu __magic_menu.__sub_magic_menu
+    unmenu __magic_menu
+endfunction
+
+function! __VisualSelection(direction) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]#')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'backward'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'forward'
+        execute "normal /" . l:pattern . "^M"
+    elseif a:direction == 'ack_smartcase'
+        execute __ExecuteCommand("Ack --smart-case " . "\"" . l:pattern . "\"" . "<cr>")
+    elseif a:direction == 'ack_wholeword'
+        execute __ExecuteCommand("Ack --smart-case -w " . "\"" . l:pattern . "\"" . "<cr>")
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
+
+" search in visual mode
+vnoremap <silent> *     :call __VisualSelection('forward')<cr>:set hlsearch<cr>
+vnoremap <silent> #     :call __VisualSelection('backward')<cr>:set hlsearch<cr>
+vnoremap <leader>v      :call __VisualSelection('ack_smartcase')<cr>
+vnoremap <localleader>v :call __VisualSelection('ack_wholeword')<cr>
+
+" get highlight group of cursor word
+function! SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+]]
+
 -- disable builtins plugins
 local disabled_built_ins = {
     "netrw",
