@@ -1,4 +1,5 @@
 -- luacheck: ignore 113 212
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = {
@@ -41,7 +42,6 @@ local servers = {
     'tsserver',
     'gopls',
     'ccls',
-    'sumneko_lua',
 }
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {

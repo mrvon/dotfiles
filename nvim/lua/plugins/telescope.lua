@@ -2,6 +2,17 @@
 local map = vim.api.nvim_set_keymap
 local noremap = {noremap = true}
 
+local actions = require("telescope.actions")
+require("telescope").setup({
+    defaults = {
+        mappings = {
+            i = {
+                ["<esc>"] = actions.close,
+            },
+        },
+    },
+})
+
 map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", noremap)
 map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", noremap)
 map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", noremap)
