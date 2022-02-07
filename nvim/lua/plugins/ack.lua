@@ -2,7 +2,7 @@
 local cmd = vim.cmd
 
 cmd [[
-nnoremap <leader>v :Ack<cr>
+nnoremap <leader>v      :Ack<cr>
 nnoremap <localleader>v :Ack -w '<c-r>=expand("<cword>")<cr>'<cr>
 if executable('rg')
     let g:ackprg = 'rg -S --vimgrep'
