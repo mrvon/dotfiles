@@ -16,9 +16,5 @@ let g:ale_fixers                                            ={
     \ }
 let g:ale_go_staticcheck_lint_package                       =1
 let g:ale_go_govet_options                                  ="-composites=false"
-if $TERMINAL_COLOR == "light"
-    let g:ale_set_highlights                                =1
-else
-    let g:ale_set_highlights                                =0
-endif
+let g:ale_set_highlights                                    =0
 ]]
