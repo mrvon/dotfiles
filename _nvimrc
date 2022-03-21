@@ -38,6 +38,7 @@ Plug 'mrvon/vim-tomorrow-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
+Plug 'szw/vim-maximizer'
 Plug 'tbastos/vim-lua'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -47,7 +48,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'leafOfTree/vim-vue-plugin', {'for': 'vue'}
-" Plug 'christoomey/vim-tmux-navigator'
 " Plug 'ap/vim-css-color'
 call plug#end()
 
