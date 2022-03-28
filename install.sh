@@ -24,6 +24,7 @@ ln -f -s ~/dotfiles/_xprofile ~/.xprofile
 ln -f -s ~/dotfiles/_gdbinit ~/.gdbinit
 wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
 ln -f -s ~/dotfiles/_inputrc ~/.inputrc
+ln -f -s ~/dotfiles/_spacemacs ~/.spacemacs
 
 # dependecy
 # sudo apt install -y xclip
