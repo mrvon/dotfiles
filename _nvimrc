@@ -257,6 +257,9 @@ if $TERMINAL_COLOR == "light"
 else
     let g:ale_set_highlights                                =0
 endif
+let g:ale_linters_ignore                                    ={
+    \ 'c': ['cc']
+    \ }
 "-----------------------------------------TagBar-------------------------------
 nnoremap <localleader>t                                     :TagbarToggle<cr>
 "-----------------------------------------Matchup------------------------------
