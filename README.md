@@ -146,3 +146,8 @@ choco install ripgrep
 choco install ag
 choco install universal-ctags
 ```
+
+```
+git clone https://github.com/syl20bnr/spacemacs ~/AppData/Roaming/.emacs.d
+mklink C:\Users\mrvon\AppData\Roaming\.spacemacs C:\Users\mrvon\dotfiles\_spacemacs
+```
