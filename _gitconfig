@@ -3,6 +3,7 @@
     email = mrvon@qq.com
 [core]
     editor = nvim -f
+	pager = less -x1,5
 [diff]
     tool = vimdiff
 	submodule = log
