@@ -28,7 +28,6 @@ Plug 'jsfaint/gen_tags.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim', {'for': ['html', 'vue']}
 Plug 'mhinz/vim-signify', {'branch': 'master'}
@@ -519,7 +518,7 @@ endfunc
 lua << END
 require('lualine').setup {
     options = {
-        icons_enabled = true,
+        icons_enabled = false,
         theme = 'gruvbox',
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
