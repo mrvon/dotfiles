@@ -175,7 +175,8 @@ set nrformats                                               =hex
 set nofoldenable
 
 "-------------------------------Diff Mode--------------------------------------
-set diffopt                                                 =filler,vertical
+set diffopt                                                 +=internal
+" set diffopt                                               +=algorithm:patience
 
 "-------------------------------Disable Swap file------------------------------
 set noswapfile
