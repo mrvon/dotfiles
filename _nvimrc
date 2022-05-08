@@ -25,7 +25,7 @@ Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plug 'jsfaint/gen_tags.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
@@ -334,7 +334,7 @@ let g:fzf_colors                                            ={
     \ 'header':  ['fg', 'Comment']
     \ }
 let g:fzf_layout                                            ={
-    \ 'window': { 'width': 0.9, 'height': 0.6 }
+    \ 'window': { 'width': 0.9, 'height': 0.9 }
     \ }
 function! RipgrepFzf(query, fullscreen)
     let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
@@ -344,6 +344,8 @@ function! RipgrepFzf(query, fullscreen)
     call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+autocmd! FileType fzf tnoremap <buffer> jk <c-c>
+" autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
 "-----------------------------------------GenTags------------------------------
 let g:loaded_gentags#gtags                                  =1
 let g:loaded_gentags#ctags                                  =0
