@@ -513,6 +513,9 @@ nnoremap k                                                  gk
 vnoremap j                                                  gj
 vnoremap k                                                  gk
 
+" for C
+nnoremap <leader>;                                          A;<esc>
+
 " get highlight group of cursor word
 function! SynStack()
     if !exists("*synstack")
