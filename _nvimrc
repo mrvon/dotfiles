@@ -470,10 +470,10 @@ augroup END
 " augroup END
 
 " Insert current file name
-inoremap <silent><nowait> <localleader>fn                                    <c-r>=expand("%:t")<cr>
-inoremap <silent><nowait> <localleader>fm                                    <c-r>=expand("%:p")<cr>
-cnoremap <silent><nowait> <localleader>fn                                    <c-r>=expand("%:t")<cr>
-cnoremap <silent><nowait> <localleader>fm                                    <c-r>=expand("%:p")<cr>
+" inoremap <localleader>fn                                  <c-r>=expand("%:t")<cr>
+" inoremap <localleader>fm                                  <c-r>=expand("%:p")<cr>
+cnoremap <localleader>fn                                    <c-r>=expand("%:t")<cr>
+cnoremap <localleader>fm                                    <c-r>=expand("%:p")<cr>
 
 "------------------------------------------------------------------------------
 function! __ExecuteCommand(str)
