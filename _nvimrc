@@ -319,6 +319,7 @@ nnoremap <leader>b                                          :Buffer<cr>
 nnoremap <leader>r                                          :History<cr>
 nnoremap <leader>t                                          :BTags<cr>
 nnoremap <leader>o                                          :Tags<cr>
+nnoremap <leader>O                                          :GenCtags<cr>
 nnoremap <leader>g                                          :RG<cr>
 let g:fzf_colors                                            ={
     \ 'fg':      ['fg', 'Normal'],
@@ -355,6 +356,7 @@ let g:gen_tags#gtags_auto_gen                               =0
 let g:gen_tags#ctags_auto_gen                               =0
 let g:gen_tags#gtags_auto_update                            =0
 let g:gen_tags#ctags_auto_update                            =0
+let g:gen_tags#statusline                                   =0
 " let g:gen_tags#ctags_opts                                 =[
 "             \ '--exclude=.ccls-cache',
 "             \ '--exclude=build',
