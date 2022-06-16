@@ -112,6 +112,10 @@ zf                        # create folding, zfa{
 zf%                       # create folding with %
 zR                        # open all folding
 za                        # toggle folding
+zj                        # moves the cursor to the next fold
+zk                        # moves the cursor to the previous fold
+[z                        # move to the start of the current open fold
+]z                        # move to the end of the current open fold
 gq                        # format the lines by textwidth
 ctrl+r                    # reverse-i-search, ctrl+r to next, ctrl+g to cancel
 ctrl+s                    # i-search, ctrl+s to next, ctrl+g to cancel

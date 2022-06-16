@@ -477,6 +477,9 @@ augroup END
 cnoremap <localleader>fn                                    <c-r>=expand("%:t")<cr>
 cnoremap <localleader>fm                                    <c-r>=expand("%:p")<cr>
 
+" Easy Folding
+nnoremap <localleader>z                                     zfa{<cr>
+
 "------------------------------------------------------------------------------
 function! __ExecuteCommand(str)
     exe "menu __magic_menu.__sub_magic_menu :" . a:str
