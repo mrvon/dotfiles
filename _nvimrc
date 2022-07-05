@@ -24,7 +24,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
-Plug 'jsfaint/gen_tags.vim'
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
@@ -34,6 +33,7 @@ Plug 'mhinz/vim-signify', {'branch': 'master'}
 Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
+Plug 'mrvon/gen_tags.vim'
 Plug 'mrvon/vim-tomorrow-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
