@@ -4,12 +4,8 @@
     "diagnostic.messageTarget": "echo",
     "diagnostic.virtualText": true,
     "diagnostic.virtualTextCurrentLineOnly":true,
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.pylintEnabled": false,
     "suggest.enablePreselect": false,
     "suggest.noselect": true,
-    "vetur.ignoreProjectWarning": true,
     "languageserver": {
         "lua": {
             "command": "lua-lsp",
