@@ -4,6 +4,7 @@
     "diagnostic.messageTarget": "echo",
     "diagnostic.virtualText": true,
     "diagnostic.virtualTextCurrentLineOnly":true,
+    "python.formatting.autopep8Path": "~/.local/bin/autopep8",
     "suggest.enablePreselect": false,
     "suggest.noselect": true,
     "languageserver": {
