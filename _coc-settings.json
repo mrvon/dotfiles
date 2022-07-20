@@ -7,6 +7,9 @@
     "python.formatting.autopep8Path": "~/.local/bin/autopep8",
     "suggest.enablePreselect": false,
     "suggest.noselect": true,
+    "notification.disabledProgressSources": [
+        "*"
+    ],
     "languageserver": {
         "lua": {
             "command": "lua-lsp",
