@@ -70,7 +70,7 @@ diff-cmd = svn_diff.py
 ### merging tool of choice. Subversion will pass 5 arguments to
 ### the specified command: base theirs mine merged wcfile
 # merge-tool-cmd = merge_command
-merge-tool-cmd = svn_merge.py
+# merge-tool-cmd = svn_merge.py
 
 ### Section for configuring tunnel agents.
 [tunnels]
