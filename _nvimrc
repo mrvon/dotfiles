@@ -482,8 +482,8 @@ cnoremap <localleader>fm                                    <c-r>=expand("%:p")<
 nnoremap <localleader>z                                     zfa{<cr>
 
 "------------------------------------------------------------------------------
-function! __ExecuteCommand(str)
-    exe "menu __magic_menu.__sub_magic_menu :" . a:str
+function! ExecuteCmd(cmd)
+    exe "menu __magic_menu.__sub_magic_menu :" . a:cmd
     emenu __magic_menu.__sub_magic_menu
     unmenu __magic_menu
 endfunction
@@ -496,13 +496,13 @@ function!                                                   __VisualSelection(di
     let l:pattern = substitute(l:pattern, "\n$", "", "")
 
     if a:direction == 'backward'
-        execute "normal ?" . l:pattern . "^M"
+        execute "normal ?" . l:pattern
     elseif a:direction == 'forward'
-        execute "normal /" . l:pattern . "^M"
+        execute "normal /" . l:pattern
     elseif a:direction == 'ack_smartcase'
-        execute __ExecuteCommand("Ack --smart-case " . "\"" . l:pattern . "\"" . "<cr>")
+        execute ExecuteCmd("Ack --smart-case " . "\"" . l:pattern . "\"" . "<cr>")
     elseif a:direction == 'ack_wholeword'
-        execute __ExecuteCommand("Ack --smart-case -w " . "\"" . l:pattern . "\"" . "<cr>")
+        execute ExecuteCmd("Ack --smart-case -w " . "\"" . l:pattern . "\"" . "<cr>")
     endif
 
     let @/ = l:pattern
