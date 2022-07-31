@@ -38,6 +38,7 @@ Plug 'mrvon/vim-tomorrow-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'scrooloose/nerdtree'
 Plug 'szw/vim-maximizer'
 Plug 'tbastos/vim-lua'
@@ -46,8 +47,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-" Plug 'leafOfTree/vim-vue-plugin', {'for': 'vue'}
-" Plug 'ap/vim-css-color'
 call plug#end()
 
 filetype plugin indent on
@@ -562,4 +561,16 @@ require('lualine').setup {
     tabline = {},
     extensions = {}
     }
+
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {},
+  sync_install = false,
+  auto_install = true,
+  ignore_install = {},
+  highlight = {
+    enable = true,
+    disable = {},
+    additional_vim_regex_highlighting = false,
+  },
+}
 END
