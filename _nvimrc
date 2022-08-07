@@ -32,7 +32,7 @@ Plug 'mattn/emmet-vim', {'for': ['html', 'vue']}
 Plug 'mhinz/vim-signify', {'branch': 'master'}
 Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
-Plug 'morhetz/gruvbox'
+Plug 'ellisonleao/gruvbox.nvim'
 Plug 'mrvon/gen_tags.vim'
 Plug 'mrvon/vim-tomorrow-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -62,9 +62,6 @@ else
     let $MYCOLOR                                            ='gruvbox'
     let $MYAIR                                              ='gruvbox'
 endif
-let $MYITALIC                                               =1
-colorscheme $MYCOLOR
-set termguicolors
 
 "-------------------------------Encoding---------------------------------------
 " Always use utf-8
@@ -573,4 +570,22 @@ require('nvim-treesitter.configs').setup {
         additional_vim_regex_highlighting = false,
         },
     }
+
+require("gruvbox").setup {
+    undercurl = true,
+    underline = true,
+    bold = true,
+    italic = true,
+    strikethrough = true,
+    invert_selection = true,
+    invert_signs = false,
+    invert_tabline = false,
+    invert_intend_guides = false,
+    inverse = true,
+    contrast = "",
+    overrides = {},
+    }
 END
+
+colorscheme $MYCOLOR
+set termguicolors
