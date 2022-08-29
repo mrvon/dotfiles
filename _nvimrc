@@ -517,8 +517,11 @@ nnoremap k                                                  gk
 vnoremap j                                                  gj
 vnoremap k                                                  gk
 
-" for C
+" for C, Rust
 nnoremap <leader>;                                          A;<esc>
+
+" for Rust
+autocmd FileType rust                                       highlight CocErrorHighlight guibg= ctermbg=
 
 " get highlight group of cursor word
 function! SynStack()
