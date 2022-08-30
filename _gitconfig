@@ -20,3 +20,5 @@
     cmd = nvim -d "$LOCAL" "$MERGED" "$REMOTE" -c '2wincmd w'
 [push]
 	recurseSubmodules = check
+[url "https://"]
+	insteadOf = git://
