@@ -21,8 +21,5 @@ export NVM_DIR=$HOME/.nvm
 # RLWRAP
 export RLWRAP_HOME=$HOME/.local/share/rlwrap
 
-# FZF
-export FZF_DEFAULT_COMMAND="fd --exclude={.git,node_modules,build,tmp} --type f"
-
 # Luarocks
 export PATH=$HOME/.luarocks/bin:$PATH

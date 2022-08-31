@@ -311,13 +311,17 @@ autocmd BufAdd * exe "cd" fnameescape(getcwd())
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 "-----------------------------------------FZF----------------------------------
-nnoremap <leader>f                                          :Files<cr>
-nnoremap <leader>b                                          :Buffer<cr>
-nnoremap <leader>r                                          :History<cr>
-nnoremap <leader>t                                          :BTags<cr>
-nnoremap <leader>o                                          :Tags<cr>
-nnoremap <leader>O                                          :GenCtags<cr>
-nnoremap <leader>g                                          :RG<cr>
+nnoremap <silent><leader>f                                  :call fzf#run(fzf#wrap({
+    \ 'source': 'fd --exclude={.git,node_modules,build,tmp} --type f'
+    \ }))<cr>
+nnoremap <silent><leader>g                                  :call fzf#run(fzf#wrap({
+    \ 'source': 'fd --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
+    \ }))<cr>
+nnoremap <silent><leader>b                                  :Buffer<cr>
+nnoremap <silent><leader>r                                  :History<cr>
+nnoremap <silent><leader>t                                  :BTags<cr>
+nnoremap <silent><leader>o                                  :Tags<cr>
+nnoremap <silent><leader>O                                  :GenCtags<cr>
 let g:fzf_colors                                            ={
     \ 'fg':      ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
