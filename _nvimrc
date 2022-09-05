@@ -314,9 +314,11 @@ xmap ga <Plug>(EasyAlign)
 nnoremap <silent><leader>f                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd --exclude={.git,node_modules,build,tmp} --type f'
     \ }))<cr>
-nnoremap <silent><leader>g                                  :call fzf#run(fzf#wrap({
+nnoremap <silent><leader>F                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
     \ }))<cr>
+nnoremap <silent><leader>g                                  :Rg<cr>
+nnoremap <silent><leader>G                                  :Ag<cr>
 nnoremap <silent><leader>b                                  :Buffer<cr>
 nnoremap <silent><leader>r                                  :History<cr>
 nnoremap <silent><leader>t                                  :BTags<cr>
