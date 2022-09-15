@@ -319,9 +319,9 @@ nnoremap <silent><leader>fe                                 :call fzf#run(fzf#wr
     \ }))<cr>
 nnoremap <silent><leader>fb                                 :Buffer<cr>
 nnoremap <silent><leader>fh                                 :History<cr>
-nnoremap <silent><leader>ft                                 :BTags<cr>
 nnoremap <silent><leader>gg                                 :Rg<cr>
 nnoremap <silent><leader>ge                                 :Ag<cr>
+nnoremap <silent><leader>t                                  :BTags<cr>
 nnoremap <silent><leader>o                                  :Tags<cr>
 nnoremap <leader>O                                          :GenCtags<cr>
 let g:fzf_colors                                            ={
