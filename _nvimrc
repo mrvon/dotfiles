@@ -311,16 +311,16 @@ autocmd BufAdd * exe "cd" fnameescape(getcwd())
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 "-----------------------------------------FZF----------------------------------
-nnoremap <silent><leader>ff                                 :call fzf#run(fzf#wrap({
+nnoremap <silent><leader>f                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd --exclude={.git,node_modules,build,tmp} --type f'
     \ }))<cr>
-nnoremap <silent><leader>fe                                 :call fzf#run(fzf#wrap({
+nnoremap <silent><leader>F                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
     \ }))<cr>
-nnoremap <silent><leader>fb                                 :Buffer<cr>
-nnoremap <silent><leader>fh                                 :History<cr>
-nnoremap <silent><leader>gg                                 :Rg<cr>
-nnoremap <silent><leader>ge                                 :Ag<cr>
+nnoremap <silent><leader>g                                  :Rg<cr>
+nnoremap <silent><leader>G                                  :Ag<cr>
+nnoremap <silent><leader>b                                  :Buffer<cr>
+nnoremap <silent><leader>r                                  :History<cr>
 nnoremap <silent><leader>t                                  :BTags<cr>
 nnoremap <silent><leader>o                                  :Tags<cr>
 nnoremap <leader>O                                          :GenCtags<cr>
