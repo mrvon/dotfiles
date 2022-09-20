@@ -312,10 +312,10 @@ nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 "-----------------------------------------FZF----------------------------------
 nnoremap <silent><leader>f                                  :call fzf#run(fzf#wrap({
-    \ 'source': 'fd --exclude={.git,node_modules,build,tmp} --type f'
+    \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f'
     \ }))<cr>
 nnoremap <silent><leader>F                                  :call fzf#run(fzf#wrap({
-    \ 'source': 'fd --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
+    \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
     \ }))<cr>
 nnoremap <silent><leader>g                                  :Rg<cr>
 nnoremap <silent><leader>G                                  :Ag<cr>
