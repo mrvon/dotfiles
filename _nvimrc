@@ -365,6 +365,7 @@ let g:gen_tags#statusline                                   =0
 "             \ '--exclude=build',
 "             \ ]
 " $HOME/.config/ctags/my.ctags
+" .ctags.d/*.ctags
 "-----------------------------------------Maximize-----------------------------
 nnoremap <silent><leader>z                                  :MaximizerToggle<CR>
 "-----------------------------------------Mrvon Special Key--------------------
