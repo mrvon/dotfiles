@@ -413,11 +413,20 @@ nnoremap H                                                  0
 vnoremap H                                                  0
 nnoremap L                                                  $
 vnoremap L                                                  $
+" no recording
+map q                                                       <nop>
 " no Ex mode
 nnoremap Q                                                  <nop>
 " nnoremap J                                                <nop>
 " vnoremap J                                                <nop>
 " nnoremap K                                                <nop>
+
+" Help myself
+map <F1>                                                    <esc>
+imap <F1>                                                   <esc>
+
+" Quick Save
+nnoremap <leader>w                                          :w<cr>
 
 " Vimscript file settings
 augroup filetype_vim
