@@ -1,9 +1,10 @@
 {
+    "diagnostic.enable": true,
     "diagnostic.displayByAle": false,
     "diagnostic.enableSign": false,
     "diagnostic.messageTarget": "echo",
     "diagnostic.virtualText": true,
-    "diagnostic.virtualTextCurrentLineOnly":true,
+    "diagnostic.virtualTextCurrentLineOnly": true,
     "python.formatting.autopep8Path": "~/.local/bin/autopep8",
     "suggest.enablePreselect": false,
     "suggest.noselect": true,
@@ -13,17 +14,32 @@
     "languageserver": {
         "lua": {
             "command": "lua-lsp",
-            "filetypes": ["lua"]
+            "filetypes": [
+                "lua"
+            ]
         },
         "ccls": {
             "command": "ccls",
-            "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
-            "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+            "filetypes": [
+                "c",
+                "cc",
+                "cpp",
+                "c++",
+                "objc",
+                "objcpp"
+            ],
+            "rootPatterns": [
+                ".ccls",
+                "compile_commands.json",
+                ".git/",
+                ".hg/"
+            ],
             "initializationOptions": {
                 "cache": {
                     "directory": "/tmp/ccls"
                 }
             }
         }
-    }
+    },
+    "[rust]": {}
 }
