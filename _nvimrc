@@ -420,7 +420,7 @@ vnoremap L                                                  $
 nnoremap Q                                                  <nop>
 " nnoremap J                                                <nop>
 " vnoremap J                                                <nop>
-" nnoremap K                                                <nop>
+nnoremap K                                                  <nop>
 
 " Help myself
 map <F1>                                                    <esc>
