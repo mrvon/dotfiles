@@ -35,7 +35,7 @@ Plug 'mileszs/ack.vim'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'mrvon/gen_tags.vim'
 Plug 'mrvon/vim-tomorrow-theme'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'commit': '9075f7b5'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
