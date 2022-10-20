@@ -11,6 +11,7 @@
     "notification.disabledProgressSources": [
         "*"
     ],
+    "coc.preferences.formatOnSaveFiletypes": ["rust", "go"],
     "languageserver": {
         "lua": {
             "command": "lua-lsp",
@@ -39,6 +40,11 @@
                     "directory": "/tmp/ccls"
                 }
             }
+        },
+        "rust": {
+            "command": "rust-analyzer",
+            "filetypes": ["rust"],
+            "rootPatterns": ["Cargo.toml"]
         }
     },
     "[rust]": {}
