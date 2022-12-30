@@ -1,9 +1,9 @@
 {
     "diagnostic.enable": true,
-    "diagnostic.displayByAle": false,
+    "diagnostic.displayByAle": true,
     "diagnostic.enableSign": false,
-    "diagnostic.messageTarget": "echo",
-    "diagnostic.virtualText": true,
+    "diagnostic.messageTarget": "float",
+    "diagnostic.virtualText": false,
     "diagnostic.virtualTextCurrentLineOnly": true,
     "python.formatting.autopep8Path": "~/.local/bin/autopep8",
     "suggest.enablePreselect": false,
