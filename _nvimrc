@@ -495,6 +495,10 @@ cnoremap <localleader>fm                                    <c-r>=expand("%:p")<
 " Easy Folding
 nnoremap <localleader>z                                     zfa{<cr>
 
+" Fast write
+nnoremap <leader>w                                          :w<esc>
+nnoremap <localleader>w                                     :Gwrite<esc>
+
 "------------------------------------------------------------------------------
 function! ExecuteCmd(cmd)
     exe "menu __magic_menu.__sub_magic_menu :" . a:cmd
