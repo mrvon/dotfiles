@@ -330,7 +330,7 @@ nnoremap <silent><leader>b                                  :Buffer<cr>
 nnoremap <silent><leader>r                                  :History<cr>
 nnoremap <silent><leader>t                                  :BTags<cr>
 nnoremap <silent><leader>o                                  :Tags<cr>
-nnoremap <leader>O                                          :GenCtags<cr>
+nnoremap <localleader>o                                     :GenCtags<cr>
 let g:fzf_colors                                            ={
     \ 'fg':      ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
