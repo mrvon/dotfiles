@@ -1,4 +1,4 @@
-bind generic S >git difftool -y %(commit)~1 %(commit) %(file)
+bind generic S >git difftool -y %(commit)~1 %(commit) -- %(file)
 bind generic D >git difftool -y %(commit)~1 %(commit)
 set tab-size = 4
 set main-view-commit-title-graph = no
