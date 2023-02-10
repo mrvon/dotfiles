@@ -499,6 +499,9 @@ nnoremap <localleader>z                                     zfa{<cr>
 nnoremap <leader>w                                          :w<esc>
 nnoremap <localleader>w                                     :Gwrite<esc>
 
+" Fast quit all
+nnoremap <localleader>q                                     :qa<esc>
+
 "------------------------------------------------------------------------------
 function! ExecuteCmd(cmd)
     exe "menu __magic_menu.__sub_magic_menu :" . a:cmd
