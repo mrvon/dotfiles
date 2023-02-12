@@ -22,3 +22,5 @@
 	recurseSubmodules = check
 [url "https://"]
 	insteadOf = git://
+[gc]
+	auto = 0
