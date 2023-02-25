@@ -6,6 +6,7 @@ DOTFILES_SCRIPT=~/dotfiles/script
 export PATH=$DOTFILES_SCRIPT:$PATH
 
 # Golang
+export GOROOT_BOOTSTRAP=/usr/lib/go
 export GOROOT=$HOME/go_build
 export PATH=$GOROOT/bin:$PATH
 export GOPATH=~/go
