@@ -385,10 +385,10 @@ inoremap JK                                                 <esc>
 tnoremap JK                                                 <c-\><c-n>
 tnoremap <expr> <c-r>                                       '<c-\><c-n>"'.nr2char(getchar()).''
 "-----------------------------------------Resize windows-----------------------
-nnoremap <up>                                               <c-w>3+
-nnoremap <down>                                             <c-w>3-
-nnoremap <left>                                             <c-w>3<
-nnoremap <right>                                            <c-w>3>
+nnoremap <c-up>                                             <c-w>3+
+nnoremap <c-down>                                           <c-w>3-
+nnoremap <c-left>                                           <c-w>3<
+nnoremap <c-right>                                          <c-w>3>
 "-----------------------------------------Moving between windows---------------
 " origin switch window key-mappings is too hard for me
 nnoremap <c-k>                                              <c-w>k
