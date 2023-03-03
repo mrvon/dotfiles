@@ -27,7 +27,7 @@ ln -f -s ~/dotfiles/_inputrc ~/.inputrc
 ln -f -s ~/dotfiles/_spacemacs ~/.spacemacs
 
 # dependecy
-# sudo apt install -y xclip
+# sudo apt install -y xsel
 # sudo apt install -y silversearcher-ag
 # sudo -H pip2 install --upgrade pip
 # sudo -H pip2 install --upgrade pynvim
