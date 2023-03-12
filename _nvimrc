@@ -220,6 +220,8 @@ nnoremap <localleader>n                                     :NERDTreeToggle<cr>
 let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
+"-------------------------------TMUX NAVIGATOR---------------------------------
+let g:tmux_navigator_disable_when_zoomed                    =1
 "-------------------------------ALE--------------------------------------------
 let g:ale_disable_lsp                                       =1
 let g:ale_completion_enabled                                =0
