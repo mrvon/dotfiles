@@ -568,7 +568,7 @@ require('lualine').setup {
         disabled_filetypes = {},
         always_divide_middle = true,
         globalstatus = true,
-        },
+    },
     sections = {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff', 'diagnostics'},
@@ -576,7 +576,7 @@ require('lualine').setup {
         lualine_x = {'encoding'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
-        },
+    },
     inactive_sections = {
         lualine_a = {},
         lualine_b = {},
@@ -584,10 +584,10 @@ require('lualine').setup {
         lualine_x = {'location'},
         lualine_y = {},
         lualine_z = {}
-        },
+    },
     tabline = {},
     extensions = {}
-    }
+}
 
 require('nvim-treesitter.configs').setup {
     ensure_installed = {},
@@ -598,14 +598,19 @@ require('nvim-treesitter.configs').setup {
         enable = true,
         disable = {},
         additional_vim_regex_highlighting = false,
-        },
-    }
+    },
+}
 
 require("gruvbox").setup {
     undercurl = true,
     underline = true,
     bold = true,
-    italic = true,
+    italic = {
+        strings = true,
+        comments = true,
+        operators = false,
+        folds = true,
+    },
     strikethrough = true,
     invert_selection = true,
     invert_signs = false,
@@ -614,7 +619,7 @@ require("gruvbox").setup {
     inverse = true,
     contrast = "",
     overrides = {},
-    }
+}
 END
 
 colorscheme $MYCOLOR
