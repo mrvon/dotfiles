@@ -23,6 +23,7 @@ Plug 'andymass/vim-matchup'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'ellisonleao/gruvbox.nvim'
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
@@ -32,7 +33,6 @@ Plug 'mattn/emmet-vim', {'for': ['html', 'vue']}
 Plug 'mhinz/vim-signify', {'branch': 'master'}
 Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
-Plug 'ellisonleao/gruvbox.nvim'
 Plug 'mrvon/gen_tags.vim'
 Plug 'mrvon/vim-tomorrow-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -84,7 +84,6 @@ set expandtab
 set backspace                                               =indent,eol,start
 set autoindent
 set smartindent
-set printoptions                                            =paper:a4
 
 "-------------------------------Max History Item-------------------------------
 set history                                                 =10000
