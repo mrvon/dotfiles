@@ -7,11 +7,8 @@ export PATH=$DOTFILES_SCRIPT:$PATH
 
 # Golang
 export GOROOT_BOOTSTRAP=/usr/lib/go
-export GOROOT=$HOME/go_build
+export GOROOT=/usr/lib/go
 export PATH=$GOROOT/bin:$PATH
-export GOPATH=~/go
-export PATH=$GOPATH/bin:$PATH
-export GO111MODULE=on
 
 # Rust
 export PATH=$HOME/.cargo/bin:$PATH

@@ -137,11 +137,13 @@ export LS_COLORS="ow=01;36;40"
 # bat theme
 export BAT_THEME="gruvbox-dark"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.proxy_config ] && source ~/.proxy_config
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# >>> xmake >>>
 [[ -s "$HOME/.xmake/profile" ]] && source "$HOME/.xmake/profile" # load xmake profile
-# <<< xmake <<<
+
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"

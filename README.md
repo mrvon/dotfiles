@@ -45,6 +45,13 @@ make linux
 sudo make linux install
 ```
 
+### gvm ###
+
+```sh
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+gvm install go1.20
+```
+
 ### npm ###
 
 ```sh
