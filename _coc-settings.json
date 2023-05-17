@@ -13,12 +13,6 @@
     ],
     "coc.preferences.formatOnSaveFiletypes": ["rust", "go"],
     "languageserver": {
-        "lua": {
-            "command": "lua-lsp",
-            "filetypes": [
-                "lua"
-            ]
-        },
         "ccls": {
             "command": "ccls",
             "filetypes": [

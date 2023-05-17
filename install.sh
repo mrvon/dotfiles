@@ -37,7 +37,6 @@ ln -f -s ~/dotfiles/_spacemacs ~/.spacemacs
 # sudo -H pip3 install --upgrade flake8
 # go get -u honnef.co/go/tools/cmd/staticcheck
 # sudo -H luarocks install luacheck
-# sudo -H luarocks install --server=http://luarocks.org/dev lua-lsp
 # go get golang.org/x/tools/gopls@latest
 
 # PlugUpgrade
