@@ -11,7 +11,7 @@
     "notification.disabledProgressSources": [
         "*"
     ],
-    "coc.preferences.formatOnSaveFiletypes": ["rust", "go"],
+    "coc.preferences.formatOnSaveFiletypes": [],
     "languageserver": {
         "ccls": {
             "command": "ccls",
