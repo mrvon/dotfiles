@@ -247,7 +247,7 @@ let g:ale_linters_ignore                                    ={
     \ 'c': ['cc']
     \ }
 "-----------------------------------------TagBar-------------------------------
-nnoremap <localleader>t                                     :TagbarToggle<cr>
+nnoremap <localleader>T                                     :TagbarToggle<cr>
 "-----------------------------------------Matchup------------------------------
 let g:matchup_matchparen_status_offscreen                   =0
 "-----------------------------------------Vim-Go--------------------------------
