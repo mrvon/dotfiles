@@ -135,7 +135,11 @@ setopt IGNORE_EOF                # Ignore CTRL+D
 export LS_COLORS="ow=01;36;40"
 
 # bat theme
-export BAT_THEME="gruvbox-dark"
+if [ "$TERMINAL_COLOR" = 'light' ]; then
+    export BAT_THEME="gruvbox-light"
+else
+    export BAT_THEME="gruvbox-dark"
+fi
 
 [ -f ~/.proxy_config ] && source ~/.proxy_config
 

@@ -56,11 +56,9 @@ syntax enable
 if $TERMINAL_COLOR == "light"
     set background                                          =light
     let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
 else
     set background                                          =dark
     let $MYCOLOR                                            ='gruvbox'
-    let $MYAIR                                              ='gruvbox'
 endif
 
 "-------------------------------Encoding---------------------------------------
