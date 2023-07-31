@@ -233,6 +233,7 @@ let g:ale_linters                                           ={
 let g:ale_fixers                                            ={
     \ 'python': ['yapf'],
     \ 'rust': ['rustfmt'],
+    \ 'lua': ['lua-format'],
     \ }
 let g:ale_go_staticcheck_lint_package                       =1
 let g:ale_go_govet_options                                  ="-composites=false"
