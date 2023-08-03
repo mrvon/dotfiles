@@ -245,6 +245,8 @@ endif
 let g:ale_linters_ignore                                    ={
     \ 'c': ['cc']
     \ }
+
+nnoremap <localleader>f                                     :ALEFix<cr>
 "-----------------------------------------TagBar-------------------------------
 nnoremap <localleader>T                                     :TagbarToggle<cr>
 "-----------------------------------------Matchup------------------------------
