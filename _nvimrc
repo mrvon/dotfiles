@@ -237,6 +237,7 @@ let g:ale_fixers                                            ={
     \ }
 let g:ale_go_staticcheck_lint_package                       =1
 let g:ale_go_govet_options                                  ="-composites=false"
+let g:ale_lua_stylua_options                                ='--search-parent-directories'
 if $TERMINAL_COLOR == "light"
     let g:ale_set_highlights                                =1
 else
