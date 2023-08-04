@@ -12,6 +12,7 @@ ln -f -s ~/dotfiles/_golangci.yml ~/.golangci.yml
 ln -f -s ~/dotfiles/_flake8 ~/.flake8
 ln -f -s ~/dotfiles/_luacheckrc ~/.luacheckrc
 ln -f -s ~/dotfiles/_lua_format ~/.lua-format
+ln -f -s ~/dotfiles/_stylua.toml ~/.stylua.toml
 ln -f -s ~/dotfiles/_mongorc.js ~/.mongorc.js
 ln -f -s ~/dotfiles/_tigrc ~/.tigrc
 ln -f -s ~/dotfiles/_coc-settings.json ~/.config/nvim/coc-settings.json
