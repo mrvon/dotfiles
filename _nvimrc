@@ -34,7 +34,7 @@ Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
 Plug 'mrvon/gen_tags.vim'
 Plug 'mrvon/vim-tomorrow-theme'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocUpdate'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
