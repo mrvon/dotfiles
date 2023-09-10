@@ -38,6 +38,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocUpdate'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'scrooloose/nerdtree'
 Plug 'szw/vim-maximizer'
 Plug 'tbastos/vim-lua'
@@ -623,6 +624,41 @@ require("gruvbox").setup {
 }
 
 require("nvim-autopairs").setup {}
+
+require("nvim-treesitter.configs").setup {
+    textobjects = {
+        select = {
+            enable = true,
+            lookahead = true,
+            keymaps = {
+                ["af"] = "@function.outer",
+                ["if"] = "@function.inner",
+                ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
+            },
+            selection_modes = {
+                ["@parameter.outer"] = "v", -- charwise
+                ["@function.outer"] = "V", -- linewise
+            },
+            include_surrounding_whitespace = false,
+        },
+        move = {
+            enable = true,
+            set_jumps = true, -- whether to set jumps in the jumplist
+            goto_next_start = {
+                ["]m"] = "@function.outer",
+                },
+            goto_next_end = {
+                ["]M"] = "@function.outer",
+                },
+            goto_previous_start = {
+                ["[m"] = "@function.outer",
+                },
+            goto_previous_end = {
+                ["[M"] = "@function.outer",
+            },
+        },
+    },
+}
 END
 
 colorscheme $MYCOLOR
