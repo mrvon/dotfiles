@@ -247,6 +247,7 @@ endif
 let g:ale_linters_ignore                                    ={
     \ 'c': ['cc']
     \ }
+let g:ale_use_neovim_diagnostics_api                        =1
 
 nnoremap <localleader>f                                     :ALEFix<cr>
 "-----------------------------------------TagBar-------------------------------
@@ -547,7 +548,7 @@ vnoremap j                                                  gj
 vnoremap k                                                  gk
 
 " for C, Rust
-nnoremap <leader>;                                          A;<esc>
+nnoremap <localleader>;                                     A;<esc>
 
 " for Rust
 autocmd FileType rust                                       highlight CocErrorHighlight guibg= ctermbg=
@@ -561,6 +562,14 @@ function! SynStack()
 endfunc
 
 lua << END
+vim.diagnostic.config({
+    virtual_text = {
+        spacing = 0,
+        prefix = "",
+        -- prefix = " ■",
+    },
+})
+
 require('lualine').setup {
     options = {
         icons_enabled = false,
