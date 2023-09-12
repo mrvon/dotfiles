@@ -230,6 +230,7 @@ nmap <silent> ]s                                            <plug>(ale_next_wrap
 let g:ale_linters                                           ={
     \ 'asm': [],
     \ 'go': ['go vet', 'gofmt', 'staticcheck'],
+    \ 'lua': ['luacheck'],
     \ }
 let g:ale_fixers                                            ={
     \ 'python': ['yapf'],
@@ -566,6 +567,7 @@ vim.diagnostic.config({
     virtual_text = {
         spacing = 0,
         prefix = " ■",
+        -- source = "if_from",
     },
 })
 
