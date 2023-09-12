@@ -9,7 +9,7 @@ $ ./install.sh
 ### install fonts ###
 
 ```sh
-$ cp ~/dotfiles/font/MonacoForPowerline.ttf ~/.local/share/fonts
+$ cp your_font.ttf ~/.local/share/fonts
 $ fc-cache -vf
 ```
 
