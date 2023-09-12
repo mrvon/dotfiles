@@ -565,8 +565,7 @@ lua << END
 vim.diagnostic.config({
     virtual_text = {
         spacing = 0,
-        prefix = "",
-        -- prefix = " ■",
+        prefix = " ■",
     },
 })
 
