@@ -225,18 +225,21 @@ let g:tmux_navigator_disable_when_zoomed                    =1
 let g:ale_disable_lsp                                       =1
 let g:ale_completion_enabled                                =0
 let g:ale_lint_on_text_changed                              ='never'
+let g:ale_lint_on_save                                      =1
 nmap <silent> [s                                            <plug>(ale_previous_wrap)
 nmap <silent> ]s                                            <plug>(ale_next_wrap)
 let g:ale_linters                                           ={
     \ 'asm': [],
     \ 'go': ['go vet', 'gofmt', 'staticcheck'],
     \ 'lua': ['luacheck'],
+    \ 'javascript': ['eslint'],
     \ }
 let g:ale_fixers                                            ={
     \ 'go': ['gofmt'],
     \ 'python': ['yapf'],
     \ 'rust': ['rustfmt'],
     \ 'lua': ['stylua'],
+    \ 'javascript': ['prettier'],
     \ }
 let g:ale_go_staticcheck_lint_package                       =1
 let g:ale_go_govet_options                                  ="-composites=false"
