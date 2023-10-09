@@ -22,7 +22,7 @@ Plug 'andymass/vim-matchup'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'ellisonleao/gruvbox.nvim'
+Plug 'ellisonleao/gruvbox.nvim', {'tag': '5e697fa640944dd4a98748d15c6e0a7725777551'}
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
