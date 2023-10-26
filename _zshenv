@@ -6,9 +6,10 @@ DOTFILES_SCRIPT=~/dotfiles/script
 export PATH=$DOTFILES_SCRIPT:$PATH
 
 # Golang
-export GOROOT_BOOTSTRAP=/usr/lib/go
-export GOROOT=/usr/lib/go
-export PATH=$GOROOT/bin:$PATH
+# Use GVM instead
+# export GOROOT_BOOTSTRAP=/usr/lib/go
+# export GOROOT=/usr/lib/go
+# export PATH=$GOROOT/bin:$PATH
 
 # Rust
 export PATH=$HOME/.cargo/bin:$PATH
