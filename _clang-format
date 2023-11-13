@@ -1,5 +1,6 @@
 BasedOnStyle: LLVM
 Language: Cpp
+ColumnLimit: 200
 IndentWidth: 4
 TabWidth: 4
 UseTab: Never
@@ -7,4 +8,4 @@ ReflowComments: false
 IndentCaseLabels: true
 AlignAfterOpenBracket: DontAlign
 AlwaysBreakAfterReturnType: AllDefinitions
-ColumnLimit: 200
+AllowShortFunctionsOnASingleLine: None
