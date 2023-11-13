@@ -6,3 +6,5 @@ UseTab: Never
 ReflowComments: false
 IndentCaseLabels: true
 AlignAfterOpenBracket: DontAlign
+AlwaysBreakAfterReturnType: AllDefinitions
+ColumnLimit: 200
