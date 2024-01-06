@@ -42,9 +42,11 @@
         },
         "go": {
             "command": "gopls",
-            "rootPatterns": ["go.mod"],
-            "trace.server": "verbose",
-            "filetypes": ["go"]
+            "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+            "filetypes": ["go"],
+            "initializationOptions": {
+                "usePlaceholders": true
+            }
         }
     },
     "[rust]": {}
