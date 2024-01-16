@@ -63,6 +63,7 @@ plugins=(
     zoxide
     zsh-autosuggestions
     zsh-syntax-highlighting
+    autoupdate
 )
 
 # User configuration

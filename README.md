@@ -26,6 +26,7 @@ $ fc-cache -vf
 + https://github.com/romkatv/powerlevel10k
 + https://github.com/zsh-users/zsh-autosuggestions
 + https://github.com/zsh-users/zsh-syntax-highlighting
++ https://github.com/tamcore/autoupdate-oh-my-zsh-plugins
 
 ### neovim ###
 + https://github.com/neovim/neovim
