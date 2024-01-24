@@ -27,6 +27,7 @@ Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plug 'junegunn/fzf', {'do': 'yes \| ./install'}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'justinmk/vim-sneak'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim', {'for': ['html', 'vue']}
 Plug 'mhinz/vim-signify', {'branch': 'master'}
@@ -636,7 +637,9 @@ require("gruvbox").setup {
     invert_intend_guides = false,
     inverse = true,
     contrast = "",
-    overrides = {},
+    overrides = {
+        Sneak = {fg = "black", bg = "#ff9900"},
+    },
 }
 
 require("nvim-autopairs").setup {}
