@@ -448,9 +448,9 @@ imap <F1>                                                   <esc>
 augroup filetype_vim
     autocmd!
     autocmd                                                 FileType vim setlocal foldmethod=marker
-    autocmd                                                 FileType html setlocal tabstop=2 shiftwidth=2
-    autocmd                                                 FileType vue setlocal tabstop=2 shiftwidth=2
-    autocmd                                                 FileType javascript setlocal tabstop=2 shiftwidth=2
+    " autocmd                                                 FileType html setlocal tabstop=2 shiftwidth=2
+    " autocmd                                                 FileType vue setlocal tabstop=2 shiftwidth=2
+    " autocmd                                                 FileType javascript setlocal tabstop=2 shiftwidth=2
 augroup END
 
 " Closing last search highlight
