@@ -1,4 +1,4 @@
 # .ctags.d/local.ctags
 --exclude=.ccls-cache
 --exclude=build
---languages=C,C++,Lua
+--languages=C,C++,Lua,Go
