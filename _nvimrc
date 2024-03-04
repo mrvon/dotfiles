@@ -49,7 +49,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'windwp/nvim-autopairs'
 " Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
-" Plug 'vimpostor/vim-tpipeline'
 call plug#end()
 
 filetype plugin indent on
@@ -93,7 +92,7 @@ set history                                                 =10000
 set noruler
 set laststatus                                              =2
 set scrolloff                                               =5
-set cmdheight                                               =0
+set cmdheight                                               =1
 
 "-------------------------------Magic------------------------------------------
 set magic
