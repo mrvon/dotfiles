@@ -47,9 +47,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vimpostor/vim-tpipeline'
 Plug 'windwp/nvim-autopairs'
 " Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+" Plug 'vimpostor/vim-tpipeline'
 call plug#end()
 
 filetype plugin indent on
