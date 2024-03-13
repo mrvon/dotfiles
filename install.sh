@@ -39,7 +39,7 @@ ln -f -s ~/dotfiles/_prettierrc ~/.prettierrc
 # sudo -H pip3 install --upgrade yapf
 # sudo -H pip3 install --upgrade flake8
 # go get -u honnef.co/go/tools/cmd/staticcheck
-# sudo -H luarocks install luacheck
+# sudo luarocks install luacheck
 # go get golang.org/x/tools/gopls@latest
 
 # PlugUpgrade
