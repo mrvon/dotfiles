@@ -132,6 +132,7 @@ du -ah | sort -h          # find max file (current directory)
 du / -ah | sort -hr       # find max file (root directory) in reverse order
 df -lh                    # report file system disk space usage
 rlwrap -m nc              # enable ctrl-x ctrl-e in rlwrap
+tmux list-keys | vim -    # list tmux all key bindings
 
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
