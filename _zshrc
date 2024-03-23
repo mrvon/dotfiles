@@ -67,6 +67,7 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     autoupdate
+    virtualenv
 )
 
 # User configuration
