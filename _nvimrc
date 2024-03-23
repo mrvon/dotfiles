@@ -51,6 +51,9 @@ Plug 'windwp/nvim-autopairs'
 " Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 call plug#end()
 
+" built-in plugins
+packadd cfilter
+
 filetype plugin indent on
 syntax enable
 
