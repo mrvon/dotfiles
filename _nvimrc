@@ -22,7 +22,7 @@ Plug 'andymass/vim-matchup'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'ellisonleao/gruvbox.nvim', {'tag': '5e697fa640944dd4a98748d15c6e0a7725777551'}
+Plug 'mrvon/gruvbox.nvim'
 Plug 'junegunn/fzf', {'do': 'yes \| ./install'}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
@@ -632,12 +632,14 @@ require('nvim-treesitter.configs').setup {
     },
 }
 
-require("gruvbox").setup {
+require("gruvbox").setup ({
+    terminal_colors = true, -- add neovim terminal colors
     undercurl = true,
     underline = true,
     bold = true,
     italic = {
         strings = true,
+        emphasis = true,
         comments = true,
         operators = false,
         folds = true,
@@ -649,10 +651,13 @@ require("gruvbox").setup {
     invert_intend_guides = false,
     inverse = true,
     contrast = "",
+    palette_overrides = {},
     overrides = {
         Sneak = {fg = "black", bg = "#ff9900"},
     },
-}
+    dim_inactive = false,
+    transparent_mode = false,
+})
 
 require("nvim-autopairs").setup {}
 
