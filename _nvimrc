@@ -325,6 +325,9 @@ let g:strip_whitespace_confirm                              =0
 let g:startify_change_to_dir                                =0
 "-----------------------------------------ACK----------------------------------
 nnoremap <silent><leader>v                                  :Ack<cr>
+cabbrev ack Ack
+cabbrev ACk Ack
+cabbrev ACK Ack
 nnoremap <silent><localleader>v                             :Ack -w '<c-r>=expand("<cword>")<cr>'<cr>
 if executable('rg')
     let g:ackprg = 'rg -S --vimgrep'
