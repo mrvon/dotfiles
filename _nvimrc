@@ -372,6 +372,8 @@ let g:fzf_colors                                            ={
 let g:fzf_layout                                            ={
     \ 'window': { 'width': 0.9, 'height': 0.9 }
     \ }
+let g:fzf_vim = {}
+let g:fzf_vim.preview_window = ['hidden,right,50%', 'ctrl-/']
 function! RipgrepFzf(query, fullscreen)
     let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
     let initial_command = printf(command_fmt, shellescape(a:query))
