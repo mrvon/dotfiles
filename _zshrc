@@ -8,7 +8,6 @@ fi
 # Path to your oh-my-zsh installation.
 export EDITOR='nvim'
 export ZSH=~/.oh-my-zsh
-export TERMINAL_COLOR='dark' #(light, dark)
 # export TERM="xterm-256color"
 
 # Set name of the theme to load.
@@ -121,11 +120,7 @@ setopt IGNORE_EOF                # Ignore CTRL+D
 export LS_COLORS="ow=01;36;40"
 
 # bat theme
-if [ "$TERMINAL_COLOR" = 'light' ]; then
-    export BAT_THEME="gruvbox-light"
-else
-    export BAT_THEME="gruvbox-dark"
-fi
+export BAT_THEME="gruvbox-dark"
 
 [ -f ~/.proxy_config ] && source ~/.proxy_config
 

@@ -26,9 +26,7 @@ Plug 'mrvon/gruvbox.nvim'
 Plug 'junegunn/fzf', {'do': 'yes \| ./install'}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'justinmk/vim-sneak'
 Plug 'majutsushi/tagbar'
-Plug 'mattn/emmet-vim', {'for': ['html', 'vue']}
 Plug 'mhinz/vim-signify', {'branch': 'master'}
 Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
@@ -39,7 +37,6 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'preservim/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'projekt0n/github-nvim-theme'
 Plug 'szw/vim-maximizer'
 Plug 'tbastos/vim-lua'
 Plug 'tpope/vim-commentary'
@@ -48,6 +45,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'windwp/nvim-autopairs'
+" Plug 'justinmk/vim-sneak'
+" Plug 'mattn/emmet-vim', {'for': ['html', 'vue']}
 " Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 call plug#end()
 
@@ -58,13 +57,8 @@ filetype plugin indent on
 syntax enable
 
 "-------------------------------My Color My Taste------------------------------
-if $TERMINAL_COLOR == "light"
-    set background                                          =light
-    let $MYCOLOR                                            ='github_light'
-else
-    set background                                          =dark
-    let $MYCOLOR                                            ='gruvbox'
-endif
+set background                                          =dark
+let $MYCOLOR                                            ='gruvbox'
 
 "-------------------------------Encoding---------------------------------------
 " Always use utf-8
@@ -251,13 +245,9 @@ let g:ale_fixers                                            ={
     \ 'javascript': ['prettier'],
     \ }
 let g:ale_go_staticcheck_lint_package                       =1
-let g:ale_go_govet_options                                  ="-composites=false"
+let g:ale_go_govet_options                                  ='-composites=false'
 let g:ale_lua_stylua_options                                ='--search-parent-directories'
-if $TERMINAL_COLOR == "light"
-    let g:ale_set_highlights                                =1
-else
-    let g:ale_set_highlights                                =0
-endif
+let g:ale_set_highlights                                    =0
 let g:ale_linters_ignore                                    ={
     \ 'c': ['cc']
     \ }
