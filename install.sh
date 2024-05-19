@@ -4,7 +4,7 @@
 ln -f -s ~/dotfiles/_zshenv ~/.zshenv
 ln -f -s ~/dotfiles/_zshrc ~/.zshrc
 mkdir -p ~/.config/nvim
-ln -f -s ~/dotfiles/_nvimrc ~/.config/nvim/init.vim
+ln -f -s ~/dotfiles/_nvim.lua ~/.config/nvim/init.lua
 ln -f -s ~/dotfiles/_tmux.conf ~/.tmux.conf
 ln -f -s ~/dotfiles/_gitconfig ~/.gitconfig
 ln -f -s ~/dotfiles/_clang-format ~/.clang-format
