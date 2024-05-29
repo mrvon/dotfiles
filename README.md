@@ -135,8 +135,9 @@ rlwrap -m nc              # enable ctrl-x ctrl-e in rlwrap
 tmux list-keys | vim -    # list tmux all key bindings
 cfilter pattern           # filter a quickfix list
 cfdo %s/old/new/gc        # execute command in each valid entry in the quickfix list
-c-h                       # vim-tmux-navigator will remap c-h
+c-h                       # same as backspace, but vim-tmux-navigator will remap c-h
 c-d                       # delete the character under the cursor
+%!lua                     # execute current buffer as lua code and then replace buffer with result
 
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
