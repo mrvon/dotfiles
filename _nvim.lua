@@ -8,7 +8,6 @@ local Plug = vim.fn["plug#"]
 vim.call("plug#begin")
 Plug("andymass/vim-matchup")
 Plug("dense-analysis/ale")
-Plug("editorconfig/editorconfig-vim")
 Plug("mrvon/gruvbox.nvim")
 Plug("junegunn/fzf", {
     ["do"] = function()
@@ -200,6 +199,9 @@ vim.opt.mouse = ""
 
 -- sign column
 vim.opt.signcolumn = "number"
+
+-- disable editorconfig
+vim.g.editorconfig = false
 
 -- highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
