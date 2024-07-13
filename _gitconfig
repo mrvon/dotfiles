@@ -30,3 +30,5 @@
 	insteadOf = https://gitlab.com/
 [url "git@gitlab.alibaba-inc.com:"]
 	insteadOf = https://gitlab.alibaba-inc.com/
+[rebase]
+	instructionFormat = [%an] %s
