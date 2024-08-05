@@ -27,6 +27,7 @@ ln -f -s ~/dotfiles/_gdbinit ~/.gdbinit
 wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
 ln -f -s ~/dotfiles/_inputrc ~/.inputrc
 ln -f -s ~/dotfiles/_prettierrc ~/.prettierrc
+ln -f -s ~/dotfiles/_npmrc ~/.npmrc
 
 # dependecy
 # sudo apt install -y xsel
