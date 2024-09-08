@@ -17,7 +17,7 @@ Plug("junegunn/fzf", {
 Plug("junegunn/fzf.vim")
 Plug("junegunn/vim-easy-align")
 Plug("majutsushi/tagbar")
-Plug("mhinz/vim-signify", {["branch"] = "master"})
+Plug("mhinz/vim-signify")
 Plug("mhinz/vim-startify")
 Plug("mileszs/ack.vim")
 Plug("mrvon/gen_tags.vim")
@@ -257,6 +257,8 @@ let g:ale_use_neovim_diagnostics_api                        =1
 nnoremap <localleader>f                                     :ALEFix<cr>
 "-----------------------------------------TagBar-------------------------------
 nnoremap <localleader>T                                     :TagbarToggle<cr>
+"-----------------------------------------Signify------------------------------
+autocmd User SignifyAutocmds exe 'au! signify' | au signify BufWritePost * call sy#start()
 "-----------------------------------------Matchup------------------------------
 let g:matchup_matchparen_status_offscreen                   =0
 "-----------------------------------------COC----------------------------------
