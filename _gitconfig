@@ -18,8 +18,10 @@
 	keepBackup = false
 [mergetool "vimdiff"]
     cmd = nvim -d "$LOCAL" "$MERGED" "$REMOTE" -c '2wincmd w'
-[mergetool "vimmerge"]
+	trustExitCode = true
+[mergetool "vimdiff3"]
     cmd = nvim -d "$BASE" "$LOCAL" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
+	trustExitCode = true
 [push]
 	recurseSubmodules = check
 [url "https://"]
