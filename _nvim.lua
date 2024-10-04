@@ -216,6 +216,7 @@ vim.keymap.set("x", "P", [['Pgv"'.v:register.'y`>']], {expr = true, noremap = tr
 vim.cmd [[
 "-------------------------------Commentary-------------------------------------
 autocmd FileType asm setlocal commentstring=;\ %s
+autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 "-------------------------------NERDTree---------------------------------------
 nnoremap <localleader>n                                     :NERDTreeToggle<cr>
 let NERDTreeAutoCenter                                      =1
