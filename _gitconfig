@@ -36,3 +36,5 @@
 	insteadOf = https://gitlab.alibaba-inc.com/
 [rebase]
 	instructionFormat = [%an] %s
+[advice]
+	skippedCherryPicks = false
