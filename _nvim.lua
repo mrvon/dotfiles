@@ -8,12 +8,7 @@ local Plug = vim.fn["plug#"]
 vim.call("plug#begin")
 Plug("andymass/vim-matchup")
 Plug("dense-analysis/ale")
-Plug("mrvon/gruvbox.nvim")
-Plug("junegunn/fzf", {
-    ["do"] = function()
-        vim.fn["fzf#install"]()
-    end,
-})
+Plug("junegunn/fzf", { ["do"] = function() vim.fn["fzf#install"]() end, })
 Plug("junegunn/fzf.vim")
 Plug("junegunn/vim-easy-align")
 Plug("majutsushi/tagbar")
@@ -21,19 +16,11 @@ Plug("mhinz/vim-signify")
 Plug("mhinz/vim-startify")
 Plug("mileszs/ack.vim")
 Plug("mrvon/gen_tags.vim")
-Plug("neoclide/coc.nvim", {
-    ["branch"] = "release",
-    ["do"] = function()
-        vim.cmd ":CocUpdate"
-    end,
-})
+Plug("mrvon/gruvbox.nvim")
+Plug("neoclide/coc.nvim", { ["branch"] = "release", ["do"] = function() vim.cmd ":CocUpdate" end, })
 Plug("ntpeters/vim-better-whitespace")
 Plug("nvim-lualine/lualine.nvim")
-Plug("nvim-treesitter/nvim-treesitter", {
-    ["do"] = function()
-        vim.cmd ":TSUpdate"
-    end,
-})
+Plug("nvim-treesitter/nvim-treesitter", { ["do"] = function() vim.cmd ":TSUpdate" end, })
 Plug("nvim-treesitter/nvim-treesitter-textobjects")
 Plug("preservim/nerdtree", {["on"] = "NERDTreeToggle"})
 Plug("szw/vim-maximizer")
@@ -44,11 +31,7 @@ Plug("tpope/vim-repeat")
 Plug("tpope/vim-surround")
 Plug("tpope/vim-unimpaired")
 Plug("windwp/nvim-autopairs")
--- Plug("fatih/vim-go", {
---     ["do"] = function()
---         vim.cmd ":GoUpdateBinaries"
---     end,
--- })
+-- Plug("fatih/vim-go", { ["do"] = function() vim.cmd ":GoUpdateBinaries" end, })
 vim.call("plug#end")
 
 local vim_init_path = "~/.config/nvim/init.lua"
