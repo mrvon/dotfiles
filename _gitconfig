@@ -24,6 +24,7 @@
 	trustExitCode = true
 [push]
 	recurseSubmodules = check
+	autoSetupRemote = true
 [url "https://"]
 	insteadOf = git://
 [gc]
