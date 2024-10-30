@@ -22,6 +22,8 @@
 [mergetool "vimdiff3"]
     cmd = nvim -d "$BASE" "$LOCAL" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
 	trustExitCode = true
+[mergetool "nvimdiff"]
+    layout = "LOCAL,BASE,REMOTE / MERGED"
 [push]
 	recurseSubmodules = check
 	autoSetupRemote = true
