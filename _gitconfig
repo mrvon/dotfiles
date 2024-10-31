@@ -5,14 +5,14 @@
     editor = nvim -f
 	pager = less -x1,5
 [diff]
-    tool = vimdiff
+    tool = nvimdiff
 	submodule = log
 [difftool]
     prompt = false
 [difftool "vimdiff"]
     cmd = nvim -d "$LOCAL" "$REMOTE"
 [merge]
-    tool = vimdiff
+    tool = nvimdiff
 [mergetool]
     prompt = false
 	keepBackup = false
