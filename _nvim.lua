@@ -150,9 +150,10 @@ vim.opt.foldenable = false
 
 -- diff mode
 vim.opt.diffopt:remove("internal")
-vim.opt.diffopt:append("algorithm:histogram")
+vim.opt.diffopt:append("algorithm:patience")
 vim.opt.diffopt:append("linematch:50")
--- vim.opt.diffopt:append("indent-heuristic")
+vim.opt.diffopt:append("indent-heuristic")
+vim.keymap.set("n", "<localleader>d", ":diffupdate<cr>")
 
 -- disable swap file
 vim.opt.swapfile = false
