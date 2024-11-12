@@ -268,7 +268,6 @@ let g:strip_whitespace_confirm                              =0
 "-----------------------------------------Startify-----------------------------
 let g:startify_change_to_dir                                =0
 "-----------------------------------------ACK----------------------------------
-nnoremap <silent><leader>v                                  :Ack<cr>
 cabbrev ack Ack
 cabbrev ACk Ack
 cabbrev ACK Ack
@@ -288,7 +287,7 @@ xmap ga <Plug>(EasyAlign)
 nnoremap <silent><leader>f                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f'
     \ }))<cr>
-nnoremap <silent><leader>F                                  :call fzf#run(fzf#wrap({
+nnoremap <silent><leader>v                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
     \ }))<cr>
 nnoremap <silent><leader>g                                  :Rg<cr>
