@@ -138,6 +138,7 @@ cfdo %s/old/new/gc        # execute command in each valid entry in the quickfix 
 c-h                       # same as backspace, but vim-tmux-navigator will remap c-h
 c-d                       # delete the character under the cursor
 %!lua                     # execute current buffer as lua code and then replace buffer with result
+lsof -p pid               # list files opened by a specific process, given its PID
 
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
