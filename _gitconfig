@@ -11,16 +11,16 @@
     prompt = false
 [difftool "vimdiff"]
     cmd = nvim -d "$LOCAL" "$REMOTE"
+[difftool "nvimdiff"]
+    cmd = nvim -f -d -c 'wincmd l' -c 'cd "$GIT_PREFIX"' "$LOCAL" "$REMOTE"
 [merge]
     tool = nvimdiff
 [mergetool]
     prompt = false
 	keepBackup = false
-[mergetool "vimdiff"]
-    cmd = nvim -d "$LOCAL" "$MERGED" "$REMOTE" -c '2wincmd w'
 	trustExitCode = true
-[mergetool "vimdiff3"]
-    cmd = nvim -d "$BASE" "$LOCAL" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
+[mergetool "vimdiff"]
+    cmd = nvim -d "$LOCAL" "$BASE" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
 	trustExitCode = true
 [mergetool "nvimdiff"]
     layout = "LOCAL,BASE,REMOTE / MERGED"
