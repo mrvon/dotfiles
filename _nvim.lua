@@ -467,8 +467,8 @@ cnoremap <localleader>fm                                    <c-r>=expand("%:p")<
 nnoremap <localleader>z                                     zfa{<cr>
 
 " Fast write
-nnoremap <leader>w                                          :w<esc>
-nnoremap <localleader>w                                     :Gwrite<esc>
+nnoremap <localleader>w                                     :w<esc>
+nnoremap <localleader>g                                     :Gwrite<esc>
 
 " Fast quit all
 nnoremap <localleader>q                                     :qa<esc>
