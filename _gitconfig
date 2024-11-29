@@ -5,25 +5,21 @@
     editor = nvim -f
 	pager = less -x1,5
 [diff]
-    tool = nvimdiff
+    tool = vimdiff
 	submodule = log
 [difftool]
     prompt = false
 [difftool "vimdiff"]
-    cmd = nvim -d "$LOCAL" "$REMOTE"
-[difftool "nvimdiff"]
-    cmd = nvim -f -d -c 'wincmd l' -c 'cd "$GIT_PREFIX"' "$LOCAL" "$REMOTE"
+    cmd = nvim -d -c 'wincmd l' -c 'cd "$GIT_PREFIX"' "$LOCAL" "$REMOTE"
 [merge]
-    tool = nvimdiff
+    tool = vimdiff
 [mergetool]
     prompt = false
 	keepBackup = false
 	trustExitCode = true
 [mergetool "vimdiff"]
-    cmd = nvim -d "$LOCAL" "$BASE" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
+    cmd = nvim -d -c '$wincmd w' -c 'wincmd J' "$LOCAL" "$BASE" "$REMOTE" "$MERGED"
 	trustExitCode = true
-[mergetool "nvimdiff"]
-    layout = "LOCAL,BASE,REMOTE / MERGED"
 [push]
 	recurseSubmodules = check
 	autoSetupRemote = true
