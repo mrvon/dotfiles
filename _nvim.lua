@@ -287,6 +287,9 @@ xmap ga <Plug>(EasyAlign)
 nnoremap <silent><leader>f                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f'
     \ }))<cr>
+nnoremap <silent><leader>F                                  :call fzf#run(fzf#wrap({
+    \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
+    \ }))<cr>
 nnoremap <silent><leader>v                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
     \ }))<cr>
