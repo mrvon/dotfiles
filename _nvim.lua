@@ -682,11 +682,5 @@ require("nvim-treesitter.configs").setup {
 }
 
 vim.opt.termguicolors = true
-vim.cmd [[
-	if &diff
-        setlocal background=dark
-    else
-        setlocal background=light
-	endif
-]]
+vim.cmd [[ setlocal background=dark ]]
 vim.cmd [[ colorscheme gruvbox ]]
