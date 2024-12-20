@@ -328,8 +328,11 @@ function! RipgrepFzf(query, fullscreen)
     call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
-autocmd! FileType fzf tnoremap <buffer> jk <c-c>
-" autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
+augroup filetype_fzf
+    autocmd!
+    autocmd FileType fzf tnoremap <buffer> jk <c-c>
+    autocmd FileType fzf tnoremap <buffer> kj <c-c>
+augroup END
 "-----------------------------------------GenTags------------------------------
 let g:loaded_gentags#gtags                                  =1
 let g:loaded_gentags#ctags                                  =0
@@ -351,10 +354,10 @@ vim.cmd [[ nnoremap <silent><leader>z :MaximizerToggle<CR> ]]
 
 -- Thanks to http://learnvimscriptthehardway.stevelosh.com/
 -- Use jk instead of esc, this excellent idea came from steve.
-vim.keymap.set("i", "jk", "<esc>", {noremap = true})
-vim.keymap.set("t", "jk", "<c-\\><c-n>", {noremap = true})
-vim.keymap.set("i", "JK", "<esc>", {noremap = true})
-vim.keymap.set("t", "JK", "<c-\\><c-n>", {noremap = true})
+for _, key in ipairs({"jk", "JK", "kj", "KJ"}) do
+    vim.keymap.set("i", key, "<esc>", {noremap = true})
+    vim.keymap.set("t", key, "<c-\\><c-n>", {noremap = true})
+end
 -- when in terminal mode, escape will leave terminal mode and then it becomes
 -- like any other vim buffer and can be switched or deleted or whatever
 vim.cmd [[ tnoremap <expr> <c-r> '<c-\><c-n>"'.nr2char(getchar()).'' ]]
