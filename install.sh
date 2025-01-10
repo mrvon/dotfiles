@@ -28,6 +28,8 @@ wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
 ln -f -s ~/dotfiles/_inputrc ~/.inputrc
 ln -f -s ~/dotfiles/_prettierrc ~/.prettierrc
 ln -f -s ~/dotfiles/_npmrc ~/.npmrc
+mkdir -p ~/.config/alacritty
+ln -f -s ~/dotfiles/_alacritty.toml ~/.config/alacritty/alacritty.toml
 
 # dependecy
 # sudo apt install -y xsel
