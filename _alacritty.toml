@@ -4,7 +4,7 @@
 # git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
 [window]
 dimensions = {columns = 0, lines = 0}
-opacity = 0.9
+opacity = 1.0
 padding.x = 0
 padding.y = 0
 decorations = "None"
@@ -14,25 +14,14 @@ startup_mode = "Maximized"
 # TERM = "tmux-256color"
 
 [font]
-size = 14
+size = 13
 offset = {x = 0, y = 0}
 glyph_offset = {x = 0, y = 0}
-
-[font.normal]
-family = "Monaco Nerd Font Mono"
-style = "Regular"
-
-[font.bold]
-family = "Monaco Nerd Font Mono"
-style = "Bold"
-
-[font.italic]
-family = "Monaco Nerd Font Mono"
-style = "Regular"
-
-[font.bold_italic]
-family = "Monaco Nerd Font Mono"
-style = "Bold"
+normal = { family = "Monaco Nerd Font Mono", style = "Regular" }
+# buggy here
+# bold = { style = "Bold" }
+italic = { style = "Bold" }
+# bold_italic = { style = "Bold Italic" }
 
 [selection]
 save_to_clipboard = true
@@ -63,34 +52,19 @@ action = "ToggleFullscreen"
 key = "F11"
 mods = "None"
 
-[[keyboard.bindings]]
-action = "ClearLogNotice"
-key = "L"
-mods = "Control"
-
-[[keyboard.bindings]]
-action = "ScrollPageUp"
-key = "PageUp"
-mode = "~Alt"
-mods = "None"
-
-[[keyboard.bindings]]
-action = "ScrollPageDown"
-key = "PageDown"
-mode = "~Alt"
-mods = "None"
-
 [scrolling]
 history = 5000
 multiplier = 3
-
-[general]
-import = [
-    "~/.config/alacritty/themes/themes/dracula.toml"
-    # "~/.config/alacritty/themes/themes/base16_default_dark.toml"
-]
 
 # [terminal]
 # [terminal.shell]
 # program = 'C:\Program Files\Git\bin\bash.exe'
 # args = [ "--login", ]
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[general]
+import = [
+  "~/.config/alacritty/themes/themes/authur.toml"
+]
