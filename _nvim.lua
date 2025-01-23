@@ -176,7 +176,7 @@ vim.opt.updatetime = 300
 vim.opt.winminheight = 0
 
 -- timeout len
-vim.opt.timeoutlen = 500
+vim.opt.timeoutlen = 300
 
 -- disable mouse
 vim.opt.mouse = ""
