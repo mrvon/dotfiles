@@ -108,7 +108,8 @@ set noexpandtab | %retab! # replace space with tab (no expand tab)
 gf, gF                    # go to file under cursor
 gt                        # go to next tab
 gT                        # go to privious tab
-C-W ]                     # open tags reference in new window
+C-w ]                     # open tags reference in new window
+C-w f                     # like gf but in new window
 vim --clean               # skips initializations from files and environment variables
 history | vim -           # read from stdin
 vim --startuptime profile # profile startup time
