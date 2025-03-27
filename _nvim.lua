@@ -471,6 +471,7 @@ cnoremap <localleader>fm                                    <c-r>=expand("%:p")<
 
 " Easy Folding
 nnoremap <localleader>z                                     zfa{<cr>
+vnoremap <localleader>z                                     zf<cr>
 
 " Fast write
 nnoremap <localleader>w                                     :Gwrite<esc>
