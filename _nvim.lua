@@ -193,6 +193,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     command = "silent! lua vim.highlight.on_yank()",
 })
 
+vim.api.nvim_create_autocmd("Filetype", {
+    pattern = { "gitcommit", "markdown" },
+    callback = function()
+        vim.opt_local.wrap = true
+    end
+})
+
 -- visual paste without overwritting register
 vim.keymap.set("x", "p", [['pgv"'.v:register.'y`>']], {expr = true, noremap = true})
 vim.keymap.set("x", "P", [['Pgv"'.v:register.'y`>']], {expr = true, noremap = true})
@@ -571,6 +578,9 @@ vim.diagnostic.config({
         prefix = " ■",
         -- source = "if_from",
     },
+    -- virtual_lines = {
+    --     current_line = true,
+    -- },
 })
 
 require("lualine").setup {
