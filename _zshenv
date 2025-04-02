@@ -2,6 +2,9 @@
 [[ $- == *i* ]] && stty -ixon
 
 # Path
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 DOTFILES_SCRIPT=~/dotfiles/script
 export PATH=$DOTFILES_SCRIPT:$PATH
 
