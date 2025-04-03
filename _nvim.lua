@@ -358,6 +358,7 @@ let g:gen_tags#statusline                                   =0
 
 -- maximize
 vim.cmd [[ nnoremap <silent><leader>z :MaximizerToggle<CR> ]]
+vim.keymap.set("n", "<localleader><localleader>", ":MaximizerToggle<CR>", {noremap = true, silent = true})
 
 -- Thanks to http://learnvimscriptthehardway.stevelosh.com/
 -- Use jk instead of esc, this excellent idea came from steve.
@@ -384,7 +385,7 @@ vim.keymap.set("n", "<c-l>", "<c-w>l", {noremap = true})
 
 -- edit the alternate file.
 -- mostly the alternate file is the previously edited file.
-vim.keymap.set("n", "<leader><leader>", "<c-^>", {noremap = true})
+vim.keymap.set("n", "<leader><leader>", "<c-^>", {noremap = true, silent = true})
 
 -- abbrev
 vim.cmd [[
