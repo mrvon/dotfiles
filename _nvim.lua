@@ -148,6 +148,9 @@ vim.opt.nrformats = "hex"
 -- I don't like vim style fold
 vim.opt.foldenable = false
 
+-- no show mode
+vim.opt.showmode = false
+
 -- diff mode
 vim.opt.diffopt:remove("internal")
 vim.opt.diffopt:append("algorithm:patience")
@@ -599,7 +602,7 @@ require("lualine").setup {
         globalstatus = true,
     },
     sections = {
-        lualine_a = {"mode"},
+        lualine_a = {}, -- "mode"
         lualine_b = {"branch", "diff", "diagnostics"},
         lualine_c = {"filename"},
         lualine_x = {"encoding"},
