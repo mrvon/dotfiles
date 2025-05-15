@@ -6,6 +6,9 @@
     "diagnostic.virtualText": false,
     "diagnostic.virtualTextCurrentLineOnly": true,
     "python.formatting.autopep8Path": "~/.local/bin/autopep8",
+    "pyright.inlayHints.functionReturnTypes": false,
+    "pyright.inlayHints.variableTypes": false,
+    "pyright.inlayHints.parameterTypes": false,
     "suggest.enablePreselect": false,
     "suggest.noselect": true,
     "notification.disabledProgressSources": [
