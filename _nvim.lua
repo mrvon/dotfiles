@@ -11,11 +11,11 @@ Plug("dense-analysis/ale")
 Plug("junegunn/fzf", { ["do"] = function() vim.fn["fzf#install"]() end, })
 Plug("junegunn/fzf.vim")
 Plug("junegunn/vim-easy-align")
+Plug("ludovicchabant/vim-gutentags")
 Plug("majutsushi/tagbar")
 Plug("mhinz/vim-signify")
 Plug("mhinz/vim-startify")
 Plug("mileszs/ack.vim")
-Plug("mrvon/gen_tags.vim")
 Plug("mrvon/gruvbox.nvim")
 Plug("neoclide/coc.nvim", { ["branch"] = "release", ["do"] = function() vim.cmd ":CocUpdate" end, })
 Plug("ntpeters/vim-better-whitespace")
@@ -309,7 +309,6 @@ nnoremap <silent><leader>b                                  :Buffer<cr>
 nnoremap <silent><leader>r                                  :History<cr>
 nnoremap <silent><leader>t                                  :BTags<cr>
 nnoremap <silent><leader>o                                  :Tags<cr>
-nnoremap <localleader>o                                     :GenCtags<cr>
 let g:fzf_colors                                            ={
     \ 'fg':      ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
@@ -343,20 +342,13 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 "     autocmd FileType fzf tnoremap <buffer> jk <c-c>
 " augroup END
 "-----------------------------------------GenTags------------------------------
-let g:loaded_gentags#gtags                                  =1
-let g:loaded_gentags#ctags                                  =0
-let g:gen_tags#gtags_auto_gen                               =0
-let g:gen_tags#ctags_auto_gen                               =0
-let g:gen_tags#gtags_auto_update                            =0
-let g:gen_tags#ctags_auto_update                            =0
-let g:gen_tags#statusline                                   =0
-" let g:gen_tags#verbose                                    =1
-" let g:gen_tags#ctags_opts                                 =[
-"             \ '--exclude=.ccls-cache',
-"             \ '--exclude=build',
-"             \ ]
-" $HOME/.config/ctags/my.ctags
-" .ctags.d/*.ctags
+" $HOME/.config/ctags/local.ctags
+" .ctags.d/local.ctags
+let g:gutentags_enabled = 1
+let g:gutentags_trace = 0
+let g:gutentags_modules = ['ctags']
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+let g:gutentags_generate_on_empty_buffer = 1
 ]]
 
 -- maximize
