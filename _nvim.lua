@@ -228,6 +228,7 @@ let g:ale_linters                                           ={
     \ 'cpp': ['clang-tidy'],
     \ 'asm': [],
     \ 'go': ['go vet', 'gofmt', 'staticcheck'],
+    \ 'python': ['ruff'],
     \ 'lua': ['luacheck'],
     \ 'javascript': ['eslint'],
     \ }
@@ -235,7 +236,7 @@ let g:ale_fixers                                            ={
     \ 'c': ['clang-format'],
     \ 'cpp': ['clang-format'],
     \ 'go': ['goimports', 'gofmt'],
-    \ 'python': ['yapf'],
+    \ 'python': ['ruff_format'],
     \ 'rust': ['rustfmt'],
     \ 'lua': ['stylua'],
     \ 'javascript': ['prettier'],
