@@ -224,8 +224,8 @@ let g:ale_lint_on_save                                      =1
 nmap <silent> [s                                            <plug>(ale_previous_wrap)
 nmap <silent> ]s                                            <plug>(ale_next_wrap)
 let g:ale_linters                                           ={
-    \ 'c': ['clang-tidy'],
-    \ 'cpp': ['clang-tidy'],
+    \ 'c': ['clangtidy'],
+    \ 'cpp': ['clangtidy'],
     \ 'asm': [],
     \ 'go': ['go vet', 'gofmt', 'staticcheck'],
     \ 'python': ['ruff'],
@@ -401,8 +401,8 @@ vim.keymap.set("n", "L", "$", {noremap = true})
 vim.keymap.set("v", "L", "$", {noremap = true})
 -- no Ex mode
 vim.keymap.set("n", "Q", "<nop>", {noremap = true})
--- vim.keymap.set("n", "J", "<nop>", {noremap = true})
--- vim.keymap.set("v", "J", "<nop>", {noremap = true})
+vim.keymap.set("n", "J", "<nop>", {noremap = true})
+vim.keymap.set("v", "J", "<nop>", {noremap = true})
 vim.keymap.set("n", "K", "<nop>", {noremap = true})
 
 vim.cmd [[
@@ -569,16 +569,18 @@ end
 -- endfunc
 -- ]]
 
+local virtual_text = {
+    spacing = 0,
+    prefix = " ■",
+    -- source = "if_from",
+}
 vim.diagnostic.config({
-    virtual_text = {
-        spacing = 0,
-        prefix = " ■",
-        -- source = "if_from",
-    },
-    -- virtual_lines = {
-    --     current_line = true,
-    -- },
+    virtual_text = virtual_text,
 })
+
+vim.keymap.set("n", "<localleader>k", function()
+    vim.diagnostic.open_float()
+end)
 
 require("lualine").setup {
     options = {
