@@ -401,8 +401,8 @@ vim.keymap.set("n", "L", "$", {noremap = true})
 vim.keymap.set("v", "L", "$", {noremap = true})
 -- no Ex mode
 vim.keymap.set("n", "Q", "<nop>", {noremap = true})
-vim.keymap.set("n", "J", "<nop>", {noremap = true})
-vim.keymap.set("v", "J", "<nop>", {noremap = true})
+-- vim.keymap.set("n", "J", "<nop>", {noremap = true})
+-- vim.keymap.set("v", "J", "<nop>", {noremap = true})
 vim.keymap.set("n", "K", "<nop>", {noremap = true})
 
 vim.cmd [[
