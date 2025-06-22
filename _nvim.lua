@@ -274,6 +274,8 @@ endif
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocActionAsync('format')
 let g:coc_disable_transparent_cursor                        =1
+let $NVIM_COC_LOG_LEVEL                                     ="debug"
+" :CocLog
 "-----------------------------------------Whitespace---------------------------
 let g:strip_whitespace_confirm                              =0
 "-----------------------------------------Startify-----------------------------
