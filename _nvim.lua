@@ -275,7 +275,8 @@ endif
 command! -nargs=0 Format :call CocActionAsync('format')
 let g:coc_disable_transparent_cursor                        =1
 let $NVIM_COC_LOG_LEVEL                                     ="debug"
-" :CocLog
+nnoremap <silent><localleader>i                             :CocCommand document.toggleInlayHint<cr>
+" :CocOpenLog
 "-----------------------------------------Whitespace---------------------------
 let g:strip_whitespace_confirm                              =0
 "-----------------------------------------Startify-----------------------------
