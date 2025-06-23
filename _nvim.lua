@@ -635,8 +635,8 @@ require("nvim-treesitter.configs").setup {
 
 require("gruvbox").setup({
     terminal_colors = true, -- add neovim terminal colors
-    undercurl = true,
-    underline = true,
+    undercurl = false, -- annoying
+    underline = false, -- annoying
     bold = true,
     italic = {
         strings = true,
