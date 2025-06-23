@@ -251,6 +251,7 @@ let g:ale_linters_ignore                                    ={
 let g:ale_use_neovim_diagnostics_api                        =1
 
 nnoremap <localleader>f                                     :ALEFix<cr>
+nnoremap <leader>d                                          :ALEToggleBuffer<cr>
 "-----------------------------------------TagBar-------------------------------
 nnoremap <localleader>T                                     :TagbarToggle<cr>
 "-----------------------------------------Signify------------------------------
@@ -276,6 +277,7 @@ command! -nargs=0 Format :call CocActionAsync('format')
 let g:coc_disable_transparent_cursor                        =1
 let $NVIM_COC_LOG_LEVEL                                     ="debug"
 nnoremap <silent><localleader>i                             :CocCommand document.toggleInlayHint<cr>
+" nnoremap <leader>d                                        :call CocAction('diagnosticToggle')<cr>
 " :CocOpenLog
 "-----------------------------------------Whitespace---------------------------
 let g:strip_whitespace_confirm                              =0
@@ -530,7 +532,7 @@ vim.keymap.set("v", "j", "gj", {noremap = true})
 vim.keymap.set("v", "k", "gk", {noremap = true})
 
 -- for c, rust
-vim.keymap.set("n", "<localleader>;", "A;<esc>", {noremap = true})
+vim.keymap.set("n", "<leader>;", "A;<esc>", {noremap = true})
 
 -- for rust
 vim.cmd [[
