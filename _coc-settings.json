@@ -5,8 +5,8 @@
     "diagnostic.messageTarget": "float",
     "diagnostic.virtualText": false,
     "diagnostic.virtualTextCurrentLineOnly": true,
-    "inlayHint.display": false,
-    "inlayHint.position": "inline",
+    "inlayHint.display": true,
+    "inlayHint.position": "eol",
     "suggest.enablePreselect": false,
     "suggest.noselect": true,
     "notification.disabledProgressSources": [

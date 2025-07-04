@@ -259,10 +259,15 @@ autocmd User SignifyAutocmds exe 'au! signify' | au signify BufWritePost * call 
 "-----------------------------------------Matchup------------------------------
 let g:matchup_matchparen_status_offscreen                   =0
 "-----------------------------------------COC----------------------------------
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" to trigger completion
+inoremap <silent><expr> <c-space> coc#refresh()
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent><nowait> [g <Plug>(coc-diagnostic-prev)
+nmap <silent><nowait> ]g <Plug>(coc-diagnostic-next)
+nmap <silent><nowait> gd <Plug>(coc-definition)
+nmap <silent><nowait> gy <Plug>(coc-type-definition)
+nmap <silent><nowait> gi <Plug>(coc-implementation)
+nmap <silent><nowait> gr <Plug>(coc-references)
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 if has('nvim-0.4.0') || has('patch-8.2.0750')
     nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
@@ -276,7 +281,6 @@ endif
 command! -nargs=0 Format :call CocActionAsync('format')
 let g:coc_disable_transparent_cursor                        =1
 let $NVIM_COC_LOG_LEVEL                                     ="debug"
-nnoremap <silent><localleader>i                             :CocCommand document.toggleInlayHint<cr>
 " nnoremap <leader>d                                        :call CocAction('diagnosticToggle')<cr>
 " :CocOpenLog
 "-----------------------------------------Whitespace---------------------------
