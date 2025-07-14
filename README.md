@@ -1,5 +1,7 @@
 # Happy Hacking #
 
+Less keystrokes is more.
+
 ### install ###
 
 ```sh

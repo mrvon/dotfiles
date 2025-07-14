@@ -13,7 +13,6 @@ Plug("junegunn/fzf.vim")
 Plug("junegunn/vim-easy-align")
 Plug("ludovicchabant/vim-gutentags")
 Plug("majutsushi/tagbar")
-Plug("mhinz/vim-signify")
 Plug("mhinz/vim-startify")
 Plug("mileszs/ack.vim")
 Plug("mrvon/gruvbox.nvim")
@@ -31,6 +30,7 @@ Plug("tpope/vim-repeat")
 Plug("tpope/vim-surround")
 Plug("tpope/vim-unimpaired")
 Plug("windwp/nvim-autopairs")
+-- Plug("mhinz/vim-signify")
 -- Plug("fatih/vim-go", { ["do"] = function() vim.cmd ":GoUpdateBinaries" end, })
 vim.call("plug#end")
 
@@ -488,7 +488,7 @@ vnoremap <localleader>z                                     zf<cr>
 
 " Fast write
 nnoremap <localleader>w                                     :Gwrite<esc>
-nnoremap <local>w                                           :w<esc>
+" nnoremap <local>w                                         :w<esc>
 
 " Fast quit all
 nnoremap <localleader>q                                     :qa<esc>
@@ -607,7 +607,7 @@ require("lualine").setup {
     },
     sections = {
         lualine_a = {}, -- "mode"
-        lualine_b = {"branch", "diff", "diagnostics"},
+        lualine_b = {"branch", "diagnostics"}, -- "diff"
         lualine_c = {"filename"},
         lualine_x = {"encoding"},
         lualine_y = {"progress"},
@@ -708,3 +708,10 @@ require("nvim-treesitter.configs").setup {
 vim.opt.termguicolors = true
 vim.cmd [[ setlocal background=dark ]]
 vim.cmd [[ colorscheme gruvbox ]]
+
+-- auto save
+vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+    pattern = { "*" },
+    command = "silent! wall",
+    nested = true,
+})
