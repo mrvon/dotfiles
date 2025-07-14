@@ -1,3 +1,4 @@
+-- luacheck: ignore 631
 local vim = vim -- luacheck: ignore 113
 
 -- leader key
@@ -707,7 +708,7 @@ require("nvim-treesitter.configs").setup {
 }
 
 require("snacks").setup {
-    bigfile = { enabled = true },
+    bigfile = { enabled = true, notify = false },
     quickfile = { enabled = true },
 }
 
