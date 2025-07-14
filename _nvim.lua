@@ -8,6 +8,7 @@ local Plug = vim.fn["plug#"]
 vim.call("plug#begin")
 Plug("andymass/vim-matchup")
 Plug("dense-analysis/ale")
+Plug("folke/snacks.nvim")
 Plug("junegunn/fzf", { ["do"] = function() vim.fn["fzf#install"]() end, })
 Plug("junegunn/fzf.vim")
 Plug("junegunn/vim-easy-align")
@@ -703,6 +704,11 @@ require("nvim-treesitter.configs").setup {
             },
         },
     },
+}
+
+require("snacks").setup {
+    bigfile = { enabled = true },
+    quickfile = { enabled = true },
 }
 
 vim.opt.termguicolors = true
