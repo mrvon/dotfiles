@@ -315,8 +315,8 @@ nnoremap <silent><leader>F                                  :call fzf#run(fzf#wr
 nnoremap <silent><leader>v                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
     \ }))<cr>
-nnoremap <silent><leader>g                                  :Rg<cr>
-nnoremap <silent><leader>G                                  :Ag<cr>
+nnoremap <silent><leader>g                                  :RG<cr>
+nnoremap <silent><leader>G                                  :RG<cr>
 nnoremap <silent><leader>b                                  :Buffer<cr>
 nnoremap <silent><leader>r                                  :History<cr>
 nnoremap <silent><leader>t                                  :BTags<cr>
@@ -341,14 +341,6 @@ let g:fzf_layout                                            ={
     \ }
 let g:fzf_vim = {}
 let g:fzf_vim.preview_window = ['hidden,right,50%', 'ctrl-/']
-function! RipgrepFzf(query, fullscreen)
-    let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
-    let initial_command = printf(command_fmt, shellescape(a:query))
-    let reload_command = printf(command_fmt, '{q}')
-    let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
-    call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
-endfunction
-command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 " augroup filetype_fzf
 "     autocmd!
 "     autocmd FileType fzf tnoremap <buffer> jk <c-c>
