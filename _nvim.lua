@@ -10,8 +10,7 @@ vim.call("plug#begin")
 Plug("andymass/vim-matchup")
 Plug("dense-analysis/ale")
 Plug("folke/snacks.nvim")
-Plug("junegunn/fzf", { ["do"] = function() vim.fn["fzf#install"]() end, })
-Plug("junegunn/fzf.vim")
+Plug("ibhagwan/fzf-lua")
 Plug("junegunn/vim-easy-align")
 Plug("ludovicchabant/vim-gutentags")
 Plug("majutsushi/tagbar")
@@ -305,22 +304,17 @@ autocmd BufAdd * exe "cd" fnameescape(getcwd())
 "-----------------------------------------EASY ALIGN---------------------------
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
-"-----------------------------------------FZF----------------------------------
-nnoremap <silent><leader>f                                  :call fzf#run(fzf#wrap({
-    \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f'
-    \ }))<cr>
-nnoremap <silent><leader>F                                  :call fzf#run(fzf#wrap({
-    \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
-    \ }))<cr>
-nnoremap <silent><leader>v                                  :call fzf#run(fzf#wrap({
-    \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
-    \ }))<cr>
-nnoremap <silent><leader>g                                  :RG<cr>
-nnoremap <silent><leader>G                                  :RG<cr>
-nnoremap <silent><leader>b                                  :Buffer<cr>
-nnoremap <silent><leader>r                                  :History<cr>
-nnoremap <silent><leader>t                                  :BTags<cr>
-nnoremap <silent><leader>o                                  :Tags<cr>
+"-----------------------------------------FZF Lua------------------------------
+nnoremap <silent><leader>f                                  :FzfLua files<cr>
+nnoremap <silent><leader>v                                  :FzfLua files no_ignore=true<cr>
+nnoremap <silent><leader>g                                  :FzfLua live_grep<cr>
+nnoremap <silent><leader>b                                  :FzfLua buffers sort_mru=true sort_lastused=true<cr>
+nnoremap <silent><leader>r                                  :FzfLua oldfiles<cr>
+nnoremap <silent><leader>t                                  :FzfLua btags<cr>
+nnoremap <silent><leader>o                                  :FzfLua tags<cr>
+nnoremap <silent><localleader>r                             :FzfLua resume<cr>
+nnoremap <silent><leader>v                                  :FzfLua grep_cword<cr>
+vnoremap <silent><leader>v                                  :FzfLua grep_visual<cr>
 let g:fzf_colors                                            ={
     \ 'fg':      ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
@@ -341,10 +335,6 @@ let g:fzf_layout                                            ={
     \ }
 let g:fzf_vim = {}
 let g:fzf_vim.preview_window = ['hidden,right,50%', 'ctrl-/']
-" augroup filetype_fzf
-"     autocmd!
-"     autocmd FileType fzf tnoremap <buffer> jk <c-c>
-" augroup END
 "-----------------------------------------GenTags------------------------------
 " $HOME/.config/ctags/local.ctags
 " .ctags.d/local.ctags
@@ -489,39 +479,40 @@ nnoremap <localleader>q                                     :qa<esc>
 ]]
 
 -- search in visual mode
-vim.cmd [[
-function! ExecuteCmd(cmd)
-    exe "menu __magic_menu.__sub_magic_menu :" . a:cmd
-    emenu __magic_menu.__sub_magic_menu
-    unmenu __magic_menu
-endfunction
-
-function!                                                   __VisualSelection(direction) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern = escape(@", '\\/.*$^~[]#')
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'backward'
-        execute "normal ?" . l:pattern
-    elseif a:direction == 'forward'
-        execute "normal /" . l:pattern
-    elseif a:direction == 'ack_smartcase'
-        execute ExecuteCmd("Ack --smart-case " . "\"" . l:pattern . "\"" . "<cr>")
-    elseif a:direction == 'ack_wholeword'
-        execute ExecuteCmd("Ack --smart-case -w " . "\"" . l:pattern . "\"" . "<cr>")
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
-
-vnoremap <silent> *                                         :call __VisualSelection('forward')<cr>:set hlsearch<cr>
-vnoremap <silent> #                                         :call __VisualSelection('backward')<cr>:set hlsearch<cr>
-vnoremap <leader>v                                          :call __VisualSelection('ack_smartcase')<cr>
-vnoremap <localleader>v                                     :call __VisualSelection('ack_wholeword')<cr>
-]]
+-- vim.cmd [[
+-- function! ExecuteCmd(cmd)
+--     exe "menu __magic_menu.__sub_magic_menu :" . a:cmd
+--     emenu __magic_menu.__sub_magic_menu
+--     unmenu __magic_menu
+-- endfunction
+--
+-- function!                                                   __VisualSelection(direction) range
+--     let l:saved_reg = @"
+--     execute "normal! vgvy"
+--
+--     let l:pattern = escape(@", '\\/.*$^~[]#')
+--     let l:pattern = substitute(l:pattern, "\n$", "", "")
+--
+--     if a:direction == 'backward'
+--         execute "normal ?" . l:pattern
+--     elseif a:direction == 'forward'
+--         execute "normal /" . l:pattern
+--     elseif a:direction == 'ack_smartcase'
+--         execute ExecuteCmd("Ack --smart-case " . "\"" . l:pattern . "\"" . "<cr>")
+--     elseif a:direction == 'ack_wholeword'
+--         execute ExecuteCmd("Ack --smart-case -w " . "\"" . l:pattern . "\"" . "<cr>")
+--     endif
+--
+--     let @/ = l:pattern
+--     let @" = l:saved_reg
+-- endfunction
+--
+-- vnoremap <silent> *                                         :call __VisualSelection('forward')<cr>:set hlsearch<cr>
+-- vnoremap <silent> #                                         :call __VisualSelection('backward')<cr>:set hlsearch<cr>
+-- vnoremap <leader>v                                          :call __VisualSelection('ack_smartcase')<cr>
+-- vnoremap <localleader>v                                     :call __VisualSelection('ack_wholeword')<cr>
+-- nnoremap <silent><localleader>v                             :Ack -w '<c-r>=expand("<cword>")<cr>'<cr>
+-- ]]
 
 -- move by line
 vim.keymap.set("n", "j", "gj", {noremap = true})
@@ -703,6 +694,74 @@ require("snacks").setup {
     bigfile = { enabled = true, notify = false },
     quickfile = { enabled = true },
 }
+
+local actions = require("fzf-lua").actions
+local config = require("fzf-lua").config
+config.defaults.keymap.fzf["ctrl-q"] = "select-all+accept"
+config.defaults.keymap.fzf["ctrl-u"] = "half-page-up"
+config.defaults.keymap.fzf["ctrl-d"] = "half-page-down"
+config.defaults.keymap.fzf["ctrl-x"] = "jump"
+config.defaults.keymap.fzf["ctrl-f"] = "preview-page-down"
+config.defaults.keymap.fzf["ctrl-b"] = "preview-page-up"
+config.defaults.keymap.builtin["<c-f>"] = "preview-page-down"
+config.defaults.keymap.builtin["<c-b>"] = "preview-page-up"
+require("fzf-lua").setup({
+    { "default-prompt" }, -- base profile
+    winopts = {
+        height = 0.80,
+        width = 0.90,
+        row = 0.48,
+        col = 0.45,
+        preview = {
+            hidden = true,
+            vertical = "up:45%",
+        },
+    },
+    fzf_opts = {
+        -- nullify fzf-lua's settings to inherit from FZF_DEFAULT_OPTS
+        ["--info"] = false,
+        ["--layout"] = false,
+    },
+    keymap = {
+        builtin = {
+            true,
+            -- nvim registers <C-/> as <C-_>, use insert mode
+            -- and press <C-v><C-/> should output ^_
+            ["<C-_>"] = "toggle-preview",
+        },
+        fzf = {
+            true,
+            ["ctrl-/"] = "toggle-preview",
+        },
+    },
+    actions = {
+        files = {
+            ["enter"] = actions.file_edit_or_qf,
+            ["ctrl-x"] = actions.file_split,
+            ["ctrl-v"] = actions.file_vsplit,
+            ["ctrl-t"] = actions.file_tabedit,
+            ["alt-q"] = actions.file_sel_to_qf,
+            ["alt-l"] = actions.file_sel_to_ll,
+        },
+    },
+    files = {
+        cmd = os.getenv("FZF_DEFAULT_COMMAND"),
+        cwd_prompt = true,
+        cwd_prompt_shorten_len = 1,
+        actions = {
+            -- ["alt-i"] = { actions.toggle_ignore },
+            -- ["alt-h"] = { actions.toggle_hidden },
+        },
+    },
+    grep = {
+        git_icons = false,
+        exec_empty_query = true,
+        actions = {
+            -- ["alt-i"] = { actions.toggle_ignore },
+            -- ["alt-h"] = { actions.toggle_hidden },
+        },
+    },
+})
 
 vim.opt.termguicolors = true
 vim.cmd [[ setlocal background=dark ]]
