@@ -7,7 +7,6 @@ vim.g.maplocalleader = ","
 
 local Plug = vim.fn["plug#"]
 vim.call("plug#begin")
-Plug("andymass/vim-matchup")
 Plug("dense-analysis/ale")
 Plug("folke/snacks.nvim")
 Plug("junegunn/fzf", { ["do"] = function() vim.fn["fzf#install"]() end, })
@@ -32,6 +31,7 @@ Plug("tpope/vim-repeat")
 Plug("tpope/vim-surround")
 Plug("tpope/vim-unimpaired")
 Plug("windwp/nvim-autopairs")
+-- Plug("andymass/vim-matchup") very slow!
 -- Plug("mhinz/vim-signify")
 -- Plug("fatih/vim-go", { ["do"] = function() vim.cmd ":GoUpdateBinaries" end, })
 vim.call("plug#end")
