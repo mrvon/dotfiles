@@ -270,7 +270,24 @@ nmap <silent><nowait> gd <Plug>(coc-definition)
 nmap <silent><nowait> gy <Plug>(coc-type-definition)
 nmap <silent><nowait> gi <Plug>(coc-implementation)
 nmap <silent><nowait> gr <Plug>(coc-references)
-" Remap <C-f> and <C-b> for scroll float windows/popups.
+" Use K to show documentation in preview window
+nnoremap <silent> K :call ShowDocumentation()<CR>
+function! ShowDocumentation()
+    if CocAction('hasProvider', 'hover')
+        call CocActionAsync('doHover')
+    else
+        call feedkeys('K', 'in')
+    endif
+endfunction
+" Symbol renaming
+nmap <leader>rn <Plug>(coc-rename)
+" Formatting selected code
+xmap <localleader>f <Plug>(coc-format-selected)
+" nmap <localleader>f <Plug>(coc-format-selected)
+" nmap <leader>cl <Plug>(coc-codelens-action)
+" Highlight the symbol and its references when holding the cursor
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" Remap <C-f> and <C-b> to scroll float windows/popups
 if has('nvim-0.4.0') || has('patch-8.2.0750')
     nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
     nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
@@ -279,8 +296,13 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
     vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
     vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
+" Use CTRL-S for selections ranges
+" Requires 'textDocument/selectionRange' support of language server
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocActionAsync('format')
+nnoremap <silent><nowait> <localleader>s :<C-u>CocList -I symbols<cr>
 let g:coc_disable_transparent_cursor                        =1
 let $NVIM_COC_LOG_LEVEL                                     ="debug"
 " nnoremap <leader>d                                        :call CocAction('diagnosticToggle')<cr>
@@ -406,7 +428,7 @@ vim.keymap.set("v", "L", "$", {noremap = true})
 vim.keymap.set("n", "Q", "<nop>", {noremap = true})
 -- vim.keymap.set("n", "J", "<nop>", {noremap = true})
 -- vim.keymap.set("v", "J", "<nop>", {noremap = true})
-vim.keymap.set("n", "K", "<nop>", {noremap = true})
+-- vim.keymap.set("n", "K", "<nop>", {noremap = true})
 
 vim.cmd [[
 " Help myself
