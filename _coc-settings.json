@@ -17,6 +17,7 @@
     "Lua.diagnostics.enable": false,
     "Lua.hint.enable": false,
     "Lua.codeLens.enable": false,
+    "Lua.completion.keywordSnippet": "Disable",
     "languageserver": {
         "ccls": {
             "command": "ccls",
