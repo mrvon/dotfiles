@@ -328,21 +328,21 @@ autocmd BufAdd * exe "cd" fnameescape(getcwd())
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 "-----------------------------------------FZF----------------------------------
-nnoremap <silent><leader>f                                  :call fzf#run(fzf#wrap({
+nnoremap <silent><nowait><leader>f                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f'
     \ }))<cr>
-nnoremap <silent><leader>F                                  :call fzf#run(fzf#wrap({
+nnoremap <silent><nowait><leader>F                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
     \ }))<cr>
-nnoremap <silent><leader>v                                  :call fzf#run(fzf#wrap({
+nnoremap <silent><nowait><leader>v                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
     \ }))<cr>
-nnoremap <silent><leader>g                                  :RG<cr>
-nnoremap <silent><leader>G                                  :RG<cr>
-nnoremap <silent><leader>b                                  :Buffer<cr>
-nnoremap <silent><leader>r                                  :History<cr>
-nnoremap <silent><leader>t                                  :BTags<cr>
-nnoremap <silent><leader>o                                  :Tags<cr>
+nnoremap <silent><nowait><leader>g                                  :RG<cr>
+nnoremap <silent><nowait><leader>G                                  :RG<cr>
+nnoremap <silent><nowait><leader>b                                  :Buffer<cr>
+nnoremap <silent><nowait><leader>r                                  :History<cr>
+nnoremap <silent><nowait><leader>t                                  :BTags<cr>
+nnoremap <silent><nowait><leader>o                                  :Tags<cr>
 let g:fzf_colors                                            ={
     \ 'fg':      ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
