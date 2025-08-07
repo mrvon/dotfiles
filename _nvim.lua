@@ -18,7 +18,6 @@ Plug("mhinz/vim-startify")
 Plug("mileszs/ack.vim")
 Plug("mrvon/gruvbox.nvim")
 Plug("neoclide/coc.nvim", { ["branch"] = "release", ["do"] = function() vim.cmd ":CocUpdate" end, })
-Plug("ntpeters/vim-better-whitespace")
 Plug("nvim-lualine/lualine.nvim")
 Plug("nvim-treesitter/nvim-treesitter", { ["do"] = function() vim.cmd ":TSUpdate" end, })
 Plug("nvim-treesitter/nvim-treesitter-textobjects")
@@ -31,6 +30,7 @@ Plug("tpope/vim-repeat")
 Plug("tpope/vim-surround")
 Plug("tpope/vim-unimpaired")
 Plug("windwp/nvim-autopairs")
+-- Plug("ntpeters/vim-better-whitespace")
 -- Plug("andymass/vim-matchup") very slow!
 -- Plug("mhinz/vim-signify")
 -- Plug("fatih/vim-go", { ["do"] = function() vim.cmd ":GoUpdateBinaries" end, })
@@ -308,7 +308,12 @@ let $NVIM_COC_LOG_LEVEL                                     ="debug"
 " nnoremap <leader>d                                        :call CocAction('diagnosticToggle')<cr>
 " :CocOpenLog
 "-----------------------------------------Whitespace---------------------------
-let g:strip_whitespace_confirm                              =0
+" let g:strip_whitespace_confirm                            =0
+" augroup on_enter_buffer
+"     autocmd!
+"     autocmd BufEnter * EnableStripWhitespaceOnSave
+"     autocmd BufEnter * DisableWhitespace
+" augroup END
 "-----------------------------------------Startify-----------------------------
 let g:startify_change_to_dir                                =0
 "-----------------------------------------ACK----------------------------------
@@ -478,12 +483,6 @@ augroup END
     " autocmd!
     " autocmd VimEnter * nested :TagbarOpen
 " augroup END
-
-augroup on_enter_buffer
-    autocmd!
-    autocmd BufEnter * EnableStripWhitespaceOnSave
-    autocmd BufEnter * DisableWhitespace
-augroup END
 ]]
 
 vim.cmd [[
