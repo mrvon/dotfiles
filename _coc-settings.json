@@ -13,6 +13,7 @@
         "*"
     ],
     "coc.preferences.formatOnSaveFiletypes": [],
+    "coc.preferences.enableMessageDialog": true,
     "Lua.workspace.ignoreSubmodules": false,
     "Lua.diagnostics.enable": false,
     "Lua.hint.enable": false,
