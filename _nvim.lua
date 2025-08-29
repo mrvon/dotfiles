@@ -283,6 +283,7 @@ endfunction
 nmap <leader>rn <Plug>(coc-rename)
 " Formatting selected code
 xmap <localleader>f <Plug>(coc-format-selected)
+nnoremap <silent><localleader>c :call coc#float#close_all()<CR>
 " nmap <localleader>f <Plug>(coc-format-selected)
 " nmap <leader>cl <Plug>(coc-codelens-action)
 " Highlight the symbol and its references when holding the cursor
