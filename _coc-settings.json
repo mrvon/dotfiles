@@ -20,28 +20,6 @@
     "Lua.codeLens.enable": false,
     "Lua.completion.keywordSnippet": "Disable",
     "languageserver": {
-        "ccls": {
-            "command": "ccls",
-            "filetypes": [
-                "c",
-                "cc",
-                "cpp",
-                "c++",
-                "objc",
-                "objcpp"
-            ],
-            "rootPatterns": [
-                ".ccls",
-                "compile_commands.json",
-                ".git/",
-                ".hg/"
-            ],
-            "initializationOptions": {
-                "cache": {
-                    "directory": "/tmp/ccls"
-                }
-            }
-        },
         "rust": {
             "command": "rust-analyzer",
             "filetypes": ["rust"],
@@ -55,5 +33,6 @@
                 "usePlaceholders": true
             }
         }
-    }
+    },
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/20.1.8/clangd_20.1.8/bin/clangd"
 }
