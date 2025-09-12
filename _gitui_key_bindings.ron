@@ -1,0 +1,8 @@
+(
+    move_left: Some(( code: Char('h'), modifiers: "")),
+    move_right: Some(( code: Char('l'), modifiers: "")),
+    move_up: Some(( code: Char('k'), modifiers: "")),
+    move_down: Some(( code: Char('j'), modifiers: "")),
+    quit: Some(( code: Esc, modifiers: "")),
+    exit_popup: Some(( code: Char('q'), modifiers: "")),
+)

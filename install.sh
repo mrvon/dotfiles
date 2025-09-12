@@ -30,6 +30,8 @@ ln -f -s ~/dotfiles/_prettierrc ~/.prettierrc
 ln -f -s ~/dotfiles/_npmrc ~/.npmrc
 mkdir -p ~/.config/alacritty
 ln -f -s ~/dotfiles/_alacritty.toml ~/.config/alacritty/alacritty.toml
+mkdir -p ~/.config/gitui
+ln -f -s ~/dotfiles/_gitui_key_bindings.ron ~/.config/gitui/key_bindings.ron
 
 # dependecy
 # sudo apt install -y xsel
