@@ -3,6 +3,7 @@
     "diagnostic.displayByAle": true,
     "diagnostic.enableSign": false,
     "diagnostic.messageTarget": "float",
+    "diagnostic.messageLevel": "error",
     "diagnostic.virtualText": false,
     "diagnostic.virtualTextCurrentLineOnly": true,
     "inlayHint.display": true,
