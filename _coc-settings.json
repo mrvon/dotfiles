@@ -20,6 +20,8 @@
     "Lua.hint.enable": false,
     "Lua.codeLens.enable": false,
     "Lua.completion.keywordSnippet": "Disable",
+    "Lua.workspace.maxPreload": 10000,
+    "Lua.workspace.preloadFileSize": 1000,
     "languageserver": {
         "rust": {
             "command": "rust-analyzer",
