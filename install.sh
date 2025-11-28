@@ -24,7 +24,6 @@ mkdir -p ~/.config/ctags
 ln -f -s ~/dotfiles/_ctags ~/.config/ctags/my.ctags
 ln -f -s ~/dotfiles/_xprofile ~/.xprofile
 ln -f -s ~/dotfiles/_gdbinit ~/.gdbinit
-wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
 ln -f -s ~/dotfiles/_inputrc ~/.inputrc
 ln -f -s ~/dotfiles/_prettierrc ~/.prettierrc
 ln -f -s ~/dotfiles/_npmrc ~/.npmrc
@@ -32,6 +31,7 @@ mkdir -p ~/.config/alacritty
 ln -f -s ~/dotfiles/_alacritty.toml ~/.config/alacritty/alacritty.toml
 mkdir -p ~/.config/gitui
 ln -f -s ~/dotfiles/_gitui_key_bindings.ron ~/.config/gitui/key_bindings.ron
+ln -f -s ~/dotfiles/_wezterm.lua ~/.wezterm.lua
 
 # dependecy
 # sudo apt install -y xsel
