@@ -20,6 +20,7 @@ config.keys = {
     },
 }
 config.window_padding = {left = 0, right = 0, top = 0, bottom = 0}
-config.max_fps = 100
+config.default_cursor_style = "BlinkingBlock"
+config.max_fps = 60
 
 return config
