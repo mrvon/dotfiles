@@ -19,8 +19,8 @@ Plug("mileszs/ack.vim")
 Plug("mrvon/gruvbox.nvim")
 Plug("neoclide/coc.nvim", { ["branch"] = "release", ["do"] = function() vim.cmd ":CocUpdate" end, })
 Plug("nvim-lualine/lualine.nvim")
-Plug("nvim-treesitter/nvim-treesitter", { ["do"] = function() vim.cmd ":TSUpdate" end, })
-Plug("nvim-treesitter/nvim-treesitter-textobjects")
+Plug("nvim-treesitter/nvim-treesitter", { ["branch"] = "master", ["do"] = function() vim.cmd ":TSUpdate" end, })
+Plug("nvim-treesitter/nvim-treesitter-textobjects", { ["branch"] = "master" })
 Plug("preservim/nerdtree", {["on"] = "NERDTreeToggle"})
 Plug("szw/vim-maximizer")
 Plug("tbastos/vim-lua")
@@ -643,18 +643,6 @@ require("lualine").setup {
     extensions = {},
 }
 
-require("nvim-treesitter.configs").setup {
-    ensure_installed = {},
-    sync_install = false,
-    auto_install = true,
-    ignore_install = {},
-    highlight = {
-        enable = true,
-        disable = {},
-        additional_vim_regex_highlighting = false,
-    },
-}
-
 require("gruvbox").setup({
     terminal_colors = true, -- add neovim terminal colors
     undercurl = false, -- annoying
@@ -687,6 +675,15 @@ require("nvim-autopairs").setup {
 }
 
 require("nvim-treesitter.configs").setup {
+    ensure_installed = {},
+    sync_install = false,
+    auto_install = true,
+    ignore_install = {},
+    highlight = {
+        enable = true,
+        disable = {},
+        additional_vim_regex_highlighting = false,
+    },
     textobjects = {
         select = {
             enable = true,
