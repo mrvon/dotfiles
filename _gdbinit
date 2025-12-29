@@ -1,3 +1,0 @@
-# gdb -q jump
-set disassembly-flavor intel
-source ~/.gdbinit-gef.py

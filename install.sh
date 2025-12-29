@@ -23,7 +23,6 @@ ln -f -s ~/dotfiles/_proxy_config ~/.proxy_config
 mkdir -p ~/.config/ctags
 ln -f -s ~/dotfiles/_ctags ~/.config/ctags/my.ctags
 ln -f -s ~/dotfiles/_xprofile ~/.xprofile
-ln -f -s ~/dotfiles/_gdbinit ~/.gdbinit
 ln -f -s ~/dotfiles/_inputrc ~/.inputrc
 ln -f -s ~/dotfiles/_prettierrc ~/.prettierrc
 ln -f -s ~/dotfiles/_npmrc ~/.npmrc
@@ -45,6 +44,7 @@ ln -f -s ~/dotfiles/_wezterm.lua ~/.wezterm.lua
 # go get -u honnef.co/go/tools/cmd/staticcheck
 # sudo luarocks install luacheck
 # go get golang.org/x/tools/gopls@latest
+# wget -P ~ https://github.com/cyrus-and/gdb-dashboard/raw/master/.gdbinit
 
 # PlugUpgrade
 # PlugUpdate
