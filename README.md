@@ -38,6 +38,7 @@ $ fc-cache -vf
 :CocInstall coc-python
 :CocInstall coc-json
 :CocInstall coc-html
+:CocInstall coc-clangd
 
 ### lua ###
 
