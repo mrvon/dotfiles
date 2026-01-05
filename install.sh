@@ -8,6 +8,7 @@ ln -f -s ~/dotfiles/_nvim.lua ~/.config/nvim/init.lua
 ln -f -s ~/dotfiles/_tmux.conf ~/.tmux.conf
 ln -f -s ~/dotfiles/_gitconfig ~/.gitconfig
 ln -f -s ~/dotfiles/_clang-format ~/.clang-format
+ln -f -s ~/dotfiles/_clang-tidy ~/.clang-tidy
 ln -f -s ~/dotfiles/_golangci.yml ~/.golangci.yml
 ln -f -s ~/dotfiles/_flake8 ~/.flake8
 ln -f -s ~/dotfiles/_luacheckrc ~/.luacheckrc
