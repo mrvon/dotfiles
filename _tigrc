@@ -4,3 +4,4 @@ set tab-size = 4
 set main-view-commit-title-graph = no
 set show-changes = no
 set show-untracked = no
+set ignore-case = smart-case
