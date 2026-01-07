@@ -226,8 +226,8 @@ let g:ale_lint_on_save                                      =1
 nmap <silent> [s                                            <plug>(ale_previous_wrap)
 nmap <silent> ]s                                            <plug>(ale_next_wrap)
 let g:ale_linters                                           ={
-    \ 'c': ['clangtidy'],
-    \ 'cpp': ['clangtidy'],
+    \ 'c': [],
+    \ 'cpp': [],
     \ 'asm': [],
     \ 'go': ['go vet', 'gofmt', 'staticcheck'],
     \ 'python': ['ruff'],
