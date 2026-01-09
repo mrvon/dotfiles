@@ -205,6 +205,13 @@ vim.api.nvim_create_autocmd("Filetype", {
     end
 })
 
+vim.api.nvim_create_autocmd("Filetype", {
+    pattern = { "c", "cpp" },
+    callback = function()
+        vim.opt.formatoptions:remove({ "o" })
+    end
+})
+
 -- visual paste without overwritting register
 vim.keymap.set("x", "p", [['pgv"'.v:register.'y`>']], {expr = true, noremap = true})
 vim.keymap.set("x", "P", [['Pgv"'.v:register.'y`>']], {expr = true, noremap = true})
