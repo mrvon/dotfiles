@@ -226,6 +226,7 @@ let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
 "-------------------------------ALE--------------------------------------------
+let g:ale_enabled                                           =1
 let g:ale_disable_lsp                                       =1
 let g:ale_completion_enabled                                =0
 let g:ale_lint_on_text_changed                              ='never'
