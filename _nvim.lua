@@ -30,9 +30,8 @@ Plug("tpope/vim-repeat")
 Plug("tpope/vim-surround")
 Plug("tpope/vim-unimpaired")
 Plug("windwp/nvim-autopairs")
--- Plug("ntpeters/vim-better-whitespace")
 -- Plug("andymass/vim-matchup") very slow!
--- Plug("mhinz/vim-signify")
+-- Plug("mhinz/vim-signify") very annoying!
 -- Plug("fatih/vim-go", { ["do"] = function() vim.cmd ":GoUpdateBinaries" end, })
 vim.call("plug#end")
 
@@ -316,13 +315,6 @@ let g:coc_disable_transparent_cursor                        =1
 let $NVIM_COC_LOG_LEVEL                                     ="debug"
 " nnoremap <leader>d                                        :call CocAction('diagnosticToggle')<cr>
 " :CocOpenLog
-"-----------------------------------------Whitespace---------------------------
-" let g:strip_whitespace_confirm                            =0
-" augroup on_enter_buffer
-"     autocmd!
-"     autocmd BufEnter * EnableStripWhitespaceOnSave
-"     autocmd BufEnter * DisableWhitespace
-" augroup END
 "-----------------------------------------Startify-----------------------------
 let g:startify_change_to_dir                                =0
 "-----------------------------------------ACK----------------------------------
