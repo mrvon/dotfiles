@@ -50,12 +50,12 @@ AllowAllParametersOfDeclarationOnNextLine: false
 # AllowShortCaseLabelsOnASingleLine: false
 # AllowShortCompoundRequirementOnASingleLine: true
 # AllowShortEnumsOnASingleLine: true
-AllowShortFunctionsOnASingleLine: None
+AllowShortFunctionsOnASingleLine: Inline
 # AllowShortIfStatementsOnASingleLine: Never
 # AllowShortLambdasOnASingleLine: All
 # AllowShortLoopsOnASingleLine: false
 # AlwaysBreakAfterDefinitionReturnType: None
-AlwaysBreakAfterReturnType: AllDefinitions
+# AlwaysBreakAfterReturnType: None
 # AlwaysBreakBeforeMultilineStrings: false
 # AlwaysBreakTemplateDeclarations: MultiLine
 AttributeMacros:
@@ -240,7 +240,7 @@ Standard: c++20
 #   - Q_UNUSED
 #   - QT_REQUIRE_VERSION
 TabWidth: 4
-UseTab: Always # UseTab: Never
+UseTab: Always
 # VerilogBreakBetweenInstancePorts: true
 # WhitespaceSensitiveMacros:
 #   - BOOST_PP_STRINGIZE
