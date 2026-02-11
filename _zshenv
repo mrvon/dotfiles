@@ -25,3 +25,6 @@ export RLWRAP_HOME=$HOME/.local/share/rlwrap
 
 # GPG
 export GPG_TTY=$(tty)
+
+# CMake
+export CMAKE_POLICY_VERSION_MINIMUM=3.5
