@@ -719,7 +719,12 @@ require("nvim-treesitter.configs").setup {
 }
 
 require("snacks").setup {
-    bigfile = { enabled = true, notify = false },
+    bigfile = {
+        enabled = true,
+        notify = false,
+        size = 5 * 1024 * 1024,
+        line_length = 1000,
+    },
     quickfile = { enabled = true },
 }
 
