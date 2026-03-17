@@ -1,0 +1,11 @@
+theme = Arthur
+
+font-family = Monaco Nerd Font
+font-family = Noto Sans Mono CJK SC
+font-size = 14
+
+cursor-style = block
+cursor-style-blink = true
+
+keybind = ctrl+enter=text:\x0d
+keybind = f11=toggle_fullscreen

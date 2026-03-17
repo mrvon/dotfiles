@@ -33,6 +33,7 @@ ln -f -s ~/dotfiles/_alacritty.toml ~/.config/alacritty/alacritty.toml
 mkdir -p ~/.config/gitui
 ln -f -s ~/dotfiles/_gitui_key_bindings.ron ~/.config/gitui/key_bindings.ron
 ln -f -s ~/dotfiles/_wezterm.lua ~/.wezterm.lua
+ln -f -s ~/dotfiles/_config.ghostty ~/.config/ghostty/config.ghostty
 
 # dependecy
 # sudo apt install -y xsel
