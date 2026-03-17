@@ -7,5 +7,9 @@ font-size = 14
 cursor-style = block
 cursor-style-blink = true
 
+keybind = ctrl+,=unbind
 keybind = ctrl+enter=text:\x0d
 keybind = f11=toggle_fullscreen
+
+window-padding-x = 0
+window-padding-y = 0
