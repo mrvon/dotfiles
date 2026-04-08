@@ -19,8 +19,8 @@ Plug("mileszs/ack.vim")
 Plug("mrvon/gruvbox.nvim")
 Plug("neoclide/coc.nvim", { ["branch"] = "release", ["do"] = function() vim.cmd ":CocUpdate" end, })
 Plug("nvim-lualine/lualine.nvim")
-Plug("nvim-treesitter/nvim-treesitter", { ["branch"] = "master", ["do"] = function() vim.cmd ":TSUpdate" end, })
-Plug("nvim-treesitter/nvim-treesitter-textobjects", { ["branch"] = "master" })
+Plug("nvim-treesitter/nvim-treesitter", { ["branch"] = "main", ["do"] = function() vim.cmd ":TSUpdate" end, })
+Plug("nvim-treesitter/nvim-treesitter-textobjects", { ["branch"] = "main" })
 Plug("preservim/nerdtree", {["on"] = "NERDTreeToggle"})
 Plug("szw/vim-maximizer")
 Plug("tbastos/vim-lua")
@@ -681,7 +681,7 @@ require("nvim-autopairs").setup {
     enable_check_bracket_line = false,
 }
 
-require("nvim-treesitter.configs").setup {
+require("nvim-treesitter").setup {
     ensure_installed = {},
     sync_install = false,
     auto_install = true,
@@ -745,3 +745,5 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
     command = "silent! wall",
     nested = true,
 })
+
+require('vim._core.ui2').enable()
