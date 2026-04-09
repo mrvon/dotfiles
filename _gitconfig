@@ -3,10 +3,10 @@
     email = mrvon@qq.com
 [core]
     editor = nvim -f
-	pager = less -x1,5
+    pager = less -x1,5
 [diff]
     tool = vimdiff
-	submodule = log
+    submodule = log
 [difftool]
     prompt = false
 [difftool "vimdiff"]
@@ -15,25 +15,25 @@
     tool = vimdiff
 [mergetool]
     prompt = false
-	keepBackup = false
-	trustExitCode = true
+    keepBackup = false
+    trustExitCode = true
 [mergetool "vimdiff"]
     cmd = nvim -d -c '$wincmd w' -c 'wincmd J' "$LOCAL" "$BASE" "$REMOTE" "$MERGED"
-	trustExitCode = true
+    trustExitCode = true
 [push]
-	recurseSubmodules = check
-	autoSetupRemote = true
+    recurseSubmodules = check
+    autoSetupRemote = true
 [url "https://"]
-	insteadOf = git://
+    insteadOf = git://
 [gc]
-	auto = 0
+    auto = 0
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
 [url "git@gitlab.com:"]
-	insteadOf = https://gitlab.com/
+    insteadOf = https://gitlab.com/
 [url "git@gitlab.alibaba-inc.com:"]
-	insteadOf = https://gitlab.alibaba-inc.com/
+    insteadOf = https://gitlab.alibaba-inc.com/
 [rebase]
-	instructionFormat = [%an] %s
+    instructionFormat = [%an] %s
 [advice]
-	skippedCherryPicks = false
+    skippedCherryPicks = false

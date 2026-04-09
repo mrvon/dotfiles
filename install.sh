@@ -20,7 +20,7 @@ ln -f -s ~/dotfiles/_tigrc ~/.tigrc
 ln -f -s ~/dotfiles/_coc-settings.json ~/.config/nvim/coc-settings.json
 mkdir -p ~/.subversion
 ln -f -s ~/dotfiles/_svn_config ~/.subversion/config
-ln -f -s ~/dotfiles/_proxy_config ~/.proxy_config
+[ -f ~/dotfiles/_proxy_config ] && ln -f -s ~/dotfiles/_proxy_config ~/.proxy_config
 # ln -f -s ~/dotfiles/_ssh_config ~/.ssh/config
 mkdir -p ~/.config/ctags
 ln -f -s ~/dotfiles/_ctags ~/.config/ctags/my.ctags
@@ -33,9 +33,10 @@ ln -f -s ~/dotfiles/_alacritty.toml ~/.config/alacritty/alacritty.toml
 mkdir -p ~/.config/gitui
 ln -f -s ~/dotfiles/_gitui_key_bindings.ron ~/.config/gitui/key_bindings.ron
 ln -f -s ~/dotfiles/_wezterm.lua ~/.wezterm.lua
-ln -f -s ~/dotfiles/_config.ghostty ~/.config/ghostty/config.ghostty
+mkdir -p ~/.config/ghostty
+ln -f -s ~/dotfiles/_config.ghostty ~/.config/ghostty/config
 
-# dependecy
+# dependency
 # sudo apt install -y xsel
 # sudo apt install -y silversearcher-ag
 # sudo -H pip2 install --upgrade pip

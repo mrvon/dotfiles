@@ -680,24 +680,61 @@ require("nvim-autopairs").setup {
     enable_check_bracket_line = false,
 }
 
-require("nvim-treesitter").setup {}
+local treesitter_languages = { 'c', 'cpp', 'lua', 'go', 'rust', 'javascript', 'python' }
 
+local installed_parsers = require('nvim-treesitter.config').get_installed()
+local parsers_to_install = vim.iter(treesitter_languages)
+    :filter(function(lang) return not vim.tbl_contains(installed_parsers, lang) end)
+    :totable()
+if #parsers_to_install > 0 then
+    require('nvim-treesitter').install(parsers_to_install)
+end
+
+-- treesitter: textobjects configuration
 require("nvim-treesitter-textobjects").setup {
     select = {
         lookahead = true,
         selection_modes = {
-            ["@parameter.outer"] = "v", -- charwise
-            ["@function.outer"] = "V", -- linewise
+            ["@parameter.outer"] = "v",
+            ["@function.outer"] = "V",
         },
         include_surrounding_whitespace = false,
     },
+    move = {
+        set_jumps = true,
+    },
 }
 
+-- treesitter: textobjects select keymaps
+local select_textobject = require("nvim-treesitter-textobjects.select").select_textobject
+vim.keymap.set({ "x", "o" }, "af", function() select_textobject("@function.outer", "textobjects") end)
+vim.keymap.set({ "x", "o" }, "if", function() select_textobject("@function.inner", "textobjects") end)
+vim.keymap.set({ "x", "o" }, "ac", function() select_textobject("@class.outer", "textobjects") end)
+vim.keymap.set({ "x", "o" }, "ic", function() select_textobject("@class.inner", "textobjects") end)
+vim.keymap.set({ "x", "o" }, "aa", function() select_textobject("@parameter.outer", "textobjects") end)
+vim.keymap.set({ "x", "o" }, "ia", function() select_textobject("@parameter.inner", "textobjects") end)
+
+-- treesitter: textobjects move keymaps
+local move_textobject = require("nvim-treesitter-textobjects.move")
+vim.keymap.set({ "n", "x", "o" }, "]m", function() move_textobject.goto_next_start("@function.outer", "textobjects") end)
+vim.keymap.set({ "n", "x", "o" }, "]M", function() move_textobject.goto_next_end("@function.outer", "textobjects") end)
+vim.keymap.set({ "n", "x", "o" }, "[m", function() move_textobject.goto_previous_start("@function.outer", "textobjects") end)
+vim.keymap.set({ "n", "x", "o" }, "[M", function() move_textobject.goto_previous_end("@function.outer", "textobjects") end)
+vim.keymap.set({ "n", "x", "o" }, "]]", function() move_textobject.goto_next_start("@class.outer", "textobjects") end)
+vim.keymap.set({ "n", "x", "o" }, "][", function() move_textobject.goto_next_end("@class.outer", "textobjects") end)
+vim.keymap.set({ "n", "x", "o" }, "[[", function() move_textobject.goto_previous_start("@class.outer", "textobjects") end)
+vim.keymap.set({ "n", "x", "o" }, "[]", function() move_textobject.goto_previous_end("@class.outer", "textobjects") end)
+
+-- treesitter: textobjects swap keymaps
+vim.keymap.set("n", "<leader>a", function() require("nvim-treesitter-textobjects.swap").swap_next("@parameter.inner") end)
+vim.keymap.set("n", "<leader>A", function() require("nvim-treesitter-textobjects.swap").swap_previous("@parameter.inner") end)
+
+-- treesitter: enable highlighting, folds, and indentation per filetype
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'c', 'cpp', 'lua', 'go', 'rust', 'javascript', 'python' },
+    pattern = treesitter_languages,
     callback = function()
         -- syntax highlighting, provided by Neovim
-        vim.treesitter.start()
+        pcall(vim.treesitter.start)
         -- folds, provided by Neovim
         vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
         vim.wo[0][0].foldmethod = 'expr'
