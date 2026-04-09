@@ -23,7 +23,6 @@ Plug("nvim-treesitter/nvim-treesitter", { ["branch"] = "main", ["do"] = function
 Plug("nvim-treesitter/nvim-treesitter-textobjects", { ["branch"] = "main" })
 Plug("preservim/nerdtree", {["on"] = "NERDTreeToggle"})
 Plug("szw/vim-maximizer")
-Plug("tbastos/vim-lua")
 Plug("tpope/vim-commentary")
 Plug("tpope/vim-fugitive")
 Plug("tpope/vim-repeat")
@@ -31,6 +30,7 @@ Plug("tpope/vim-surround")
 Plug("tpope/vim-unimpaired")
 Plug("windwp/nvim-autopairs")
 Plug("ntpeters/vim-better-whitespace")
+-- Plug("tbastos/vim-lua") use tree-sitter instead!
 -- Plug("andymass/vim-matchup") very slow!
 -- Plug("fatih/vim-go", { ["do"] = function() vim.cmd ":GoUpdateBinaries" end, })
 vim.call("plug#end")
@@ -45,14 +45,14 @@ vim.keymap.set("n", "<leader>sv", string.format(":source %s<cr>", vim_init_path)
 vim.cmd [[
 
 "-------------------------------Plugin Package Manager-------------------------
-if &compatible
-    set nocompatible
-endif
+" if &compatible
+"     set nocompatible
+" endif
 
 " built-in plugins
 packadd cfilter
 
-filetype plugin indent on
+" filetype plugin indent on
 syntax enable
 ]]
 
@@ -101,7 +101,7 @@ vim.opt.cursorline = true
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 
 -- enable lazyredraw
-vim.opt.lazyredraw = true
+-- vim.opt.lazyredraw = true
 
 -- display line number
 vim.opt.number = true
@@ -296,14 +296,12 @@ nnoremap <silent><localleader>c :call coc#float#close_all()<CR>
 " Highlight the symbol and its references when holding the cursor
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " Remap <C-f> and <C-b> to scroll float windows/popups
-if has('nvim-0.4.0') || has('patch-8.2.0750')
-    nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-    nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-    inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-    inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-    vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-    vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-endif
+nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 " Use CTRL-S for selections ranges
 " Requires 'textDocument/selectionRange' support of language server
 nmap <silent> <C-s> <Plug>(coc-range-select)
@@ -312,7 +310,8 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 command! -nargs=0 Format :call CocActionAsync('format')
 nnoremap <silent><nowait> <localleader>s :<C-u>CocList -I symbols<cr>
 let g:coc_disable_transparent_cursor                        =1
-let $NVIM_COC_LOG_LEVEL                                     ="debug"
+" debug
+let $NVIM_COC_LOG_LEVEL                                     ="error"
 " nnoremap <leader>d                                        :call CocAction('diagnosticToggle')<cr>
 " :CocOpenLog
 "-----------------------------------------Whitespace---------------------------
@@ -681,49 +680,31 @@ require("nvim-autopairs").setup {
     enable_check_bracket_line = false,
 }
 
-require("nvim-treesitter").setup {
-    ensure_installed = {},
-    sync_install = false,
-    auto_install = true,
-    ignore_install = {},
-    highlight = {
-        enable = true,
-        disable = {},
-        additional_vim_regex_highlighting = false,
-    },
-    textobjects = {
-        select = {
-            enable = true,
-            lookahead = true,
-            keymaps = {
-                ["af"] = "@function.outer",
-                ["if"] = "@function.inner",
-                ["as"] = {query = "@scope", query_group = "locals", desc = "Select language scope"},
-            },
-            selection_modes = {
-                ["@parameter.outer"] = "v", -- charwise
-                ["@function.outer"] = "V", -- linewise
-            },
-            include_surrounding_whitespace = false,
+require("nvim-treesitter").setup {}
+
+require("nvim-treesitter-textobjects").setup {
+    select = {
+        lookahead = true,
+        selection_modes = {
+            ["@parameter.outer"] = "v", -- charwise
+            ["@function.outer"] = "V", -- linewise
         },
-        move = {
-            enable = true,
-            set_jumps = true, -- whether to set jumps in the jumplist
-            goto_next_start = {
-                ["]m"] = "@function.outer",
-            },
-            goto_next_end = {
-                ["]M"] = "@function.outer",
-            },
-            goto_previous_start = {
-                ["[m"] = "@function.outer",
-            },
-            goto_previous_end = {
-                ["[M"] = "@function.outer",
-            },
-        },
+        include_surrounding_whitespace = false,
     },
 }
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'c', 'cpp', 'lua', 'go', 'rust', 'javascript', 'python' },
+    callback = function()
+        -- syntax highlighting, provided by Neovim
+        vim.treesitter.start()
+        -- folds, provided by Neovim
+        vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        vim.wo[0][0].foldmethod = 'expr'
+        -- indentation, provided by nvim-treesitter
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+})
 
 require("snacks").setup {
     bigfile = {
