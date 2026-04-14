@@ -48,7 +48,6 @@ ln -f -s ~/dotfiles/_config.ghostty ~/.config/ghostty/config
 # go get -u honnef.co/go/tools/cmd/staticcheck
 # sudo luarocks install luacheck
 # go get golang.org/x/tools/gopls@latest
-# wget -P ~ https://github.com/cyrus-and/gdb-dashboard/raw/master/.gdbinit
 
 # PlugUpgrade
 # PlugUpdate
