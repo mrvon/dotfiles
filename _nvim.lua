@@ -387,6 +387,7 @@ let g:gutentags_trace = 0
 let g:gutentags_modules = ['ctags']
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 let g:gutentags_generate_on_empty_buffer = 1
+let g:gutentags_file_list_command = 'git ls-files --cached --others --exclude-standard'
 ]]
 
 -- maximize
