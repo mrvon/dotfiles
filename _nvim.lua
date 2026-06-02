@@ -341,7 +341,7 @@ nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 "-----------------------------------------FZF----------------------------------
 nnoremap <silent><nowait><leader>f                                  :call fzf#run(fzf#wrap({
-    \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f'
+    \ 'source': 'git ls-files --cached --others --exclude-standard'
     \ }))<cr>
 nnoremap <silent><nowait><leader>F                                  :call fzf#run(fzf#wrap({
     \ 'source': 'fd -L --exclude={.git,node_modules,build,tmp} --type f --no-ignore'
