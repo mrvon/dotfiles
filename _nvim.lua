@@ -324,9 +324,7 @@ augroup END
 "-----------------------------------------Startify-----------------------------
 let g:startify_change_to_dir                                =0
 "-----------------------------------------ACK----------------------------------
-cabbrev ack Ack
-cabbrev ACk Ack
-cabbrev ACK Ack
+command! -nargs=+ Ackk execute 'Ack --no-ignore --hidden <args>'
 nnoremap <silent><localleader>v                             :Ack -w '<c-r>=expand("<cword>")<cr>'<cr>
 if executable('rg')
     let g:ackprg = 'rg -S --vimgrep'
