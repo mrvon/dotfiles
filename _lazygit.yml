@@ -1,0 +1,37 @@
+gui:
+  theme:
+    activeBorderColor:
+      - green
+      - bold
+    inactiveBorderColor:
+      - default
+    optionsTextColor:
+      - blue
+    selectedLineBgColor:
+      - default
+    cherryPickedCommitFgColor:
+      - blue
+    cherryPickedCommitBgColor:
+      - default
+    markedBaseCommitFgColor:
+      - blue
+    markedBaseCommitBgColor:
+      - default
+    unstagedChangesColor:
+      - red
+    defaultFgColor:
+      - default
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
+promptToReturnFromSubprocess: false
+customCommands:
+  - key: 'D'
+    context: 'commits'
+    command: 'git difftool -y {{.SelectedCommit.Sha}}~1 {{.SelectedCommit.Sha}}'
+    output: terminal
+  - key: 'S'
+    context: 'commitFiles'
+    command: 'git difftool -y {{.SelectedCommit.Sha}}~1 {{.SelectedCommit.Sha}} -- {{.SelectedCommitFilePath}}'
+    output: terminal
