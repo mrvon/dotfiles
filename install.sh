@@ -35,7 +35,10 @@ ln -f -s ~/dotfiles/_gitui_key_bindings.ron ~/.config/gitui/key_bindings.ron
 ln -f -s ~/dotfiles/_wezterm.lua ~/.wezterm.lua
 mkdir -p ~/.config/ghostty
 ln -f -s ~/dotfiles/_config.ghostty ~/.config/ghostty/config
+mkdir -p ~/.config/lazygit
 ln -f -s ~/dotfiles/_lazygit.yml ~/.config/lazygit/config.yml
+mkdir -p ~/.config/bat
+ln -f -s ~/dotfiles/_bat_config ~/.config/bat/config
 
 # dependency
 # sudo apt install -y xsel
