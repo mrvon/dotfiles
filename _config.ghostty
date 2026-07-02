@@ -1,5 +1,7 @@
 theme = Arthur
 
+bold-color = bright
+
 font-family = Monaco Nerd Font
 font-family = Noto Sans Mono CJK SC
 font-size = 14
