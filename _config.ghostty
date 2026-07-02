@@ -12,6 +12,7 @@ cursor-style-blink = true
 
 keybind = ctrl+,=unbind
 keybind = ctrl+enter=text:\x0d
+keybind = shift+enter=text:\x1b\x0d
 keybind = f11=toggle_fullscreen
 
 window-padding-x = 0
