@@ -2,9 +2,10 @@ theme = Arthur
 
 bold-color = bright
 
-font-family = Monaco Nerd Font
+font-family = Monaco Nerd Font Mono
 font-family = Noto Sans Mono CJK SC
 font-size = 14
+font-codepoint-map = U+00D7=Monaco Nerd Font Mono
 
 cursor-style = block
 cursor-style-blink = true
@@ -15,3 +16,5 @@ keybind = f11=toggle_fullscreen
 
 window-padding-x = 0
 window-padding-y = 0
+
+mouse-scroll-multiplier = 0.5
