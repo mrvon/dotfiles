@@ -28,9 +28,15 @@ ln -f -s ~/dotfiles/_xprofile ~/.xprofile
 ln -f -s ~/dotfiles/_inputrc ~/.inputrc
 ln -f -s ~/dotfiles/_prettierrc ~/.prettierrc
 ln -f -s ~/dotfiles/_npmrc ~/.npmrc
-mkdir -p ~/.config/alacritty
-ln -f -s ~/dotfiles/_alacritty.toml ~/.config/alacritty/alacritty.toml
 ln -f -s ~/dotfiles/_wezterm.lua ~/.wezterm.lua
+# wezterm terminfo (truecolor via Tc; needed for config.term = "wezterm")
+if command -v tic >/dev/null 2>&1 && command -v curl >/dev/null 2>&1; then
+    _wt=$(mktemp)
+    if curl -fsSL -o "$_wt" https://raw.githubusercontent.com/wezterm/wezterm/main/termwiz/data/wezterm.terminfo; then
+        tic -x -o ~/.terminfo "$_wt"
+    fi
+    rm -f "$_wt"
+fi
 mkdir -p ~/.config/ghostty
 ln -f -s ~/dotfiles/_config.ghostty ~/.config/ghostty/config
 mkdir -p ~/.config/lazygit

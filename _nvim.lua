@@ -13,8 +13,7 @@ Plug("junegunn/fzf", { ["do"] = function() vim.fn["fzf#install"]() end, })
 Plug("junegunn/fzf.vim")
 Plug("junegunn/vim-easy-align")
 Plug("ludovicchabant/vim-gutentags")
-Plug("majutsushi/tagbar")
-Plug("mhinz/vim-startify")
+Plug("preservim/tagbar")
 Plug("mileszs/ack.vim")
 Plug("mrvon/gruvbox.nvim")
 Plug("neoclide/coc.nvim", { ["branch"] = "release", ["do"] = function() vim.cmd ":CocUpdate" end, })
@@ -263,10 +262,6 @@ nnoremap <localleader>f                                     :ALEFix<cr>
 nnoremap <leader>d                                          :ALEToggleBuffer<cr>
 "-----------------------------------------TagBar-------------------------------
 nnoremap <localleader>T                                     :TagbarToggle<cr>
-"-----------------------------------------Signify------------------------------
-autocmd User SignifyAutocmds exe 'au! signify' | au signify BufWritePost * call sy#start()
-"-----------------------------------------Matchup------------------------------
-let g:matchup_matchparen_status_offscreen                   =0
 "-----------------------------------------COC----------------------------------
 " to trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -321,8 +316,6 @@ augroup on_enter_buffer
     autocmd BufEnter * EnableStripWhitespaceOnSave
     autocmd BufEnter * DisableWhitespace
 augroup END
-"-----------------------------------------Startify-----------------------------
-let g:startify_change_to_dir                                =0
 "-----------------------------------------ACK----------------------------------
 command! -nargs=+ Ackk execute 'Ack --no-ignore --hidden <args>'
 nnoremap <silent><localleader>v                             :Ack -w '<c-r>=expand("<cword>")<cr>'<cr>

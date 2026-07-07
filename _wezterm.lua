@@ -2,6 +2,10 @@ local wezterm = require "wezterm"
 
 local config = wezterm.config_builder()
 
+-- use wezterm's own terminfo (truecolor via Tc); requires the wezterm
+-- terminfo installed (~/.terminfo), see install.sh
+config.term = "wezterm"
+
 config.initial_cols = 120
 config.initial_rows = 28
 config.font_size = 14
@@ -22,7 +26,7 @@ config.keys = {
         key = "Enter",
         mods = "SHIFT",
         action = wezterm.action.SendString("\x1b\r"),
-    },
+    }
 }
 config.window_padding = {left = 0, right = 0, top = 0, bottom = 0}
 config.default_cursor_style = "BlinkingBlock"
