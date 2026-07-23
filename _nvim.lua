@@ -317,6 +317,8 @@ augroup on_enter_buffer
     autocmd BufEnter * EnableStripWhitespaceOnSave
     autocmd BufEnter * DisableWhitespace
 augroup END
+"-----------------------------------------Startify-----------------------------
+let g:startify_change_to_dir                                =0
 "-----------------------------------------ACK----------------------------------
 command! -nargs=+ Ackk execute 'Ack --no-ignore --hidden <args>'
 nnoremap <silent><localleader>v                             :Ack -w '<c-r>=expand("<cword>")<cr>'<cr>
